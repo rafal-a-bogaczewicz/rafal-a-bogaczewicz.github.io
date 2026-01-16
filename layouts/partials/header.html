@@ -193,14 +193,8 @@
             <div class="name-bio-box">
                 <h1 class="notranslate" translate="no">{{ .Site.Title }}</h1>
                 <div class="bio" translate="no">
-                    {{/* ATOMOWE POBIERANIE BIO Z KONFIGURACJI JĘZYKA */}}
-                    {{ $langBio := "" }}
-                    {{ if eq .Language.Lang "pl" }}
-                        {{ $langBio = .Site.Languages.pl.Params.bio }}
-                    {{ else }}
-                        {{ $langBio = .Site.Languages.en.Params.bio }}
-                    {{ end }}
-                    {{ $langBio | replaceRE " — " "&nbsp;— " | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}
+                    {{/* Pobieranie bio przez .Site.Language.Params - najbezpieczniejsza metoda */}}
+                    {{ .Site.Language.Params.bio | replaceRE " — " "&nbsp;— " | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}
                 </div>
             </div>
         </div>
