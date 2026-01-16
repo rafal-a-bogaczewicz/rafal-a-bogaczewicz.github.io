@@ -7,7 +7,8 @@
     <title>{{ .Site.Title }}</title>
     <style>
         :root { 
-            --morska-zielen: {{ .Site.Params.morska_zielen }}; 
+            /* Używamy nowej nazwy z hugo.toml */
+            --gorska-zielen: {{ .Site.Params.gorska_zielen }}; 
             --bg-color: #ffffff;
             --text-color: #2c3e50;
             --bio-color: #7f8c8d;
@@ -15,6 +16,8 @@
         }
 
         [data-theme="dark"] {
+            /* Podjaśniona zieleń dla lepszego kontrastu w nocy */
+            --gorska-zielen: #769d7c; 
             --bg-color: #1a1a1a;
             --text-color: #ecf0f1;
             --bio-color: #bdc3c7;
@@ -36,13 +39,47 @@
             touch-action: pan-x pan-y;
         }
 
-        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; min-height: 50px; }
-        h1 { color: var(--morska-zielen); margin: 0; font-size: 1.8rem; white-space: nowrap; }
-        header { border-bottom: 3px solid var(--morska-zielen); padding-bottom: 10px; margin-bottom: 30px; }
-        .bio { font-size: 1.1em; color: var(--bio-color); margin: 5px 0 15px 0; min-height: 1.5em; }
+        header { 
+            border-bottom: 3px solid var(--gorska-zielen); 
+            padding-bottom: 15px; 
+            margin-bottom: 30px; 
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            min-height: 50px;
+        }
+
+        /* Nowa sekcja profilowa */
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--gorska-zielen);
+            object-fit: cover;
+            background-color: var(--slider-bg);
+        }
+
+        h1 { color: var(--gorska-zielen); margin: 0; font-size: 1.8rem; white-space: nowrap; }
+        .bio { font-size: 1.1em; color: var(--bio-color); margin: 5px 0 10px 0; min-height: 1.5em; }
 
         nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; }
-        nav a { text-decoration: none; color: var(--morska-zielen); font-weight: bold; text-transform: uppercase; font-size: 14px; }
+        nav a { 
+            text-decoration: none; 
+            color: var(--gorska-zielen); 
+            font-weight: bold; 
+            text-transform: uppercase;
+            font-size: 14px;
+        }
 
         .controls-top { display: flex; gap: 15px; align-items: center; }
         .control-group { display: flex; align-items: center; gap: 6px; }
@@ -51,13 +88,16 @@
         .switch input { opacity: 0; width: 0; height: 0; }
         .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--slider-bg); transition: .3s; border-radius: 20px; }
         .slider:before { position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px; background-color: white; transition: .3s; border-radius: 50%; }
-        input:checked + .slider { background-color: var(--morska-zielen); }
+        
+        input:checked + .slider { background-color: var(--gorska-zielen); }
         input:checked + .slider:before { transform: translateX(18px); }
+        
         .icon { font-size: 1.2rem; user-select: none; }
 
         @media (max-width: 600px) {
-            .header-top { flex-direction: column; align-items: flex-start; gap: 10px; min-height: auto; }
-            .controls-top { width: 100%; justify-content: flex-end; }
+            .header-top { flex-direction: column; align-items: center; text-align: center; gap: 15px; min-height: auto; }
+            .profile-section { flex-direction: column; gap: 10px; }
+            .controls-top { width: 100%; justify-content: center; }
             h1 { font-size: 1.5rem; }
         }
     </style>
@@ -65,7 +105,15 @@
 <body>
     <header>
         <div class="header-top">
-            <h1>{{ .Site.Title }}</h1>
+            <div class="profile-section">
+                <!-- Zdjęcie musi być w static/images/profil.jpg -->
+                <img src="/images/profil.jpg" alt="Rafał A. Bogaczewicz" class="profile-img">
+                <div>
+                    <h1>{{ .Site.Title }}</h1>
+                    <div id="dynamic-bio" class="bio">{{ .Param "bio" }}</div>
+                </div>
+            </div>
+
             <div class="controls-top">
                 <div class="control-group">
                     <span class="icon">🇺🇸</span>
@@ -85,10 +133,8 @@
                 </div>
             </div>
         </div>
-        <!-- Dodano ID dla dynamicznej podmiany bio -->
-        <div id="dynamic-bio" class="bio">{{ .Param "bio" }}</div>
+
         <nav>
-            <!-- Dodano ID dla dynamicznej podmiany menu -->
             <ul id="dynamic-menu">
                 {{ range .Site.Menus.main }}
                 <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
@@ -97,14 +143,13 @@
         </nav>
     </header>
 
-    <!-- Dodano ID dla dynamicznej podmiany głównej treści -->
     <main id="dynamic-content">
         {{ .Content }}
         <p>Witaj w moim laboratorium cyfrowym. Sekcje publikacji i konferencji są w przygotowaniu.</p>
     </main>
 
     <script>
-        // 1. OBSŁUGA MOTYWU (Bez zmian, działa lokalnie)
+        // 1. OBSŁUGA MOTYWU
         const themeToggle = document.getElementById("theme-toggle");
         const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         if (currentTheme === "dark") { document.documentElement.setAttribute("data-theme", "dark"); themeToggle.checked = true; }
@@ -127,23 +172,18 @@
             if (!url) return;
 
             try {
-                // Pobieramy treść z innej wersji językowej w tle
                 const response = await fetch(url);
                 const htmlText = await response.text();
                 const parser = new DOMParser();
                 const newDoc = parser.parseFromString(htmlText, 'text/html');
 
-                // Podmieniamy tylko kluczowe kontenery tekstowe
-                // Dzięki temu przeglądarka nie przeładowuje okna i ZACHOWUJE ZOOM
                 document.getElementById('dynamic-bio').innerHTML = newDoc.getElementById('dynamic-bio').innerHTML;
                 document.getElementById('dynamic-content').innerHTML = newDoc.getElementById('dynamic-content').innerHTML;
                 document.getElementById('dynamic-menu').innerHTML = newDoc.getElementById('dynamic-menu').innerHTML;
                 
-                // Aktualizujemy adres URL w pasku przeglądarki bez odświeżania strony
                 window.history.pushState({}, '', url);
                 document.documentElement.lang = targetLang;
             } catch (err) {
-                // W razie problemu z siecią - standardowe przeładowanie (bezpiecznik)
                 window.location.href = url;
             }
         });
