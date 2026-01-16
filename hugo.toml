@@ -14,7 +14,7 @@ theme = []
     contentDir = 'content/pl'
     weight = 1
     # Spójne i poprawne językowo bio PL
-    bio = "Pasjonat odkrywania świata\u00a0– zarówno naukowo, jak\u00a0i podczas wypraw."
+    bio = "Pasjonat odkrywania świata – zarówno naukowo, jak i podczas wypraw."
     [languages.pl.menu]
       [[languages.pl.menu.main]]
         name = "Publikacje"
@@ -30,7 +30,7 @@ theme = []
     contentDir = 'content/en'
     weight = 2
     # Prestiżowe tłumaczenie American English (High-Value / Action-oriented)
-    bio = "Passionate about discovery\u00a0– both in research and during exploration."
+    bio = "Passionate about discovery – both in research and during exploration."
     [languages.en.menu]
       [[languages.en.menu.main]]
         name = "Publications"
