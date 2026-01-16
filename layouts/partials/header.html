@@ -1,23 +1,61 @@
 <!DOCTYPE html>
-{{/* 1. Atrybuty globalne: translate=no oraz jawne wskazanie języka */}}
-<html lang="{{ .Language.Lang }}" class="notranslate" translate="no">
+{{/* 1. Potrójna blokada na poziomie HTML */}}
+<html lang="{{ .Language.Lang }}" class="notranslate" translate="no" google="notranslate">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     
-    {{/* 2. Komplet meta-tagów dla wszystkich znanych silników (Google, Bing, Yandex, robots) */}}
+    {{/* 2. Komplet meta-tagów przeciwko botom i silnikom tłumaczącym */}}
     <meta name="google" content="notranslate">
-    <meta name="robots" content="notranslate">
     <meta name="googlebot" content="notranslate">
+    <meta name="robots" content="notranslate">
+    <meta name="google" value="notranslate">
 
-    {{/* 3. Linki alternatywne - mówią przeglądarce: "nie tłumacz, inna wersja już istnieje" */}}
+    {{/* 3. Linki alternatywne - sugerują, że tłumaczenie jest już dostępne pod innym URL */}}
     {{ range .AllTranslations }}
     <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
     {{ end }}
     
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    
+    {{/* 4. SKRYPT "NUKLEARNY" - Blokuje mechanizm tłumaczenia na poziomie procesów przeglądarki */}}
+    <script>
+        (function() {
+            const block = () => {
+                // Forsuje brak tłumaczenia w atrybutach
+                document.documentElement.setAttribute('translate', 'no');
+                document.documentElement.setAttribute('google', 'notranslate');
+                
+                // Usuwa elementy wstrzykiwane przez Google Translate (paski, ramki)
+                const translateElements = document.querySelectorAll('.skiptranslate, #google_translate_element, .goog-te-banner-frame');
+                translateElements.forEach(el => el.remove());
+                
+                // Przywraca oryginalny układ strony, jeśli Google próbował go przesunąć
+                if (document.body.style.top !== '0px') {
+                    document.body.style.top = '0px';
+                    document.body.style.setProperty('top', '0px', 'important');
+                }
+            };
+
+            // Uruchamia blokadę natychmiast i przy każdej zmianie na stronie
+            block();
+            const observer = new MutationObserver(block);
+            observer.observe(document.documentElement, { attributes: true, childList: true, subtree: true });
+            
+            // Blokuje wywołanie okienka przez eventy dotykowe na mobilkach
+            window.addEventListener('load', block);
+        })();
+    </script>
+
     <style>
+        {{/* 5. Blokada CSS - ukrywa ewentualne pozostałości paska tłumaczenia */}}
+        .skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame {
+            display: none !important;
+            visibility: hidden !important;
+        }
+        body { top: 0 !important; }
+
         :root { 
             --gorska-zielen: {{ .Site.Params.gorska_zielen | default "#4a674f" }}; 
             --bg-color: #ffffff;
@@ -53,7 +91,6 @@
         nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; }
         nav a { text-decoration: none; color: var(--gorska-zielen); font-weight: bold; text-transform: uppercase; font-size: 14px; }
         
-        /* Style publikacji */
         .values-header { border-left: 3px solid var(--gorska-zielen); padding-left: 20px; margin-bottom: 40px; }
         .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; }
         .pub-number { color: var(--gorska-zielen); min-width: 40px; font-weight: bold; flex-shrink: 0; }
@@ -70,7 +107,6 @@
         .icon { font-size: 1.2rem; }
     </style>
 </head>
-{{/* 4. Klasa notranslate na body + atrybut translate="no" na poziomie kontenera */}}
 <body class="notranslate" translate="no">
     <header>
         <div class="controls-top">
@@ -94,15 +130,14 @@
         <div class="header-top">
             <img src="{{ "/images/profil.jpg" | relURL }}" alt="Rafał A. Bogaczewicz" class="profile-img">
             <div class="name-bio-box">
-                <h1>{{ .Site.Title }}</h1>
-                {{/* Parametr bio z zabezpieczeniem przed tłumaczeniem na poziomie div */}}
+                <h1 class="notranslate" translate="no">{{ .Site.Title }}</h1>
                 <div class="bio" translate="no">{{ .Param "bio" | safeHTML }}</div>
             </div>
         </div>
         <nav translate="no">
             <ul>
                 {{ range .Site.Menus.main }}
-                <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+                <li><a href="{{ .URL | relLangURL }}" class="notranslate">{{ .Name }}</a></li>
                 {{ end }}
             </ul>
         </nav>
