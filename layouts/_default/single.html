@@ -43,7 +43,7 @@
         </div>
         {{ end }}
 
-        {{/* SEKCJA KONFERENCJI - CZYSTY MINIMALIZM */}}
+        {{/* SEKCJA KONFERENCJI - PRECYZYJNA DATA */}}
         {{ if eq .Type "conferences" }}
         <div class="conferences-list">
             {{ if .Site.Data.confs }}
@@ -75,10 +75,11 @@
                                 {{ end }}
                             {{ end }}
 
+                            {{/* Format: Dzień bez zera, Miesiąc z zerem */}}
                             {{- if $element.end_date -}}
-                                {{ dateFormat "02" $element.date }}–{{ dateFormat "02.01.2006" $element.end_date }}
+                                {{ dateFormat "2" $element.date }}–{{ dateFormat "2.01.2006" $element.end_date }}
                             {{- else -}}
-                                {{ dateFormat "02.01.2006" $element.date }}
+                                {{ dateFormat "2.01.2006" $element.date }}
                             {{- end -}},
 
                             {{- if $element.city -}}
