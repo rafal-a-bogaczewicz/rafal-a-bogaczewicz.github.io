@@ -66,16 +66,13 @@
             transition: background-color 0.2s;
         }
 
-        /* --- NOWA STRUKTURA KONTROLNA --- */
+        /* NAGŁÓWEK - USUNIĘTO border-bottom STĄD */
         header { 
-            border-bottom: 3px solid var(--gorska-zielen); 
-            padding-bottom: 15px; 
             margin-bottom: 30px;
             display: flex;
-            flex-direction: column; /* Układ pionowy: najpierw suwaki, potem reszta */
+            flex-direction: column;
         }
 
-        /* Suwaki domyślnie wyrównane do prawej */
         .controls-top { 
             display: flex; 
             justify-content: flex-end; 
@@ -89,6 +86,7 @@
             display: flex;
             align-items: flex-start;
             gap: 30px;
+            padding-bottom: 20px; /* Odstęp od nowej linii menu */
         }
 
         .profile-img { 
@@ -103,11 +101,22 @@
         h1 { color: var(--gorska-zielen); margin: 0; font-size: 1.8rem; line-height: 1.2; }
         .bio { font-size: 1.1em; color: var(--bio-color); margin-top: 10px; font-style: italic; max-width: 550px; line-height: 1.5; }
         
-        nav { margin-top: 20px; }
-        nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; }
+        /* MENU Z KRESKĄ NA GÓRZE I NA DOLE */
+        nav { 
+            margin-top: 10px;
+            padding: 15px 0;
+            border-top: 3px solid var(--gorska-zielen);    /* NOWA KRESKA NA GÓRZE */
+            border-bottom: 3px solid var(--gorska-zielen); /* KRESKA NA DOLE */
+        }
+        nav ul { 
+            list-style: none; 
+            padding: 0; 
+            margin: 0; 
+            display: flex; 
+            gap: 25px; 
+        }
         nav a { text-decoration: none; color: var(--gorska-zielen); font-weight: bold; text-transform: uppercase; font-size: 14px; }
         
-        /* Styl przełączników */
         .control-group { display: flex; align-items: center; gap: 6px; }
         .switch { position: relative; display: inline-block; width: 36px; height: 18px; }
         .switch input { opacity: 0; width: 0; height: 0; }
@@ -117,17 +126,13 @@
         input:checked + .slider:before { transform: translateX(18px); }
         .icon { font-size: 1.2rem; }
 
-        /* --- LOGIKA SPYCHANIA --- */
-        
-        /* Gdy ekran jest średni (suwaki mogłyby najechać na imię) */
         @media (max-width: 850px) {
             .controls-top {
-                justify-content: flex-start; /* Spychamy je na lewo, nad zdjęcie */
+                justify-content: flex-start;
                 margin-bottom: 20px;
             }
         }
 
-        /* Gdy ekran jest mały (smartfon) */
         @media (max-width: 600px) {
             .header-main-box {
                 flex-direction: column;
@@ -135,16 +140,19 @@
                 text-align: center;
             }
             .controls-top {
-                justify-content: center; /* Na smartfonie centralnie nad zdjęciem */
+                justify-content: center;
             }
             .bio { max-width: 100%; }
-            nav ul { justify-content: center; flex-wrap: wrap; }
+            nav ul { 
+                justify-content: center; 
+                flex-wrap: wrap; /* To zapewnia dwurzędowe menu */
+                gap: 15px 25px; /* Dodatkowy odstęp między rzędami */
+            }
         }
     </style>
 </head>
 <body class="notranslate" translate="no">
     <header>
-        {{/* Blok suwaków - teraz zawsze fizycznie nad resztą w kodzie */}}
         <div class="controls-top">
             <div class="control-group">
                 <span class="icon">🇺🇸</span>
