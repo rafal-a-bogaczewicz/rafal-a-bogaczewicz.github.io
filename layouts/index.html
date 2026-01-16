@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta tagi optymalizujące ładowanie w 2026 roku -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <title>{{ .Site.Title }}</title>
     <style>
@@ -22,7 +21,6 @@
             --slider-bg: #444;
         }
 
-        /* Stabilizacja przewijania */
         html { overflow-y: scroll; }
 
         body { 
@@ -33,48 +31,19 @@
             color: var(--text-color); 
             background-color: var(--bg-color);
             transition: background-color 0.2s;
-            /* Stabilizacja zoomu i tekstu na mobile */
             -webkit-text-size-adjust: none;
             text-size-adjust: none;
             touch-action: pan-x pan-y;
         }
 
-        /* NAGŁÓWEK - Imię i Suwaki */
-        .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 5px;
-            min-height: 50px;
-        }
-
+        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; min-height: 50px; }
         h1 { color: var(--morska-zielen); margin: 0; font-size: 1.8rem; white-space: nowrap; }
-
-        header { 
-            border-bottom: 3px solid var(--morska-zielen); 
-            padding-bottom: 10px; 
-            margin-bottom: 30px; 
-        }
-
+        header { border-bottom: 3px solid var(--morska-zielen); padding-bottom: 10px; margin-bottom: 30px; }
         .bio { font-size: 1.1em; color: var(--bio-color); margin: 5px 0 15px 0; min-height: 1.5em; }
 
-        nav ul { 
-            list-style: none; 
-            padding: 0; 
-            margin: 0; 
-            display: flex; 
-            gap: 25px; 
-        }
-        
-        nav a { 
-            text-decoration: none; 
-            color: var(--morska-zielen); 
-            font-weight: bold; 
-            text-transform: uppercase;
-            font-size: 14px;
-        }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; }
+        nav a { text-decoration: none; color: var(--morska-zielen); font-weight: bold; text-transform: uppercase; font-size: 14px; }
 
-        /* KONTROLKI */
         .controls-top { display: flex; gap: 15px; align-items: center; }
         .control-group { display: flex; align-items: center; gap: 6px; }
 
@@ -82,23 +51,13 @@
         .switch input { opacity: 0; width: 0; height: 0; }
         .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--slider-bg); transition: .3s; border-radius: 20px; }
         .slider:before { position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px; background-color: white; transition: .3s; border-radius: 50%; }
-        
         input:checked + .slider { background-color: var(--morska-zielen); }
         input:checked + .slider:before { transform: translateX(18px); }
-        
         .icon { font-size: 1.2rem; user-select: none; }
 
         @media (max-width: 600px) {
-            .header-top {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-                min-height: auto;
-            }
-            .controls-top {
-                width: 100%;
-                justify-content: flex-end;
-            }
+            .header-top { flex-direction: column; align-items: flex-start; gap: 10px; min-height: auto; }
+            .controls-top { width: 100%; justify-content: flex-end; }
             h1 { font-size: 1.5rem; }
         }
     </style>
@@ -107,9 +66,7 @@
     <header>
         <div class="header-top">
             <h1>{{ .Site.Title }}</h1>
-            
             <div class="controls-top">
-                <!-- Patriotyczny suwak Języka: USA [wajcha] PL -->
                 <div class="control-group">
                     <span class="icon">🇺🇸</span>
                     <label class="switch">
@@ -118,8 +75,6 @@
                     </label>
                     <span class="icon">🇵🇱</span>
                 </div>
-
-                <!-- Suwak Motywu: Słońce [wajcha] Księżyc -->
                 <div class="control-group">
                     <span class="icon">☀️</span>
                     <label class="switch">
@@ -130,9 +85,7 @@
                 </div>
             </div>
         </div>
-
         <div class="bio">{{ .Param "bio" }}</div>
-
         <nav>
             <ul>
                 {{ range .Site.Menus.main }}
@@ -148,35 +101,41 @@
     </main>
 
     <script>
-        // LOGIKA MOTYWU
+        // 1. OBSŁUGA MOTYWU
         const themeToggle = document.getElementById("theme-toggle");
         const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-        
-        if (currentTheme === "dark") { 
-            document.documentElement.setAttribute("data-theme", "dark"); 
-            themeToggle.checked = true; 
-        }
-        
+        if (currentTheme === "dark") { document.documentElement.setAttribute("data-theme", "dark"); themeToggle.checked = true; }
         themeToggle.addEventListener("change", () => {
-            if (themeToggle.checked) { 
-                document.documentElement.setAttribute("data-theme", "dark"); 
-                localStorage.setItem("theme", "dark"); 
-            } else { 
-                document.documentElement.removeAttribute("data-theme"); 
-                localStorage.setItem("theme", "light"); 
-            }
+            if (themeToggle.checked) { document.documentElement.setAttribute("data-theme", "dark"); localStorage.setItem("theme", "dark"); }
+            else { document.documentElement.removeAttribute("data-theme"); localStorage.setItem("theme", "light"); }
         });
 
-        // LOGIKA JĘZYKA (Bez wymuszania resetu zoomu)
+        // 2. OBSŁUGA JĘZYKA Z PRÓBĄ ZACHOWANIA ZOOMU
         const langToggle = document.getElementById("lang-toggle");
         langToggle.addEventListener("change", () => {
+            // Zapamiętaj obecny zoom (skalę) jeśli przeglądarka na to pozwala
+            if (window.visualViewport) {
+                sessionStorage.setItem('savedZoom', window.visualViewport.scale);
+                sessionStorage.setItem('savedScrollX', window.visualViewport.offsetLeft);
+                sessionStorage.setItem('savedScrollY', window.visualViewport.offsetTop);
+            }
+            
             const targetLang = langToggle.checked ? "pl" : "en";
             {{ if .IsTranslated }}{{ range .AllTranslations }}
-            if ("{{ .Language.Lang }}" === targetLang) { 
-                // Używamy czystego linku, aby przeglądarka mobilna mogła spróbować zachować stan zoomu
-                window.location.href = "{{ .Permalink }}"; 
-            }
+            if ("{{ .Language.Lang }}" === targetLang) { window.location.href = "{{ .Permalink }}"; }
             {{ end }}{{ end }}
+        });
+
+        // 3. PRÓBA PRZYWRÓCENIA ZOOMU PO ZAŁADOWANIU (tylko na mobile)
+        window.addEventListener('load', () => {
+            const savedZoom = sessionStorage.getItem('savedZoom');
+            if (savedZoom && window.visualViewport) {
+                // Czyścimy od razu, by nie psuć zwykłego odświeżania
+                sessionStorage.removeItem('savedZoom');
+                // Uwaga: Wiele przeglądarek blokuje automatyczny zoom ze względów bezpieczeństwa,
+                // ale próba ustawienia scrolla pomaga utrzymać kontekst widzenia.
+                window.scrollTo(sessionStorage.getItem('savedScrollX') || 0, sessionStorage.getItem('savedScrollY') || 0);
+            }
         });
     </script>
 </body>
