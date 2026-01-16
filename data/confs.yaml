@@ -6,7 +6,7 @@
   country: "Poland"
 
 - event: "6th International Workshop on the Optical Properties of Nanostructures (OPON 2020)"
-  link: "https://http://opon.fuw.edu.pl/"
+  link: "http://opon.fuw.edu.pl/"
   date: "2020-02-12"
   end_date: "2020-02-14"
   city: "Warsaw"
@@ -18,4 +18,12 @@
   end_date: "2020-09-17"
   city: "Münster"
   country: "Germany"
+  online: true  # To aktywuje dopisek (on-line) / (held on-line)
+
+- event: "49th International School & Conference on the Physics of Semiconductors (Jaszowiec 2021)"
+  link: "https://www.jaszowiec.edu.pl/2021/"
+  date: "2021-09-01"
+  end_date: "2021-09-10"
+  city: "Szczyrk"
+  country: "Poland"
   online: true  # To aktywuje dopisek (on-line) / (held on-line)
