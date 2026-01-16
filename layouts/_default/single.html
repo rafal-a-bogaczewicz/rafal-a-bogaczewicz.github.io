@@ -7,15 +7,7 @@
 
 <main id="dynamic-content">
     <div class="page-content">
-        {{/* Skrypt naprawczy dla biogramu w nagłówku */}}
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const bioElement = document.querySelector('.bio');
-                if (bioElement && bioElement.innerText.trim() === "") {
-                    bioElement.innerHTML = {{ $bio | safeHTML }};
-                }
-            });
-        </script>
+        {{/* USUNIĘTO SKRYPT JS, KTÓRY POWODOWAŁ BŁĘDY */}}
 
         <h1>{{ .Title }}</h1>
 
@@ -36,7 +28,6 @@
                     <span class="pub-number">({{ sub $count $index }})</span>
                     <div class="pub-details">
                         <div class="authors">
-                            {{/* Odwołujemy się bezpośrednio do zmiennej elementu pętli */}}
                             {{ $authorList := $element.authors | replace "R. A. Bogaczewicz" "<span class='my-name'>R. A. Bogaczewicz</span>" }}
                             {{ $authorList | safeHTML }}
                         </div>
