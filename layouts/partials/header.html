@@ -193,8 +193,8 @@
             <div class="name-bio-box">
                 <h1 class="notranslate" translate="no">{{ .Site.Title }}</h1>
                 <div class="bio" translate="no">
-                    {{/* Pobieranie bio przez .Site.Language.Params - najbezpieczniejsza metoda */}}
-                    {{ .Site.Language.Params.bio | replaceRE " — " "&nbsp;— " | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}
+                    {{/* METODA ATOMOWA: Odwołanie bezpośrednio do parametrów aktualnego języka */}}
+                    {{ .Language.Params.bio | replaceRE " — " "&nbsp;— " | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}
                 </div>
             </div>
         </div>
