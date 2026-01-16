@@ -7,9 +7,13 @@
 
         {{ if .Params.quote }}
         <div class="values-header">
-            {{/* Łączenie spójników w cytatach */}}
+            {{/* Treść cytatu: szara kursywa */}}
             <div class="quote-text">{{ .Params.quote | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}</div>
-            {{ if .Params.quote_ref }}<div class="quote-ref">— {{ .Params.quote_ref }}</div>{{ end }}
+            
+            {{ if .Params.quote_ref }}
+            {{/* Referencja: Twoja zmienna, stylizowana na ciemniejszy szary i pogrubiona */}}
+            <div class="quote-ref">— {{ .Params.quote_ref }}</div>
+            {{ end }}
         </div>
         {{ end }}
 
