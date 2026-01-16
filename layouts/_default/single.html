@@ -1,48 +1,19 @@
 <div id="dynamic-content">
 <style>
-  /* Stylizacja cytatu (np. Mdr 7, 9) */
-  .values-header {
-    font-size: 0.95em;
-    margin-bottom: 40px;
-    border-left: 3px solid var(--gorska-zielen);
-    padding-left: 20px;
-    line-height: 1.5;
-  }
+  .values-header { font-size: 0.95em; margin-bottom: 40px; border-left: 3px solid var(--gorska-zielen); padding-left: 20px; line-height: 1.5; }
   .quote-text { font-style: italic; color: var(--text-color); margin-bottom: 5px; }
   .quote-ref { font-weight: bold; opacity: 0.6; font-size: 0.85em; }
 
-  /* Stylizacja listy publikacji */
-  .pub-item { 
-    display: flex; 
-    align-items: baseline; 
-    margin-bottom: 25px; 
-    font-size: 0.95em; 
-  }
-  .pub-number { 
-    color: var(--gorska-zielen); 
-    min-width: 40px; 
-    font-weight: bold; 
-    opacity: 0.8; 
-  }
-  .my-name { 
-    text-decoration: none; 
-    border-bottom: 1px solid var(--gorska-zielen); 
-    color: var(--text-color); 
-  }
-  .pub-link { 
-    color: var(--gorska-zielen); 
-    text-decoration: none; 
-    font-weight: 500; 
-  }
-  .pub-link:hover { 
-    text-decoration: underline; 
-  }
+  .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; }
+  .pub-number { color: var(--gorska-zielen); min-width: 40px; font-weight: bold; opacity: 0.8; }
+  .my-name { text-decoration: none; border-bottom: 1px solid var(--gorska-zielen); color: var(--text-color); }
+  .pub-link { color: var(--gorska-zielen); text-decoration: none; font-weight: 500; }
+  .pub-link:hover { text-decoration: underline; }
 </style>
 
 <div class="page-content">
   <h1>{{ .Title }}</h1>
 
-  <!-- Sekcja cytatu - pobiera dane z parametru 'quote' w pliku .md -->
   {{ if .Params.quote }}
   <div class="values-header">
     <div class="quote-text">{{ .Params.quote | safeHTML }}</div>
@@ -50,7 +21,6 @@
   </div>
   {{ end }}
 
-  <!-- Logika wyświetlania listy publikacji z data/pubs.yaml -->
   {{ if or (eq .Type "publications") (eq .File.BaseFileName "publications") }}
   <div class="publications-list">
     {{ if .Site.Data.pubs }}
@@ -58,11 +28,11 @@
         {{ $count := len $pubs }}
         {{ range $index, $element := $pubs }}
           <div class="pub-item">
-            <!-- Numeracja malejąca -->
             <span class="pub-number">({{ sub $count $index }})</span>
             <div class="pub-details">
               <div class="authors">
-                {{ $authors := .authors | replace "R. A. Bogaczewicz" "<span class='my-name'>R. A. Bogaczewicz</span>" | replace "T. Bogaczewicz" "<span class='my-name'>T. Bogaczewicz</span>" }}
+                {{/* Kluczowa linia: precyzyjne dopasowanie do Twoich danych */}}
+                {{ $authors := .authors | replace "R. A. Bogaczewicz" "<span class='my-name'>R. A. Bogaczewicz</span>" }}
                 {{ $authors | safeHTML }}
               </div>
               <div class="title-line">
@@ -77,13 +47,10 @@
             </div>
           </div>
         {{ end }}
-    {{ else }}
-        <p>Ładowanie danych z bibliografii...</p>
     {{ end }}
   </div>
   {{ end }}
 
-  <!-- Miejsce na dodatkową treść wpisaną ręcznie w Markdownie -->
   <div class="markdown-body">
     {{ .Content }}
   </div>
