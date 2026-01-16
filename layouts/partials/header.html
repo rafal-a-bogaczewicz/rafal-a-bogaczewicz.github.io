@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html lang="{{ .Language.Lang }}">
+<html lang="{{ .Language.Lang }}" translate="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    
+    {{/* Pancerna blokada automatycznego tłumaczenia Google */}}
+    <meta name="google" content="notranslate">
+    
+    {{/* Informacja o alternatywnych wersjach językowych */}}
+    {{ range .AllTranslations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+    {{ end }}
+    
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     <style>
         :root { 
@@ -82,7 +91,6 @@
             <img src="{{ "/images/profil.jpg" | relURL }}" alt="Rafał A. Bogaczewicz" class="profile-img">
             <div class="name-bio-box">
                 <h1>{{ .Site.Title }}</h1>
-                {{/* Użycie .Param "bio" wyciągnie bio z hugo.toml dla aktualnego języka */}}
                 <div class="bio">{{ .Param "bio" | safeHTML }}</div>
             </div>
         </div>
