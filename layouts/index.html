@@ -1,7 +1,8 @@
 {{ partial "header.html" . }}
 <main id="dynamic-content">
     <div class="markdown-body">
-        {{ .Content }}
+        {{/* Globalny filtr typograficzny dla treści strony głównej */}}
+        {{ .Content | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}
     </div>
 </main>
 {{ partial "footer.html" . }}
