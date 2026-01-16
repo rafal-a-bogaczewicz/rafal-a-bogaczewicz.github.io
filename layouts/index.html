@@ -35,26 +35,33 @@
         h1 { color: var(--morska-zielen); margin-bottom: 5px; }
         .bio { font-size: 1.2em; color: var(--bio-color); margin-bottom: 15px; }
         
-        nav ul { list-style: none; padding: 0; display: flex; gap: 25px; align-items: center; flex-wrap: wrap; }
-        nav a { text-decoration: none; color: var(--morska-zielen); font-weight: bold; text-transform: uppercase; }
+        /* Stabilizacja Nawigacji */
+        nav { display: flex; justify-content: space-between; align-items: center; }
         
-        .control-group { display: flex; align-items: center; gap: 10px; }
-        .switch { position: relative; display: inline-block; width: 44px; height: 22px; }
+        /* Lewa strona: Menu */
+        nav ul.menu-left { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; }
+        nav .menu-left a { text-decoration: none; color: var(--morska-zielen); font-weight: bold; text-transform: uppercase; }
+        nav .menu-left a:hover { text-decoration: underline; }
+
+        /* Prawa strona: Sterowanie */
+        .controls-right { display: flex; gap: 30px; align-items: center; min-width: 220px; justify-content: flex-end; }
+        
+        .control-group { display: flex; align-items: center; gap: 8px; }
+        .switch { position: relative; display: inline-block; width: 40px; height: 20px; }
         .switch input { opacity: 0; width: 0; height: 0; }
         
         .slider {
             position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
             background-color: var(--slider-bg);
-            transition: .4s; border-radius: 22px;
+            transition: .4s; border-radius: 20px;
         }
         
         .slider:before {
-            position: absolute; content: ""; height: 16px; width: 16px; left: 4px; bottom: 3px;
+            position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px;
             background-color: white;
             transition: .4s; border-radius: 50%;
         }
         
-        /* Wyróżnienie kolorem morskiej zieleni po przesunięciu w prawo */
         input:checked + .slider { background-color: var(--morska-zielen); }
         input:checked + .slider:before { transform: translateX(20px); }
         
@@ -66,32 +73,35 @@
         <h1>{{ .Site.Title }}</h1>
         <div class="bio">{{ .Param "bio" }}</div>
         <nav>
-            <ul>
+            <!-- Lewa strona: Publikacje i Konferencje -->
+            <ul class="menu-left">
                 {{ range .Site.Menus.main }}
                 <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
                 {{ end }}
+            </ul>
 
-                <!-- JĘZYK: USA [wajcha] PL (wyróżniony) -->
-                <li class="control-group">
+            <!-- Prawa strona: Suwaki -->
+            <div class="controls-right">
+                <!-- JĘZYK: USA [wajcha] PL -->
+                <div class="control-group">
                     <span class="icon">🇺🇸</span>
                     <label class="switch">
-                        <!-- Checked oznacza język polski (prawy kierunek) -->
                         <input type="checkbox" id="lang-toggle" {{ if eq .Language.Lang "pl" }}checked{{ end }}>
                         <span class="slider"></span>
                     </label>
                     <span class="icon">🇵🇱</span>
-                </li>
+                </div>
 
-                <!-- MOTYW: ☀️ [wajcha] 🌙 (wyróżniony) -->
-                <li class="control-group">
+                <!-- MOTYW: ☀️ [wajcha] 🌙 -->
+                <div class="control-group">
                     <span class="icon">☀️</span>
                     <label class="switch">
                         <input type="checkbox" id="theme-toggle">
                         <span class="slider"></span>
                     </label>
                     <span class="icon">🌙</span>
-                </li>
-            </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -121,12 +131,10 @@
             }
         });
 
-        // --- LOGIKA JĘZYKA (USA -> PL) ---
+        // --- LOGIKA JĘZYKA ---
         const langToggle = document.getElementById("lang-toggle");
         langToggle.addEventListener("change", () => {
-            // Jeśli odznaczono (lewo) -> idź do EN, jeśli zaznaczono (prawo) -> idź do PL
             const targetLang = langToggle.checked ? "pl" : "en";
-            
             {{ if .IsTranslated }}
                 {{ range .AllTranslations }}
                     if ("{{ .Language.Lang }}" === targetLang) {
