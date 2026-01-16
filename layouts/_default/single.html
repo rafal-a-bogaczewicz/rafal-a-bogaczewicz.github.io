@@ -6,6 +6,7 @@
 
         {{ if .Params.quote }}
         <div class="values-header">
+            {{/* Cytat z filtrem typograficznym */}}
             <div class="quote-text">{{ .Params.quote | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}</div>
             {{ if .Params.quote_ref }}
             <div class="quote-ref">— {{ .Params.quote_ref }}</div>
@@ -28,7 +29,8 @@
                             {{ $authorList | safeHTML }},
                         </div>
                         <div class="title-line">
-                            <span class="pub-title">{{ $element.title }},</span>
+                            {{/* Tytuł wytłuszczony, czarny/biały */}}
+                            <span class="pub-title"><b>{{ $element.title }},</b></span>
                             <a href="{{ $element.paperurl }}" class="pub-link" target="_blank" rel="noopener">
                                 <i>{{ $element.venue }}</i> 
                                 {{ if $element.volume }}<b>{{ $element.volume }}</b>,{{ end }}
@@ -55,13 +57,15 @@
                     <div class="pub-details">
                         <div class="authors">
                             {{ if $element.title }}
-                                <span class="pub-title">{{ $element.title }}</span>
+                                {{/* Tytuł prezentacji wytłuszczony */}}
+                                <span class="pub-title"><b>{{ $element.title }}</b></span>
                             {{ else }}
+                                {{/* Jeśli brak tytułu, nazwa konferencji staje się pogrubionym nagłówkiem */}}
                                 <span class="pub-title">
                                     {{ if $element.link }}
-                                        <a href="{{ $element.link }}" class="pub-link" target="_blank" rel="noopener"><i>{{ $element.event }}</i></a>
+                                        <a href="{{ $element.link }}" class="pub-link" target="_blank" rel="noopener"><b><i>{{ $element.event }}</i></b></a>
                                     {{ else }}
-                                        <i>{{ $element.event }}</i>
+                                        <b><i>{{ $element.event }}</i></b>
                                     {{ end }}
                                 </span>
                             {{ end }}
@@ -69,19 +73,28 @@
                         <div class="title-line">
                             {{ if $element.title }}
                                 {{ if $element.link }}
-                                    <a href="{{ $element.link }}" class="pub-link" target="_blank" rel="noopener"><i>{{ $element.event }}</i></a>,
+                                    <a href="{{ $element.link }}" class="pub-link" target="_blank" rel="noopener"><b><i>{{ $element.event }}</i></b></a>,
                                 {{ else }}
-                                    <i>{{ $element.event }}</i>,
+                                    <b><i>{{ $element.event }}</i></b>,
                                 {{ end }}
                             {{ end }}
 
+                            {{/* Data od-do */}}
                             {{ if $element.end_date }}
-                                {{ dateFormat "02" $element.date }}–{{ dateFormat "02.01.2006" $element.end_date }},
+                                {{ dateFormat "02" $element.date }}–{{ dateFormat "02.01.2006" $element.end_date }}
                             {{ else }}
-                                {{ dateFormat "02.01.2006" $element.date }},
+                                {{ dateFormat "02.01.2006" $element.date }}
                             {{ end }}
 
-                            {{ $element.city }} ({{ $element.country }}).
+                            {{/* Lokalizacja - dodaje przecinek tylko jeśli podano miasto */}}
+                            {{ if $element.city }}
+                                , {{ $element.city }} ({{ $element.country }})
+                            {{ end }}
+
+                            {{/* Logika on-line: held on-line dla EN, on-line dla PL */}}
+                            {{ if $element.online }}
+                                {{ if eq $.Language.Lang "pl" }} (on-line).{{ else }} (held on-line).{{ end }}
+                            {{ else }}.{{ end }}
                         </div>
                     </div>
                 </div>
@@ -91,6 +104,7 @@
         {{ end }}
 
         <div class="markdown-body">
+            {{/* Treść Markdown z twardymi spacjami */}}
             {{ .Content | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}
         </div>
     </div>
