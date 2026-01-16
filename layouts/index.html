@@ -36,14 +36,13 @@
         }
 
         header { 
-            position: relative; /* Kluczowe dla pozycjonowania suwaków */
+            position: relative; 
             border-bottom: 3px solid var(--gorska-zielen); 
             padding-bottom: 15px; 
             margin-bottom: 30px;
-            padding-top: 10px; /* Odstęp od góry strony */
+            padding-top: 10px; 
         }
 
-        /* Suwaki w prawym górnym rogu */
         .controls-top { 
             position: absolute;
             top: 0;
@@ -59,7 +58,7 @@
             justify-content: flex-start;
             align-items: flex-start;
             gap: 30px;
-            padding-right: 120px; /* Zapewnia miejsce, by tekst nie wszedł pod suwaki przy dużym zoomie */
+            padding-right: 120px; 
         }
 
         .profile-section { 
@@ -94,9 +93,8 @@
             line-height: 1.5;
             font-style: italic;
             max-width: 550px; 
-            /* Nowości na rok 2026 poprawiające typografię: */
-            text-wrap: balance;     /* Automatycznie wyrównuje długość linii, by uniknąć "schodków" */
-            overflow-wrap: anywhere; /* Zapobiega wychodzeniu tekstu poza kontener przy dużym zoomie */
+            text-wrap: balance;     
+            overflow-wrap: anywhere; 
         }
 
         .control-group { display: flex; align-items: center; gap: 6px; }
@@ -113,7 +111,7 @@
         nav a { text-decoration: none; color: var(--gorska-zielen); font-weight: bold; text-transform: uppercase; font-size: 14px; }
 
         @media (max-width: 600px) {
-            header { padding-top: 40px; } /* Miejsce na suwaki nad zdjęciem na mobile */
+            header { padding-top: 40px; } 
             .header-top { padding-right: 0; flex-direction: column; align-items: center; text-align: center; }
             .profile-section { flex-direction: column; align-items: center; gap: 15px; }
             .controls-top { width: 100%; justify-content: center; }
@@ -124,7 +122,6 @@
 </head>
 <body>
     <header>
-        <!-- Suwaki przeniesione na górę dla poprawnego pozycjonowania absolute -->
         <div class="controls-top">
             <div class="control-group">
                 <span class="icon">🇺🇸</span>
@@ -169,7 +166,7 @@
     </main>
 
     <script>
-        // Sekcja script pozostaje bez zmian (Motyw i AJAX językowy)
+        // MOTYW
         const themeToggle = document.getElementById("theme-toggle");
         const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         
@@ -184,39 +181,61 @@
             localStorage.setItem("theme", newMode);
         });
 
+        // JĘZYK I PODMIANA TREŚCI (FIXED)
         const langToggle = document.getElementById("lang-toggle");
         const translations = {
             {{ range .AllTranslations }} "{{ .Language.Lang }}": "{{ .Permalink }}", {{ end }}
             "{{ .Language.Lang }}": "{{ .Permalink }}"
         };
 
-        langToggle.addEventListener("change", async () => {
-            const targetLang = langToggle.checked ? "pl" : "en";
-            const url = translations[targetLang];
-            if (!url) return;
+        async function loadPage(url, targetLang) {
             try {
                 const response = await fetch(url);
                 const htmlText = await response.text();
                 const parser = new DOMParser();
                 const newDoc = parser.parseFromString(htmlText, 'text/html');
                 
-                // Ta funkcja "skleja" krótkie słowa (i, a, jak, –) z następnym wyrazem
-                function fixSierotki(text) {
-                    return text.replace(/ (i|a|z|o|u|w|jak|–) /gi, ' $1&nbsp;');
-                }
+                // 1. Podmiana Bio (z zachowaniem twardych spacji)
+                const newBio = newDoc.getElementById('dynamic-bio');
+                if (newBio) document.getElementById('dynamic-bio').innerHTML = newBio.innerHTML;
+                
+                // 2. Podmiana Menu (aby linki pasowały do języka)
+                const newMenu = newDoc.getElementById('dynamic-menu');
+                if (newMenu) document.getElementById('dynamic-menu').innerHTML = newMenu.innerHTML;
 
-                // Znajdź miejsce w swoim langToggle.addEventListener, gdzie podmieniasz bio:
-                const newBioHTML = newDoc.getElementById('dynamic-bio').innerHTML;
-                document.getElementById('dynamic-bio').innerHTML = fixSierotki(newBioHTML);
-                document.getElementById('dynamic-content').innerHTML = newDoc.getElementById('dynamic-content').innerHTML;
-                document.getElementById('dynamic-menu').innerHTML = newDoc.getElementById('dynamic-menu').innerHTML;
+                // 3. Podmiana Głównej Treści (Publikacje itp.)
+                const newContent = newDoc.getElementById('dynamic-content');
+                if (newContent) document.getElementById('dynamic-content').innerHTML = newContent.innerHTML;
                 
                 window.history.pushState({}, '', url);
                 document.documentElement.lang = targetLang;
+                setupMenuLinks(); // Re-inicjalizacja linków po podmianie menu
             } catch (err) {
+                console.error("Błąd ładowania strony:", err);
                 window.location.href = url;
             }
+        }
+
+        function setupMenuLinks() {
+            document.querySelectorAll('nav a').forEach(link => {
+                link.onclick = (e) => {
+                    const url = link.getAttribute('href');
+                    // Jeśli to nie jest link zewnętrzny, użyj AJAX
+                    if (url.startsWith('/') || url.includes(window.location.hostname)) {
+                        e.preventDefault();
+                        loadPage(url, document.documentElement.lang);
+                    }
+                };
+            });
+        }
+
+        langToggle.addEventListener("change", () => {
+            const targetLang = langToggle.checked ? "pl" : "en";
+            loadPage(translations[targetLang], targetLang);
         });
+
+        // Start linków
+        setupMenuLinks();
     </script>
 </body>
 </html>
