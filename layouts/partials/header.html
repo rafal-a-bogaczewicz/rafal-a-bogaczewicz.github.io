@@ -47,6 +47,8 @@
             --text-color: #000000;
             --bio-color: #1a1a1a;
             --slider-bg: #ccc;
+            --gray-quote: #777777; 
+            --gray-ref: #444444;   
         }
         [data-theme="dark"] {
             --gorska-zielen: #769d7c; 
@@ -54,6 +56,8 @@
             --text-color: #ffffff;
             --bio-color: #eeeeee;
             --slider-bg: #444;
+            --gray-quote: #999999;
+            --gray-ref: #bbbbbb;
         }
         html { overflow-y: scroll; }
         body { 
@@ -120,7 +124,27 @@
         }
         nav a { text-decoration: none; color: var(--gorska-zielen); font-weight: bold; text-transform: uppercase; font-size: 14px; }
 
-        .values-header { border-left: 3px solid var(--gorska-zielen); padding-left: 20px; margin-bottom: 40px; }
+        /* LINIA I CYTAT */
+        .values-header { 
+            border-left: 3px solid var(--gorska-zielen); 
+            padding-left: 20px; 
+            margin-top: 20px;      
+            margin-left: 15px;     
+            margin-bottom: 40px; 
+        }
+        .quote-text {
+            font-style: italic;
+            color: var(--gray-quote);
+            margin-bottom: 8px;
+            line-height: 1.5;
+            font-size: 1.05em;
+        }
+        .quote-ref {
+            color: var(--gray-ref);
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+
         .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; line-height: 1.6; }
         .pub-number { color: var(--gorska-zielen); min-width: 40px; font-weight: bold; flex-shrink: 0; }
         .my-name { border-bottom: 2px solid var(--gorska-zielen); font-weight: 600; }
@@ -189,7 +213,7 @@
         </div>
 
         <div class="header-main-box">
-            <img src="{{ "/images/profil.jpg" | relURL }}" alt="Rafał A. Bogaczewicz" class="profile-img">
+            <img src="{{ "/images/profile.jpg" | relURL }}" alt="Rafał A. Bogaczewicz" class="profile-img">
             <div class="name-bio-box">
                 <h1 class="notranslate" translate="no">{{ .Site.Title }}</h1>
                 <div class="bio" translate="no">
@@ -207,11 +231,7 @@
         <nav translate="no">
             <ul>
                 {{ range .Site.Menus.main }}
-                <li>
-                    <a href="{{ .URL | relLangURL }}" class="notranslate">
-                        {{ .Name | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}
-                    </a>
-                </li>
+                <li><a href="{{ .URL | relLangURL }}" class="notranslate">{{ .Name }}</a></li>
                 {{ end }}
             </ul>
         </nav>
