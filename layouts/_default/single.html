@@ -1,0 +1,92 @@
+{{ define "main" }}
+<style>
+  /* Stylizacja cytatu Mdr 7,9 - High Value & Values */
+  .values-header {
+    font-size: 0.95em;
+    margin-bottom: 40px;
+    border-left: 3px solid var(--gorska-zielen);
+    padding-left: 20px;
+    line-height: 1.5;
+  }
+  
+  .quote-pl { font-style: italic; color: var(--text-color); margin-bottom: 5px; }
+  .quote-en { font-style: italic; opacity: 0.7; font-size: 0.9em; margin-bottom: 8px; }
+  .quote-ref { font-weight: bold; opacity: 0.6; font-size: 0.85em; }
+
+  /* Lista publikacji */
+  .pub-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+    line-height: 1.4;
+  }
+
+  .pub-number {
+    color: var(--gorska-zielen);
+    min-width: 40px;
+    font-weight: bold;
+    opacity: 0.8;
+  }
+
+  /* Atomowe podkreślenie nazwiska - styl High-Value */
+  .my-name {
+    text-decoration: none;
+    border-bottom: 1px solid var(--gorska-zielen);
+    color: var(--text-color);
+  }
+
+  .pub-link {
+    color: var(--gorska-zielen);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .pub-link:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<div class="page-publications">
+  <h1>{{ .Title }}</h1>
+
+  <!-- Sekcja cytatu biblijnego -->
+  <div class="values-header">
+    <div class="quote-pl">{{ .Params.quote_pl }}</div>
+    <div class="quote-en">{{ .Params.quote_en }}</div>
+    <div class="quote-ref">— {{ .Params.quote_ref }}</div>
+  </div>
+
+  <div class="publications-list">
+    {{ $pubs := .Site.Data.pubs }}
+    {{ $count := len $pubs }}
+    
+    {{ range $index, $element := $pubs }}
+      <div class="pub-item">
+        <!-- Numeracja malejąca -->
+        <span class="pub-number">({{ sub $count $index }})</span>
+        
+        <div class="pub-details">
+          <!-- Autorzy z podkreśleniem Twojego nazwiska -->
+          <div class="authors">
+            {{ $authors := .authors }}
+            {{ $authors := replace $authors "R. A. Bogaczewicz" "<span class='my-name'>R. A. Bogaczewicz</span>" }}
+            {{ $authors := replace $authors "T. Bogaczewicz" "<span class='my-name'>T. Bogaczewicz</span>" }}
+            {{ $authors | safeHTML }}
+          </div>
+
+          <!-- Tytuł i dane bibliograficzne -->
+          <div class="title-line">
+            <span class="pub-title">{{ .title }},</span>
+            <a href="{{ .paperurl }}" class="pub-link" target="_blank" rel="noopener">
+              <i>{{ .venue }}</i> 
+              {{ if .volume }}<b>{{ .volume }}</b>{{ end }}
+              {{ if .pages }}, {{ .pages }}{{ end }} 
+              ({{ dateFormat "2006" .date }})
+            </a>
+          </div>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
