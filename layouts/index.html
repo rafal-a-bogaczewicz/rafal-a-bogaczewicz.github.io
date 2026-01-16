@@ -85,9 +85,11 @@
                 </div>
             </div>
         </div>
-        <div class="bio">{{ .Param "bio" }}</div>
+        <!-- Dodano ID dla dynamicznej podmiany bio -->
+        <div id="dynamic-bio" class="bio">{{ .Param "bio" }}</div>
         <nav>
-            <ul>
+            <!-- Dodano ID dla dynamicznej podmiany menu -->
+            <ul id="dynamic-menu">
                 {{ range .Site.Menus.main }}
                 <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
                 {{ end }}
@@ -95,46 +97,54 @@
         </nav>
     </header>
 
-    <main>
+    <!-- Dodano ID dla dynamicznej podmiany głównej treści -->
+    <main id="dynamic-content">
         {{ .Content }}
         <p>Witaj w moim laboratorium cyfrowym. Sekcje publikacji i konferencji są w przygotowaniu.</p>
     </main>
 
     <script>
-        // 1. OBSŁUGA MOTYWU
+        // 1. OBSŁUGA MOTYWU (Bez zmian, działa lokalnie)
         const themeToggle = document.getElementById("theme-toggle");
         const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         if (currentTheme === "dark") { document.documentElement.setAttribute("data-theme", "dark"); themeToggle.checked = true; }
         themeToggle.addEventListener("change", () => {
-            if (themeToggle.checked) { document.documentElement.setAttribute("data-theme", "dark"); localStorage.setItem("theme", "dark"); }
-            else { document.documentElement.removeAttribute("data-theme"); localStorage.setItem("theme", "light"); }
+            const newMode = themeToggle.checked ? "dark" : "light";
+            document.documentElement.setAttribute("data-theme", newMode);
+            localStorage.setItem("theme", newMode);
         });
 
-        // 2. OBSŁUGA JĘZYKA Z PRÓBĄ ZACHOWANIA ZOOMU
+        // 2. OBSŁUGA JĘZYKA - PODMIANA TREŚCI (OCHRONA ZOOMU)
         const langToggle = document.getElementById("lang-toggle");
-        langToggle.addEventListener("change", () => {
-            // Zapamiętaj obecny zoom (skalę) jeśli przeglądarka na to pozwala
-            if (window.visualViewport) {
-                sessionStorage.setItem('savedZoom', window.visualViewport.scale);
-                sessionStorage.setItem('savedScrollX', window.visualViewport.offsetLeft);
-                sessionStorage.setItem('savedScrollY', window.visualViewport.offsetTop);
-            }
-            
-            const targetLang = langToggle.checked ? "pl" : "en";
-            {{ if .IsTranslated }}{{ range .AllTranslations }}
-            if ("{{ .Language.Lang }}" === targetLang) { window.location.href = "{{ .Permalink }}"; }
-            {{ end }}{{ end }}
-        });
+        const translations = {
+            {{ range .AllTranslations }} "{{ .Language.Lang }}": "{{ .Permalink }}", {{ end }}
+            "{{ .Language.Lang }}": "{{ .Permalink }}"
+        };
 
-        // 3. PRÓBA PRZYWRÓCENIA ZOOMU PO ZAŁADOWANIU (tylko na mobile)
-        window.addEventListener('load', () => {
-            const savedZoom = sessionStorage.getItem('savedZoom');
-            if (savedZoom && window.visualViewport) {
-                // Czyścimy od razu, by nie psuć zwykłego odświeżania
-                sessionStorage.removeItem('savedZoom');
-                // Uwaga: Wiele przeglądarek blokuje automatyczny zoom ze względów bezpieczeństwa,
-                // ale próba ustawienia scrolla pomaga utrzymać kontekst widzenia.
-                window.scrollTo(sessionStorage.getItem('savedScrollX') || 0, sessionStorage.getItem('savedScrollY') || 0);
+        langToggle.addEventListener("change", async () => {
+            const targetLang = langToggle.checked ? "pl" : "en";
+            const url = translations[targetLang];
+            if (!url) return;
+
+            try {
+                // Pobieramy treść z innej wersji językowej w tle
+                const response = await fetch(url);
+                const htmlText = await response.text();
+                const parser = new DOMParser();
+                const newDoc = parser.parseFromString(htmlText, 'text/html');
+
+                // Podmieniamy tylko kluczowe kontenery tekstowe
+                // Dzięki temu przeglądarka nie przeładowuje okna i ZACHOWUJE ZOOM
+                document.getElementById('dynamic-bio').innerHTML = newDoc.getElementById('dynamic-bio').innerHTML;
+                document.getElementById('dynamic-content').innerHTML = newDoc.getElementById('dynamic-content').innerHTML;
+                document.getElementById('dynamic-menu').innerHTML = newDoc.getElementById('dynamic-menu').innerHTML;
+                
+                // Aktualizujemy adres URL w pasku przeglądarki bez odświeżania strony
+                window.history.pushState({}, '', url);
+                document.documentElement.lang = targetLang;
+            } catch (err) {
+                // W razie problemu z siecią - standardowe przeładowanie (bezpiecznik)
+                window.location.href = url;
             }
         });
     </script>
