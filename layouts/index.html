@@ -94,6 +94,9 @@
             line-height: 1.5;
             font-style: italic;
             max-width: 550px; 
+            /* Nowości na rok 2026 poprawiające typografię: */
+            text-wrap: balance;     /* Automatycznie wyrównuje długość linii, by uniknąć "schodków" */
+            overflow-wrap: anywhere; /* Zapobiega wychodzeniu tekstu poza kontener przy dużym zoomie */
         }
 
         .control-group { display: flex; align-items: center; gap: 6px; }
@@ -197,7 +200,14 @@
                 const parser = new DOMParser();
                 const newDoc = parser.parseFromString(htmlText, 'text/html');
                 
-                document.getElementById('dynamic-bio').innerHTML = newDoc.getElementById('dynamic-bio').innerHTML;
+                // Ta funkcja "skleja" krótkie słowa (i, a, jak, –) z następnym wyrazem
+                function fixSierotki(text) {
+                    return text.replace(/ (i|a|z|o|u|w|jak|–) /gi, ' $1&nbsp;');
+                }
+
+                // Znajdź miejsce w swoim langToggle.addEventListener, gdzie podmieniasz bio:
+                const newBioHTML = newDoc.getElementById('dynamic-bio').innerHTML;
+                document.getElementById('dynamic-bio').innerHTML = fixSierotki(newBioHTML);
                 document.getElementById('dynamic-content').innerHTML = newDoc.getElementById('dynamic-content').innerHTML;
                 document.getElementById('dynamic-menu').innerHTML = newDoc.getElementById('dynamic-menu').innerHTML;
                 
