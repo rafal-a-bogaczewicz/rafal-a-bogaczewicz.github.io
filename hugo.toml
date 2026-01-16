@@ -2,12 +2,11 @@ baseURL = 'https://rafal-a-bogaczewicz.github.io'
 languageCode = 'pl'
 title = 'Rafał A. Bogaczewicz'
 
-# Budujemy ab initio, więc nie potrzebujemy zewnętrznego motywu
 theme = []
 
 [params]
   morska_zielen = "#16a085"
-  bio = "Fizyk teoretyk. High Value Man. Tradycyjne wartości."
+  bio = "Fizyk teoretyk. Specjalista w zakresie metod ab initio i modelowania kwantowego."
 
 [menu]
   [[menu.main]]
@@ -21,4 +20,4 @@ theme = []
 
 [markup]
   [markup.goldmark.renderer]
-    unsafe = true # Pozwala na wstawianie czystego HTML (np. wzorów lub specyficznego formatowania)
+    unsafe = true
