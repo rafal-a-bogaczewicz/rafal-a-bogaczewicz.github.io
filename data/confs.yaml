@@ -1,0 +1,13 @@
+- title: "Nowoczesne metody nauczania fizyki w 2026 roku"
+  event: "Ogólnopolska Konferencja Dydaktyki Fizyki"
+  location: "Wrocław, Polska"
+  date: "2026-01-15"
+  type: "Referat" # lub "Poster", "Zaproszony"
+  link: "https://example.com"
+
+- title: "Acoustic control of quantum dots"
+  event: "International Quantum Optics Conference"
+  location: "Berlin, Niemcy"
+  date: "2025-06-10"
+  type: "Poster"
+  link: ""
