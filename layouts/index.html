@@ -9,16 +9,16 @@
         :root { 
             --gorska-zielen: {{ .Site.Params.gorska_zielen }}; 
             --bg-color: #ffffff;
-            --text-color: #000000; /* Czysta czerń dla imienia i nazwiska */
-            --bio-color: #1a1a1a;  /* Bardzo ciemny szary dla bio */
+            --text-color: #000000;
+            --bio-color: #1a1a1a;
             --slider-bg: #ccc;
         }
 
         [data-theme="dark"] {
             --gorska-zielen: #769d7c; 
             --bg-color: #1a1a1a;
-            --text-color: #ffffff; /* Czysta biel w trybie ciemnym */
-            --bio-color: #eeeeee;  /* Jasny szary dla bio w nocy */
+            --text-color: #ffffff;
+            --bio-color: #eeeeee;
             --slider-bg: #444;
         }
 
@@ -36,16 +36,30 @@
         }
 
         header { 
+            position: relative; /* Kluczowe dla pozycjonowania suwaków */
             border-bottom: 3px solid var(--gorska-zielen); 
             padding-bottom: 15px; 
-            margin-bottom: 30px; 
+            margin-bottom: 30px;
+            padding-top: 10px; /* Odstęp od góry strony */
+        }
+
+        /* Suwaki w prawym górnym rogu */
+        .controls-top { 
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex; 
+            gap: 20px; 
+            align-items: center; 
+            z-index: 100;
         }
 
         .header-top {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: flex-start;
             gap: 30px;
+            padding-right: 120px; /* Zapewnia miejsce, by tekst nie wszedł pod suwaki przy dużym zoomie */
         }
 
         .profile-section { 
@@ -67,7 +81,7 @@
         .name-bio-box { display: flex; flex-direction: column; }
 
         h1 { 
-            color: var(--gorska-zielen); /* Imię i nazwisko w Twojej zieleni górskiej */
+            color: var(--gorska-zielen);
             margin: 0; 
             font-size: 1.8rem; 
             line-height: 1.2; 
@@ -78,19 +92,11 @@
             color: var(--bio-color); 
             margin: 15px 0 0 0; 
             line-height: 1.5;
-            font-style: italic; /* Kursywa dla zaciekawienia "wybranki" */
-            max-width: 500px;   /* Ograniczenie szerokości dla lepszej struktury tekstu */
+            font-style: italic;
+            max-width: 550px; 
         }
 
-        .controls-top { 
-            display: flex; 
-            gap: 20px; 
-            align-items: center; 
-            padding-top: 5px; 
-        }
-        
         .control-group { display: flex; align-items: center; gap: 6px; }
-
         .switch { position: relative; display: inline-block; width: 36px; height: 18px; flex-shrink: 0; }
         .switch input { opacity: 0; width: 0; height: 0; }
         .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--slider-bg); transition: .3s; border-radius: 20px; }
@@ -104,9 +110,10 @@
         nav a { text-decoration: none; color: var(--gorska-zielen); font-weight: bold; text-transform: uppercase; font-size: 14px; }
 
         @media (max-width: 600px) {
-            .header-top { flex-direction: column; align-items: center; text-align: center; }
+            header { padding-top: 40px; } /* Miejsce na suwaki nad zdjęciem na mobile */
+            .header-top { padding-right: 0; flex-direction: column; align-items: center; text-align: center; }
             .profile-section { flex-direction: column; align-items: center; gap: 15px; }
-            .controls-top { width: 100%; justify-content: center; margin-top: 10px; }
+            .controls-top { width: 100%; justify-content: center; }
             h1 { font-size: 1.5rem; }
             .bio { max-width: 100%; }
         }
@@ -114,32 +121,32 @@
 </head>
 <body>
     <header>
+        <!-- Suwaki przeniesione na górę dla poprawnego pozycjonowania absolute -->
+        <div class="controls-top">
+            <div class="control-group">
+                <span class="icon">🇺🇸</span>
+                <label class="switch">
+                    <input type="checkbox" id="lang-toggle" {{ if eq .Language.Lang "pl" }}checked{{ end }}>
+                    <span class="slider"></span>
+                </label>
+                <span class="icon">🇵🇱</span>
+            </div>
+            <div class="control-group">
+                <span class="icon">☀️</span>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="icon">🌙</span>
+            </div>
+        </div>
+
         <div class="header-top">
             <div class="profile-section">
                 <img src="/images/profil.jpg" alt="Rafał A. Bogaczewicz" class="profile-img">
                 <div class="name-bio-box">
                     <h1>{{ .Site.Title }}</h1>
-                    <!-- Ten kontener wyświetli Twój nowy napis z hugo.toml -->
                     <div id="dynamic-bio" class="bio">{{ .Param "bio" }}</div>
-                </div>
-            </div>
-
-            <div class="controls-top">
-                <div class="control-group">
-                    <span class="icon">🇺🇸</span>
-                    <label class="switch">
-                        <input type="checkbox" id="lang-toggle" {{ if eq .Language.Lang "pl" }}checked{{ end }}>
-                        <span class="slider"></span>
-                    </label>
-                    <span class="icon">🇵🇱</span>
-                </div>
-                <div class="control-group">
-                    <span class="icon">☀️</span>
-                    <label class="switch">
-                        <input type="checkbox" id="theme-toggle">
-                        <span class="slider"></span>
-                    </label>
-                    <span class="icon">🌙</span>
                 </div>
             </div>
         </div>
@@ -159,11 +166,10 @@
     </main>
 
     <script>
-        // MOTYW
+        // Sekcja script pozostaje bez zmian (Motyw i AJAX językowy)
         const themeToggle = document.getElementById("theme-toggle");
         const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         
-        // Inicjalizacja stanu suwaka motywu
         if (currentTheme === "dark") { 
             document.documentElement.setAttribute("data-theme", "dark"); 
             themeToggle.checked = true; 
@@ -175,7 +181,6 @@
             localStorage.setItem("theme", newMode);
         });
 
-        // JĘZYK - PODMIANA TREŚCI (BEZ RESETU ZOOMU)
         const langToggle = document.getElementById("lang-toggle");
         const translations = {
             {{ range .AllTranslations }} "{{ .Language.Lang }}": "{{ .Permalink }}", {{ end }}
@@ -192,7 +197,6 @@
                 const parser = new DOMParser();
                 const newDoc = parser.parseFromString(htmlText, 'text/html');
                 
-                // Kluczowa podmiana tekstu Bio
                 document.getElementById('dynamic-bio').innerHTML = newDoc.getElementById('dynamic-bio').innerHTML;
                 document.getElementById('dynamic-content').innerHTML = newDoc.getElementById('dynamic-content').innerHTML;
                 document.getElementById('dynamic-menu').innerHTML = newDoc.getElementById('dynamic-menu').innerHTML;
