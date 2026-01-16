@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <title>{{ .Site.Title }}</title>
     <style>
         :root { 
@@ -11,6 +12,7 @@
             --text-color: #2c3e50;
             --bio-color: #7f8c8d;
             --slider-bg: #ccc;
+            --nav-height: 44px; /* Stała wysokość - klucz do braku skakania */
         }
 
         [data-theme="dark"] {
@@ -20,37 +22,36 @@
             --slider-bg: #444;
         }
 
-        /* Stabilizacja przewijania na PC i Mobile */
-        html { overflow-y: scroll; }
+        html { overflow-y: scroll; } /* Stały pasek przewijania */
 
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             max-width: 900px; 
             margin: 40px auto; 
             padding: 0 20px; 
-            line-height: 1.6; 
             color: var(--text-color); 
             background-color: var(--bg-color);
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.2s;
+            -webkit-text-size-adjust: 100%; /* Fix dla mobile */
         }
 
         header { 
             border-bottom: 3px solid var(--morska-zielen); 
-            padding-bottom: 10px; 
+            padding-bottom: 5px; 
             margin-bottom: 30px; 
         }
 
-        h1 { color: var(--morska-zielen); margin-bottom: 5px; }
-        .bio { font-size: 1.2em; color: var(--bio-color); margin-bottom: 15px; min-height: 1.5em; }
+        h1 { color: var(--morska-zielen); margin-bottom: 5px; line-height: 1.2; }
+        .bio { font-size: 1.1em; color: var(--bio-color); margin-bottom: 10px; height: 1.5em; overflow: hidden; }
         
-        /* NAWIGACJA - ELIMINACJA SKAKANIA */
+        /* NAWIGACJA - BLOKADA WYSOKOŚCI */
         nav { 
             display: flex; 
             align-items: center; 
             justify-content: space-between;
             width: 100%; 
-            flex-wrap: wrap; /* Pozwala na przejście do nowej linii na mobile */
-            gap: 15px;
+            height: var(--nav-height);
+            position: relative;
         }
         
         .menu-left { 
@@ -58,8 +59,7 @@
             padding: 0; 
             margin: 0; 
             display: flex; 
-            gap: 25px; 
-            white-space: nowrap; /* Napisy nie łamią się do nowej linii */
+            gap: 20px;
         }
         
         .menu-left a { 
@@ -67,59 +67,43 @@
             color: var(--morska-zielen); 
             font-weight: bold; 
             text-transform: uppercase;
+            line-height: var(--nav-height); /* Tekst idealnie wycentrowany pionowo */
+            display: block;
+            font-size: 14px;
         }
 
         .controls-right { 
             display: flex; 
-            gap: 20px; 
+            gap: 15px; 
             align-items: center; 
-            margin-left: auto; /* Na PC wypycha do prawej */
+            height: var(--nav-height);
         }
         
-        .control-group { 
-            display: flex; 
-            align-items: center; 
-            gap: 8px; 
-            white-space: nowrap;
-        }
+        .control-group { display: flex; align-items: center; gap: 6px; }
 
         /* Switch Style */
-        .switch { position: relative; display: inline-block; width: 40px; height: 20px; flex-shrink: 0; }
+        .switch { position: relative; display: inline-block; width: 36px; height: 18px; flex-shrink: 0; }
         .switch input { opacity: 0; width: 0; height: 0; }
-        
-        .slider {
-            position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
-            background-color: var(--slider-bg);
-            transition: .4s; border-radius: 20px;
-        }
-        
-        .slider:before {
-            position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px;
-            background-color: white;
-            transition: .4s; border-radius: 50%;
-        }
-        
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--slider-bg); transition: .3s; border-radius: 20px; }
+        .slider:before { position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px; background-color: white; transition: .3s; border-radius: 50%; }
         input:checked + .slider { background-color: var(--morska-zielen); }
-        input:checked + .slider:before { transform: translateX(20px); }
-        
-        .icon { font-size: 1.3rem; user-select: none; line-height: 1; }
+        input:checked + .slider:before { transform: translateX(18px); }
+        .icon { font-size: 1.2rem; user-select: none; line-height: 1; }
 
-        /* POPRAWKI DLA SMARTFONÓW */
+        /* MOBILE FIX */
         @media (max-width: 600px) {
             nav {
-                justify-content: center; /* Na małych ekranach centrujemy bazę */
+                height: 80px; /* Stała, podwójna wysokość dla dwóch rzędów */
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
             }
-            .menu-left {
+            .menu-left { height: 40px; }
+            .controls-right { 
+                height: 40px; 
+                margin-left: auto; /* Dociśnięcie do prawej */
                 width: 100%;
-                justify-content: center; /* Napisy na środku */
-                gap: 15px;
-            }
-            .controls-right {
-                width: 100%;
-                justify-content: center; /* Suwaki pod napisami, wycentrowane dla balansu lub do prawej wg życzenia */
-                /* Jeśli chcesz suwaki zawsze do prawej nawet na mobile, zmień center na flex-end */
-                justify-content: flex-end; 
-                margin-top: 5px;
+                justify-content: flex-end;
             }
         }
     </style>
@@ -134,25 +118,15 @@
                 <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
                 {{ end }}
             </ul>
-
             <div class="controls-right">
-                <!-- Język: USA [wajcha] PL (Patriotyczny wybór) -->
                 <div class="control-group">
                     <span class="icon">🇺🇸</span>
-                    <label class="switch">
-                        <input type="checkbox" id="lang-toggle" {{ if eq .Language.Lang "pl" }}checked{{ end }}>
-                        <span class="slider"></span>
-                    </label>
+                    <label class="switch"><input type="checkbox" id="lang-toggle" {{ if eq .Language.Lang "pl" }}checked{{ end }}><span class="slider"></span></label>
                     <span class="icon">🇵🇱</span>
                 </div>
-
-                <!-- Motyw: Słońce [wajcha] Księżyc -->
                 <div class="control-group">
                     <span class="icon">☀️</span>
-                    <label class="switch">
-                        <input type="checkbox" id="theme-toggle">
-                        <span class="slider"></span>
-                    </label>
+                    <label class="switch"><input type="checkbox" id="theme-toggle"><span class="slider"></span></label>
                     <span class="icon">🌙</span>
                 </div>
             </div>
@@ -167,35 +141,20 @@
     <script>
         // Logika Motywu
         const themeToggle = document.getElementById("theme-toggle");
-        const currentTheme = localStorage.getItem("theme") || 
-                             (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-
-        if (currentTheme === "dark") {
-            document.documentElement.setAttribute("data-theme", "dark");
-            themeToggle.checked = true;
-        }
-
+        const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        if (currentTheme === "dark") { document.documentElement.setAttribute("data-theme", "dark"); themeToggle.checked = true; }
         themeToggle.addEventListener("change", () => {
-            if (themeToggle.checked) {
-                document.documentElement.setAttribute("data-theme", "dark");
-                localStorage.setItem("theme", "dark");
-            } else {
-                document.documentElement.removeAttribute("data-theme");
-                localStorage.setItem("theme", "light");
-            }
+            if (themeToggle.checked) { document.documentElement.setAttribute("data-theme", "dark"); localStorage.setItem("theme", "dark"); }
+            else { document.documentElement.removeAttribute("data-theme"); localStorage.setItem("theme", "light"); }
         });
 
-        // Logika Języka (USA -> PL)
+        // Logika Języka
         const langToggle = document.getElementById("lang-toggle");
         langToggle.addEventListener("change", () => {
             const targetLang = langToggle.checked ? "pl" : "en";
-            {{ if .IsTranslated }}
-                {{ range .AllTranslations }}
-                    if ("{{ .Language.Lang }}" === targetLang) {
-                        window.location.href = "{{ .Permalink }}";
-                    }
-                {{ end }}
-            {{ end }}
+            {{ if .IsTranslated }}{{ range .AllTranslations }}
+            if ("{{ .Language.Lang }}" === targetLang) { window.location.href = "{{ .Permalink }}"; }
+            {{ end }}{{ end }}
         });
     </script>
 </body>
