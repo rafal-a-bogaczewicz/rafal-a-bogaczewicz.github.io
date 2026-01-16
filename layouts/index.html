@@ -20,7 +20,7 @@
             --slider-bg: #444;
         }
 
-        /* 1. Stabilizacja przewijania - zapobiega drganiu strony na boki */
+        /* Stabilizacja przewijania na PC i Mobile */
         html { overflow-y: scroll; }
 
         body { 
@@ -34,7 +34,6 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        /* 2. Stabilizacja nagłówka - stała wysokość dolnego paska */
         header { 
             border-bottom: 3px solid var(--morska-zielen); 
             padding-bottom: 10px; 
@@ -42,36 +41,49 @@
         }
 
         h1 { color: var(--morska-zielen); margin-bottom: 5px; }
-        .bio { font-size: 1.2em; color: var(--bio-color); margin-bottom: 15px; height: 1.5em; }
+        .bio { font-size: 1.2em; color: var(--bio-color); margin-bottom: 15px; min-height: 1.5em; }
         
-        /* 3. Stabilizacja nawigacji - wymuszona wysokość zapobiega "puchnięciu" paska */
+        /* NAWIGACJA - ELIMINACJA SKAKANIA */
         nav { 
             display: flex; 
             align-items: center; 
+            justify-content: space-between;
             width: 100%; 
-            height: 40px; /* Stała wysokość sekcji z linkami i suwakami */
+            flex-wrap: wrap; /* Pozwala na przejście do nowej linii na mobile */
+            gap: 15px;
         }
         
-        .menu-left { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; }
+        .menu-left { 
+            list-style: none; 
+            padding: 0; 
+            margin: 0; 
+            display: flex; 
+            gap: 25px; 
+            white-space: nowrap; /* Napisy nie łamią się do nowej linii */
+        }
+        
         .menu-left a { 
             text-decoration: none; 
             color: var(--morska-zielen); 
             font-weight: bold; 
             text-transform: uppercase;
-            display: inline-block;
-            line-height: 40px; /* Centrowanie tekstu w pionie do wysokości nav */
         }
 
         .controls-right { 
-            margin-left: auto; 
             display: flex; 
             gap: 20px; 
             align-items: center; 
-            height: 40px;
+            margin-left: auto; /* Na PC wypycha do prawej */
         }
         
-        .control-group { display: flex; align-items: center; gap: 8px; }
+        .control-group { 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            white-space: nowrap;
+        }
 
+        /* Switch Style */
         .switch { position: relative; display: inline-block; width: 40px; height: 20px; flex-shrink: 0; }
         .switch input { opacity: 0; width: 0; height: 0; }
         
@@ -91,6 +103,25 @@
         input:checked + .slider:before { transform: translateX(20px); }
         
         .icon { font-size: 1.3rem; user-select: none; line-height: 1; }
+
+        /* POPRAWKI DLA SMARTFONÓW */
+        @media (max-width: 600px) {
+            nav {
+                justify-content: center; /* Na małych ekranach centrujemy bazę */
+            }
+            .menu-left {
+                width: 100%;
+                justify-content: center; /* Napisy na środku */
+                gap: 15px;
+            }
+            .controls-right {
+                width: 100%;
+                justify-content: center; /* Suwaki pod napisami, wycentrowane dla balansu lub do prawej wg życzenia */
+                /* Jeśli chcesz suwaki zawsze do prawej nawet na mobile, zmień center na flex-end */
+                justify-content: flex-end; 
+                margin-top: 5px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -105,6 +136,7 @@
             </ul>
 
             <div class="controls-right">
+                <!-- Język: USA [wajcha] PL (Patriotyczny wybór) -->
                 <div class="control-group">
                     <span class="icon">🇺🇸</span>
                     <label class="switch">
@@ -114,6 +146,7 @@
                     <span class="icon">🇵🇱</span>
                 </div>
 
+                <!-- Motyw: Słońce [wajcha] Księżyc -->
                 <div class="control-group">
                     <span class="icon">☀️</span>
                     <label class="switch">
@@ -132,6 +165,7 @@
     </main>
 
     <script>
+        // Logika Motywu
         const themeToggle = document.getElementById("theme-toggle");
         const currentTheme = localStorage.getItem("theme") || 
                              (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
@@ -151,6 +185,7 @@
             }
         });
 
+        // Logika Języka (USA -> PL)
         const langToggle = document.getElementById("lang-toggle");
         langToggle.addEventListener("change", () => {
             const targetLang = langToggle.checked ? "pl" : "en";
