@@ -1,49 +1,32 @@
 {{ partial "header.html" . }}
-<main id="dynamic-content">
-    <div class="page-content">
-        <h1>{{ .Title }}</h1>
-
-        <!-- Sekcja cytatu (np. Mdr 7, 9) -->
-        {{ if .Params.quote }}
-        <div class="values-header">
-            <div class="quote-text">{{ .Params.quote | safeHTML }}</div>
-            {{ if .Params.quote_ref }}<div class="quote-ref">— {{ .Params.quote_ref }}</div>{{ end }}
-        </div>
-        {{ end }}
-
-        <!-- LISTA PUBLIKACJI (wyświetlana tylko gdy type: "publications") -->
-        {{ if eq .Type "publications" }}
-        <div class="publications-list">
-            {{ if .Site.Data.pubs }}
-                {{ $pubs := .Site.Data.pubs }}
-                {{ $count := len $pubs }}
-                {{ range $index, $element := $pubs }}
-                <div class="pub-item">
-                    <span class="pub-number">({{ sub $count $index }})</span>
-                    <div class="pub-details">
-                        <div class="authors">
-                            {{ $authors := .authors | replace "R. A. Bogaczewicz" "<span class='my-name'>R. A. Bogaczewicz</span>" }}
-                            {{ $authors | safeHTML }}
-                        </div>
-                        <div class="title-line">
-                            <span class="pub-title">{{ .title }},</span>
-                            <a href="{{ .paperurl }}" class="pub-link" target="_blank" rel="noopener">
-                                <i>{{ .venue }}</i> 
-                                {{ if .volume }}<b>{{ .volume }}</b>{{ end }}
-                                {{ if .pages }}, {{ .pages }}{{ end }} 
-                                ({{ dateFormat "2006" .date }}).
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-            {{ end }}
-        </div>
-        {{ end }}
-
-        <div class="markdown-body">
-            {{ .Content }}
-        </div>
+<main>
+    <h1>{{ .Title }}</h1>
+    {{ if .Params.quote }}
+    <div class="values-header">
+        <div style="font-style: italic;">{{ .Params.quote | safeHTML }}</div>
+        {{ if .Params.quote_ref }}<div style="font-weight: bold; opacity: 0.6;">— {{ .Params.quote_ref }}</div>{{ end }}
     </div>
+    {{ end }}
+
+    {{ if eq .Type "publications" }}
+    <div class="publications-list">
+        {{ if .Site.Data.pubs }}
+            {{ $pubs := .Site.Data.pubs }}
+            {{ $count := len $pubs }}
+            {{ range $index, $element := $pubs }}
+            <div class="pub-item">
+                <span class="pub-number">({{ sub $count $index }})</span>
+                <div>
+                    <div>{{ .authors | replace "R. A. Bogaczewicz" "<span class='my-name'>R. A. Bogaczewicz</span>" | safeHTML }}</div>
+                    <a href="{{ .paperurl }}" class="pub-link" target="_blank">
+                        <i>{{ .venue }}</i> {{ if .volume }}<b>{{ .volume }}</b>{{ end }} ({{ dateFormat "2006" .date }}).
+                    </a>
+                </div>
+            </div>
+            {{ end }}
+        {{ end }}
+    </div>
+    {{ end }}
+    <div class="markdown-body">{{ .Content }}</div>
 </main>
 {{ partial "footer.html" . }}
