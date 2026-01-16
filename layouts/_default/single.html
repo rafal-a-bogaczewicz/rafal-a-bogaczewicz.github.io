@@ -3,12 +3,10 @@
   .values-header { font-size: 0.95em; margin-bottom: 40px; border-left: 3px solid var(--gorska-zielen); padding-left: 20px; line-height: 1.5; }
   .quote-text { font-style: italic; color: var(--text-color); margin-bottom: 5px; }
   .quote-ref { font-weight: bold; opacity: 0.6; font-size: 0.85em; }
-
   .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; }
   .pub-number { color: var(--gorska-zielen); min-width: 40px; font-weight: bold; opacity: 0.8; }
   .my-name { text-decoration: none; border-bottom: 1px solid var(--gorska-zielen); color: var(--text-color); }
   .pub-link { color: var(--gorska-zielen); text-decoration: none; font-weight: 500; }
-  .pub-link:hover { text-decoration: underline; }
 </style>
 
 <div class="page-content">
@@ -31,7 +29,6 @@
             <span class="pub-number">({{ sub $count $index }})</span>
             <div class="pub-details">
               <div class="authors">
-                {{/* Kluczowa linia: precyzyjne dopasowanie do Twoich danych */}}
                 {{ $authors := .authors | replace "R. A. Bogaczewicz" "<span class='my-name'>R. A. Bogaczewicz</span>" }}
                 {{ $authors | safeHTML }}
               </div>
@@ -41,7 +38,7 @@
                   <i>{{ .venue }}</i> 
                   {{ if .volume }}<b>{{ .volume }}</b>{{ end }}
                   {{ if .pages }}, {{ .pages }}{{ end }} 
-                  ({{ dateFormat "2006" .date }})
+                  ({{ dateFormat "2006" .date }}). <!-- DODANA KROPKA TUTAJ -->
                 </a>
               </div>
             </div>
