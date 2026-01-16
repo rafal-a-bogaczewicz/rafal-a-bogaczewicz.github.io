@@ -13,7 +13,7 @@
         </div>
         {{ end }}
 
-        {{/* SEKCJA PUBLIKACJI (Bez zmian) */}}
+        {{/* SEKCJA PUBLIKACJI */}}
         {{ if eq .Type "publications" }}
         <div class="publications-list">
             {{ if .Site.Data.pubs }}
@@ -43,16 +43,13 @@
         </div>
         {{ end }}
 
-        {{/* SEKCJA KONFERENCJI - POPRAWIONA LOGIKA DATY I KRAJU */}}
+        {{/* SEKCJA KONFERENCJI */}}
         {{ if eq .Type "conferences" }}
         <div class="conferences-list">
             {{ if .Site.Data.confs }}
-                {{/* Definiujemy nazwy miesięcy raz, aby uniknąć błędów w pętli */}}
                 {{ $polishMonths := dict "1" "stycznia" "2" "lutego" "3" "marca" "4" "kwietnia" "5" "maja" "6" "czerwca" "7" "lipca" "8" "sierpnia" "9" "września" "10" "października" "11" "listopada" "12" "grudnia" }}
-                
                 {{ $confs := sort .Site.Data.confs "date" "desc" }}
                 {{ $count := len $confs }}
-                
                 {{ range $index, $element := $confs }}
                 <div class="pub-item">
                     <span class="pub-number" style="color: var(--gray-ref);">({{ sub $count $index }})</span>
@@ -79,16 +76,10 @@
                                 {{ end }}
                             {{ end }}
 
-                            {{/* Wyliczanie miesiąca */}}
                             {{ $m_num := dateFormat "1" $element.date }}
                             {{ $month_display := "" }}
-                            {{ if eq $.Language.Lang "pl" }}
-                                {{ $month_display = index $polishMonths $m_num }}
-                            {{ else }}
-                                {{ $month_display = dateFormat "January" $element.date }}
-                            {{ end }}
+                            {{ if eq $.Language.Lang "pl" }}{{ $month_display = index $polishMonths $m_num }}{{ else }}{{ $month_display = dateFormat "January" $element.date }}{{ end }}
 
-                            {{/* Wyświetlanie daty */}}
                             {{- if $element.end_date -}}
                                 {{ dateFormat "2" $element.date }}–{{ dateFormat "2" $element.end_date }} {{ $month_display }} {{ dateFormat "2006" $element.end_date }}
                             {{- else -}}
@@ -104,6 +95,31 @@
                             {{- else -}}
                                 .
                             {{- end -}}
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            {{ end }}
+        </div>
+        {{ end }}
+
+        {{/* SEKCJA DYDAKTYKI */}}
+        {{ if eq .Type "teaching" }}
+        <div class="teaching-list">
+            {{ if .Site.Data.teaching }}
+                {{ $items := sort .Site.Data.teaching "date" "desc" }}
+                {{ $count := len $items }}
+                {{ range $index, $element := $items }}
+                <div class="pub-item">
+                    <span class="pub-number" style="color: var(--gray-ref);">({{ sub $count $index }})</span>
+                    <div class="pub-details">
+                        <div class="authors">
+                            <span class="pub-title"><b>
+                                {{ if eq $.Language.Lang "pl" }}{{ $element.semester_pl }}{{ else }}{{ $element.semester_en }}{{ end }}
+                            </b></span>
+                        </div>
+                        <div class="title-line" style="text-align: justify; margin-top: 5px; opacity: 0.9;">
+                            {{ if eq $.Language.Lang "pl" }}{{ $element.desc_pl }}{{ else }}{{ $element.desc_en }}{{ end }}
                         </div>
                     </div>
                 </div>
