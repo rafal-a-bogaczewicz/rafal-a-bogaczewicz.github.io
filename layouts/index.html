@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Site.Title }}</title>
     <style>
-        /* Zmienne kolorów - Tryb Jasny */
         :root { 
             --morska-zielen: {{ .Site.Params.morska_zielen }}; 
             --bg-color: #ffffff;
             --text-color: #2c3e50;
             --bio-color: #7f8c8d;
+            --slider-bg: #ccc;
         }
 
-        /* Zmienne kolorów - Tryb Ciemny */
         [data-theme="dark"] {
             --bg-color: #1a1a1a;
             --text-color: #ecf0f1;
             --bio-color: #bdc3c7;
+            --slider-bg: #444;
         }
 
         body { 
@@ -33,21 +33,32 @@
 
         header { border-bottom: 3px solid var(--morska-zielen); padding-bottom: 20px; margin-bottom: 30px; }
         h1 { color: var(--morska-zielen); margin-bottom: 5px; }
-        .bio { font-size: 1.2em; color: var(--bio-color); }
+        .bio { font-size: 1.2em; color: var(--bio-color); margin-bottom: 15px; }
         
-        nav ul { list-style: none; padding: 0; display: flex; gap: 25px; align-items: center; }
+        nav ul { list-style: none; padding: 0; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
         nav a { text-decoration: none; color: var(--morska-zielen); font-weight: bold; text-transform: uppercase; }
-        nav a:hover { text-decoration: underline; }
-
-        /* Styl przycisku motywu i flag */
-        .theme-toggle { background: none; border: none; cursor: pointer; font-size: 1.4rem; padding: 0; }
-        .lang-link { font-size: 1.2rem; text-decoration: none; }
+        
+        /* Wspólny styl dla suwaków */
+        .control-group { display: flex; align-items: center; gap: 8px; font-size: 1.2rem; }
+        .switch { position: relative; display: inline-block; width: 40px; height: 20px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider {
+            position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
+            background-color: var(--slider-bg); transition: .4s; border-radius: 20px;
+        }
+        .slider:before {
+            position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px;
+            background-color: white; transition: .4s; border-radius: 50%;
+        }
+        input:checked + .slider { background-color: var(--morska-zielen); }
+        input:checked + .slider:before { transform: translateX(20px); }
+        
+        .icon { user-select: none; }
     </style>
 </head>
 <body>
     <header>
         <h1>{{ .Site.Title }}</h1>
-        <!-- Używamy .Param "bio", aby pobierało bio z sekcji [languages] w hugo.toml -->
         <div class="bio">{{ .Param "bio" }}</div>
         <nav>
             <ul>
@@ -55,50 +66,66 @@
                 <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
                 {{ end }}
 
-                <!-- Flagi języków -->
-                {{ range .AllTranslations }}
-                <li>
-                    <a href="{{ .Permalink }}" class="lang-link" title="{{ .Language.LanguageName }}">
-                        {{ if eq .Language.Lang "pl" }}🇵🇱{{ else if eq .Language.Lang "en" }}🇺🇸{{ end }}
-                    </a>
+                <!-- Grupa Językowa: PL [suwak] EN -->
+                <li class="control-group">
+                    <span class="icon">🇵🇱</span>
+                    <label class="switch">
+                        <input type="checkbox" id="lang-toggle" {{ if eq .Language.Lang "en" }}checked{{ end }}>
+                        <span class="slider"></span>
+                    </label>
+                    <span class="icon">🇺🇸</span>
                 </li>
-                {{ end }}
 
-                <!-- Przełącznik Trybu (Słońce/Księżyc) -->
-                <li>
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+                <!-- Grupa Motywu: ☀️ [suwak] 🌙 -->
+                <li class="control-group">
+                    <span class="icon">☀️</span>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="icon">🌙</span>
                 </li>
             </ul>
         </nav>
     </header>
+
     <main>
         {{ .Content }}
         <p>Witaj w moim laboratorium cyfrowym. Sekcje publikacji i konferencji są w przygotowaniu.</p>
     </main>
 
     <script>
-        const btn = document.getElementById("theme-toggle");
+        // --- LOGIKA MOTYWU ---
+        const themeToggle = document.getElementById("theme-toggle");
         const currentTheme = localStorage.getItem("theme") || 
                              (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
-        // Inicjalizacja motywu
+        // Ustawienie początkowe suwaka i atrybutu
         if (currentTheme === "dark") {
             document.documentElement.setAttribute("data-theme", "dark");
-            btn.textContent = "☀️";
+            themeToggle.checked = true;
         }
 
-        // Obsługa kliknięcia
-        btn.addEventListener("click", () => {
-            let theme = document.documentElement.getAttribute("data-theme");
-            if (theme === "dark") {
-                document.documentElement.removeAttribute("data-theme");
-                localStorage.setItem("theme", "light");
-                btn.textContent = "🌙";
-            } else {
+        themeToggle.addEventListener("change", () => {
+            if (themeToggle.checked) {
                 document.documentElement.setAttribute("data-theme", "dark");
                 localStorage.setItem("theme", "dark");
-                btn.textContent = "☀️";
+            } else {
+                document.documentElement.removeAttribute("data-theme");
+                localStorage.setItem("theme", "light");
             }
+        });
+
+        // --- LOGIKA JĘZYKA ---
+        const langToggle = document.getElementById("lang-toggle");
+        langToggle.addEventListener("change", () => {
+            {{ range .AllTranslations }}
+                if (langToggle.checked && "{{ .Language.Lang }}" === "en") {
+                    window.location.href = "{{ .Permalink }}";
+                } else if (!langToggle.checked && "{{ .Language.Lang }}" === "pl") {
+                    window.location.href = "{{ .Permalink }}";
+                }
+            {{ end }}
         });
     </script>
 </body>
