@@ -162,11 +162,9 @@
 
     <main id="dynamic-content">
         {{ .Content }}
-        <p>Witaj w moim laboratorium cyfrowym. Sekcje publikacji i konferencji są w przygotowaniu.</p>
     </main>
 
     <script>
-        // MOTYW
         const themeToggle = document.getElementById("theme-toggle");
         const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         
@@ -181,7 +179,6 @@
             localStorage.setItem("theme", newMode);
         });
 
-        // JĘZYK I PODMIANA TREŚCI (FIXED)
         const langToggle = document.getElementById("lang-toggle");
         const translations = {
             {{ range .AllTranslations }} "{{ .Language.Lang }}": "{{ .Permalink }}", {{ end }}
@@ -191,28 +188,31 @@
         async function loadPage(url, targetLang) {
             try {
                 const response = await fetch(url);
+                if (!response.ok) throw new Error('Network response was not ok');
+                
                 const htmlText = await response.text();
                 const parser = new DOMParser();
                 const newDoc = parser.parseFromString(htmlText, 'text/html');
                 
-                // 1. Podmiana Bio (z zachowaniem twardych spacji)
+                const newContent = newDoc.getElementById('dynamic-content');
+                if (!newContent) {
+                    window.location.href = url; // Fail-safe: jeśli brak ID, ładuj klasycznie
+                    return;
+                }
+
+                document.getElementById('dynamic-content').innerHTML = newContent.innerHTML;
+                
                 const newBio = newDoc.getElementById('dynamic-bio');
                 if (newBio) document.getElementById('dynamic-bio').innerHTML = newBio.innerHTML;
                 
-                // 2. Podmiana Menu (aby linki pasowały do języka)
                 const newMenu = newDoc.getElementById('dynamic-menu');
                 if (newMenu) document.getElementById('dynamic-menu').innerHTML = newMenu.innerHTML;
 
-                // 3. Podmiana Głównej Treści (Publikacje itp.)
-                const newContent = newDoc.getElementById('dynamic-content');
-                if (newContent) document.getElementById('dynamic-content').innerHTML = newContent.innerHTML;
-                
                 window.history.pushState({}, '', url);
                 document.documentElement.lang = targetLang;
-                setupMenuLinks(); // Re-inicjalizacja linków po podmianie menu
+                setupMenuLinks();
             } catch (err) {
-                console.error("Błąd ładowania strony:", err);
-                window.location.href = url;
+                window.location.href = url; // Fail-safe: błąd sieci = przeładowanie
             }
         }
 
@@ -220,7 +220,6 @@
             document.querySelectorAll('nav a').forEach(link => {
                 link.onclick = (e) => {
                     const url = link.getAttribute('href');
-                    // Jeśli to nie jest link zewnętrzny, użyj AJAX
                     if (url.startsWith('/') || url.includes(window.location.hostname)) {
                         e.preventDefault();
                         loadPage(url, document.documentElement.lang);
@@ -234,7 +233,6 @@
             loadPage(translations[targetLang], targetLang);
         });
 
-        // Start linków
         setupMenuLinks();
     </script>
 </body>
