@@ -30,7 +30,7 @@ theme = []
     contentDir = 'content/en'
     weight = 2
     # Prestiżowe tłumaczenie American English (High-Value / Action-oriented)
-    bio = "I am a theoretical physicist exploring the world through both scientific research and wilderness expeditions."
+    bio = "Passionate about discovery&nbsp;– both in research and during exploration."
     [languages.en.menu]
       [[languages.en.menu.main]]
         name = "Publications"
