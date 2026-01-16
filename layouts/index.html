@@ -146,6 +146,7 @@
                 <img src="/images/profil.jpg" alt="Rafał A. Bogaczewicz" class="profile-img">
                 <div class="name-bio-box">
                     <h1>{{ .Site.Title }}</h1>
+                    <!-- BIO wyświetlane dynamicznie z parametrów strony lub strony głównej -->
                     <div id="dynamic-bio" class="bio">{{ .Param "bio" | safeHTML }}</div>
                 </div>
             </div>
@@ -165,6 +166,7 @@
     </main>
 
     <script>
+        // MOTYW
         const themeToggle = document.getElementById("theme-toggle");
         const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         
@@ -179,61 +181,17 @@
             localStorage.setItem("theme", newMode);
         });
 
+        // JĘZYK - KLASYCZNE PRZEŁADOWANIE (Pancerne rozwiązanie)
         const langToggle = document.getElementById("lang-toggle");
         const translations = {
             {{ range .AllTranslations }} "{{ .Language.Lang }}": "{{ .Permalink }}", {{ end }}
             "{{ .Language.Lang }}": "{{ .Permalink }}"
         };
 
-        async function loadPage(url, targetLang) {
-            try {
-                const response = await fetch(url);
-                if (!response.ok) throw new Error('Network response was not ok');
-                
-                const htmlText = await response.text();
-                const parser = new DOMParser();
-                const newDoc = parser.parseFromString(htmlText, 'text/html');
-                
-                const newContent = newDoc.getElementById('dynamic-content');
-                if (!newContent) {
-                    window.location.href = url; // Fail-safe: jeśli brak ID, ładuj klasycznie
-                    return;
-                }
-
-                document.getElementById('dynamic-content').innerHTML = newContent.innerHTML;
-                
-                const newBio = newDoc.getElementById('dynamic-bio');
-                if (newBio) document.getElementById('dynamic-bio').innerHTML = newBio.innerHTML;
-                
-                const newMenu = newDoc.getElementById('dynamic-menu');
-                if (newMenu) document.getElementById('dynamic-menu').innerHTML = newMenu.innerHTML;
-
-                window.history.pushState({}, '', url);
-                document.documentElement.lang = targetLang;
-                setupMenuLinks();
-            } catch (err) {
-                window.location.href = url; // Fail-safe: błąd sieci = przeładowanie
-            }
-        }
-
-        function setupMenuLinks() {
-            document.querySelectorAll('nav a').forEach(link => {
-                link.onclick = (e) => {
-                    const url = link.getAttribute('href');
-                    if (url.startsWith('/') || url.includes(window.location.hostname)) {
-                        e.preventDefault();
-                        loadPage(url, document.documentElement.lang);
-                    }
-                };
-            });
-        }
-
         langToggle.addEventListener("change", () => {
             const targetLang = langToggle.checked ? "pl" : "en";
-            loadPage(translations[targetLang], targetLang);
+            window.location.href = translations[targetLang];
         });
-
-        setupMenuLinks();
     </script>
 </body>
 </html>
