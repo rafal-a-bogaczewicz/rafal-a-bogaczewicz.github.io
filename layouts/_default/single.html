@@ -1,3 +1,4 @@
+{{/* USUNIĘTO STARE ZMIENNE $bio, KTÓRE POWODOWAŁY KONFLIKTY */}}
 {{ partial "header.html" . }}
 
 <main id="dynamic-content">
@@ -22,7 +23,8 @@
                     <span class="pub-number">({{ sub $count $index }})</span>
                     <div class="pub-details">
                         <div class="authors">
-                            {{ $authorList := $element.authors | replace "R. A. Bogaczewicz" "<span class='my-name'>R. A. Bogaczewicz</span>" }}
+                            {{/* Wyróżniamy Twoje nazwisko w pełnej liście autorów */}}
+                            {{ $authorList := $element.authors | replaceRE "R. A. Bogaczewicz" "<span class='my-name'>R. A. Bogaczewicz</span>" }}
                             {{ $authorList | safeHTML }}
                         </div>
                         <div class="title-line">
@@ -42,7 +44,7 @@
         {{ end }}
 
         <div class="markdown-body">
-            {{/* Ostateczny szlif typograficzny dla całej treści Markdown */}}
+            {{/* Globalny filtr typograficzny dla treści Markdown */}}
             {{ .Content | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}
         </div>
     </div>
