@@ -18,3 +18,4 @@
   end_date: "2020-09-17"
   city: "Münster"
   country: "Germany"
+  online: true  # To aktywuje dopisek (on-line) / (held on-line)
