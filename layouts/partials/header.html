@@ -188,19 +188,22 @@
                 <span class="icon">🌙</span>
             </div>
         </div>
-
         <div class="header-main-box">
             <img src="{{ "/images/profil.jpg" | relURL }}" alt="Rafał A. Bogaczewicz" class="profile-img">
             <div class="name-bio-box">
                 <h1 class="notranslate" translate="no">{{ .Site.Title }}</h1>
                 <div class="bio" translate="no">
-                    {{/* OSTATECZNE ROZWIĄZANIE: Pobieramy bio bezpośrednio ze strony głównej aktualnego języka */}}
-                    {{ $bio := .Site.Home.Params.bio }}
+                    {{/* POBIERANIE BIO Z GLOBALNYCH PARAMS - DZIAŁA NA KAŻDEJ PODSTRONIE */}}
+                    {{ $bio := "" }}
+                    {{ if eq .Language.Lang "pl" }}
+                        {{ $bio = .Site.Params.bio_pl }}
+                    {{ else }}
+                        {{ $bio = .Site.Params.bio_en }}
+                    {{ end }}
                     {{ $bio | replaceRE " — " "&nbsp;— " | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}
                 </div>
             </div>
         </div>
-
         <nav translate="no">
             <ul>
                 {{ range .Site.Menus.main }}
