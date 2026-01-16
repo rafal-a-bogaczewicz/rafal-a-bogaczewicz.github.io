@@ -38,28 +38,27 @@
         nav ul { list-style: none; padding: 0; display: flex; gap: 25px; align-items: center; flex-wrap: wrap; }
         nav a { text-decoration: none; color: var(--morska-zielen); font-weight: bold; text-transform: uppercase; }
         
-        /* Styl Suwaków - Neutralny */
         .control-group { display: flex; align-items: center; gap: 10px; }
         .switch { position: relative; display: inline-block; width: 44px; height: 22px; }
         .switch input { opacity: 0; width: 0; height: 0; }
         
         .slider {
             position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
-            background-color: var(--slider-bg); /* Neutralne tło */
+            background-color: var(--slider-bg);
             transition: .4s; border-radius: 22px;
-            border: 1px solid var(--morska-zielen);
         }
         
         .slider:before {
-            position: absolute; content: ""; height: 16px; width: 16px; left: 3px; bottom: 2px;
-            background-color: var(--morska-zielen); /* Kropka ma Twój kolor */
+            position: absolute; content: ""; height: 16px; width: 16px; left: 4px; bottom: 3px;
+            background-color: white;
             transition: .4s; border-radius: 50%;
         }
         
-        /* Przesunięcie kropki, ale TŁO zostaje neutralne */
+        /* Wyróżnienie kolorem morskiej zieleni po przesunięciu w prawo */
+        input:checked + .slider { background-color: var(--morska-zielen); }
         input:checked + .slider:before { transform: translateX(20px); }
         
-        .icon { font-size: 1.3rem; user-select: none; cursor: pointer; }
+        .icon { font-size: 1.3rem; user-select: none; }
     </style>
 </head>
 <body>
@@ -72,18 +71,18 @@
                 <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
                 {{ end }}
 
-                <!-- JĘZYK: PL [wajcha] EN -->
+                <!-- JĘZYK: USA [wajcha] PL (wyróżniony) -->
                 <li class="control-group">
-                    <span class="icon" onclick="location.href='{{ if .IsTranslated }}{{ (index .AllTranslations 0).Permalink }}{{ else }}#{{ end }}'">🇵🇱</span>
+                    <span class="icon">🇺🇸</span>
                     <label class="switch">
-                        <!-- Ten input musi być zawsze widoczny -->
-                        <input type="checkbox" id="lang-toggle" {{ if eq .Language.Lang "en" }}checked{{ end }}>
+                        <!-- Checked oznacza język polski (prawy kierunek) -->
+                        <input type="checkbox" id="lang-toggle" {{ if eq .Language.Lang "pl" }}checked{{ end }}>
                         <span class="slider"></span>
                     </label>
-                    <span class="icon" onclick="location.href='{{ if .IsTranslated }}{{ (index .AllTranslations 0).Permalink }}{{ else }}#{{ end }}'">🇺🇸</span>
+                    <span class="icon">🇵🇱</span>
                 </li>
 
-                <!-- MOTYW: ☀️ [wajcha] 🌙 -->
+                <!-- MOTYW: ☀️ [wajcha] 🌙 (wyróżniony) -->
                 <li class="control-group">
                     <span class="icon">☀️</span>
                     <label class="switch">
@@ -122,12 +121,18 @@
             }
         });
 
-        // --- LOGIKA JĘZYKA (Stabilna) ---
+        // --- LOGIKA JĘZYKA (USA -> PL) ---
         const langToggle = document.getElementById("lang-toggle");
         langToggle.addEventListener("change", () => {
-            // Szukamy permalinka do alternatywnej wersji językowej
+            // Jeśli odznaczono (lewo) -> idź do EN, jeśli zaznaczono (prawo) -> idź do PL
+            const targetLang = langToggle.checked ? "pl" : "en";
+            
             {{ if .IsTranslated }}
-                window.location.href = "{{ (index .AllTranslations 0).Permalink }}";
+                {{ range .AllTranslations }}
+                    if ("{{ .Language.Lang }}" === targetLang) {
+                        window.location.href = "{{ .Permalink }}";
+                    }
+                {{ end }}
             {{ end }}
         });
     </script>
