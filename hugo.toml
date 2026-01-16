@@ -13,8 +13,8 @@ theme = []
     languageName = 'PL'
     contentDir = 'content/pl'
     weight = 1
-    # Bio specyficzne dla języka
-    bio = "Fizyk teoretyk. Specjalista w zakresie metod ab initio i modelowania kwantowego."
+    # Nowe bio z akcentem na wyprawy i odkrywanie świata
+    bio = "Fizyk teoretyk. Specjalista w zakresie metod ab initio. Lubię odkrywać świat, pracując naukowo oraz podczas wypraw."
     [languages.pl.menu]
       [[languages.pl.menu.main]]
         name = "Publikacje"
@@ -29,8 +29,8 @@ theme = []
     languageName = 'EN'
     contentDir = 'content/en'
     weight = 2
-    # Bio specyficzne dla języka
-    bio = "Theoretical Physicist. Expert in ab initio methods and quantum modeling."
+    # American English translation: "exploring" i "expeditions" brzmią bardziej profesjonalnie i męsko
+    bio = "Theoretical Physicist. Expert in ab initio methods. I enjoy exploring the world through scientific research and wilderness expeditions."
     [languages.en.menu]
       [[languages.en.menu.main]]
         name = "Publications"
