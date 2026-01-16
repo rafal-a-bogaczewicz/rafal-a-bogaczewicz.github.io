@@ -13,16 +13,14 @@
         </div>
         {{ end }}
 
+        {{/* SEKCJA PUBLIKACJI */}}
         {{ if eq .Type "publications" }}
         <div class="publications-list">
             {{ if .Site.Data.pubs }}
-                {{/* 1. Pobieramy dane i sortujemy je malejąco po dacie */}}
                 {{ $pubs := sort .Site.Data.pubs "date" "desc" }}
                 {{ $count := len $pubs }}
-                
                 {{ range $index, $element := $pubs }}
                 <div class="pub-item">
-                    {{/* 2. Numeracja: (4), (3), (2), (1) */}}
                     <span class="pub-number">({{ sub $count $index }})</span>
                     <div class="pub-details">
                         <div class="authors">
@@ -37,6 +35,60 @@
                                 {{ if $element.pages }} {{ $element.pages }}{{ end }} 
                                 ({{ dateFormat "2006" $element.date }}).
                             </a>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            {{ end }}
+        </div>
+        {{ end }}
+
+        {{/* SEKCJA KONFERENCJI */}}
+        {{ if eq .Type "conferences" }}
+        <div class="conferences-list">
+            {{ if .Site.Data.confs }}
+                {{ $confs := sort .Site.Data.confs "date" "desc" }}
+                {{ $count := len $confs }}
+                {{ range $index, $element := $confs }}
+                <div class="pub-item">
+                    <span class="pub-number">({{ sub $count $index }})</span>
+                    <div class="pub-details">
+                        <div class="authors">
+                            {{ if $element.title }}
+                                {{/* Tytuł prezentacji jeśli istnieje */}}
+                                <span class="pub-title">{{ $element.title }}</span>
+                            {{ else }}
+                                {{/* Jeśli brak tytułu, nazwa konferencji staje się nagłówkiem */}}
+                                <span class="pub-title">
+                                    {{ if $element.link }}
+                                        <a href="{{ $element.link }}" class="pub-link" target="_blank" rel="noopener"><i>{{ $element.event }}</i></a>
+                                    {{ else }}
+                                        <i>{{ $element.event }}</i>
+                                    {{ end }}
+                                </span>
+                            {{ end }}
+                        </div>
+                        <div class="title-line">
+                            {{/* 1. Tytuł konferencji (linkowany, jeśli był tytuł prezentacji) */}}
+                            {{ if $element.title }}
+                                {{ if $element.link }}
+                                    <a href="{{ $element.link }}" class="pub-link" target="_blank" rel="noopener"><i>{{ $element.event }}</i></a>,
+                                {{ else }}
+                                    <i>{{ $element.event }}</i>,
+                                {{ end }}
+                            {{ end }}
+
+                            {{/* 2. Data od do */}}
+                            {{ if $element.end_date }}
+                                {{ dateFormat "02" $element.date }}–{{ dateFormat "02.01.2006" $element.end_date }},
+                            {{ else }}
+                                {{ dateFormat "02.01.2006" $element.date }},
+                            {{ end }}
+
+                            {{/* 3. Miasto (Kraj) */}}
+                            {{ $element.city }} ({{ $element.country }}).
+
+                            {{ if $element.type }}<br><small style="color: var(--gray-quote)">Typ: {{ $element.type }}</small>{{ end }}
                         </div>
                     </div>
                 </div>
