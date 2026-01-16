@@ -120,7 +120,6 @@
         }
         nav a { text-decoration: none; color: var(--gorska-zielen); font-weight: bold; text-transform: uppercase; font-size: 14px; }
 
-        /* --- STYLE PUBLIKACJI --- */
         .values-header { border-left: 3px solid var(--gorska-zielen); padding-left: 20px; margin-bottom: 40px; }
         .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; line-height: 1.6; }
         .pub-number { color: var(--gorska-zielen); min-width: 40px; font-weight: bold; flex-shrink: 0; }
@@ -188,12 +187,12 @@
                 <span class="icon">🌙</span>
             </div>
         </div>
+
         <div class="header-main-box">
             <img src="{{ "/images/profil.jpg" | relURL }}" alt="Rafał A. Bogaczewicz" class="profile-img">
             <div class="name-bio-box">
                 <h1 class="notranslate" translate="no">{{ .Site.Title }}</h1>
                 <div class="bio" translate="no">
-                    {{/* POBIERANIE BIO Z GLOBALNYCH PARAMS - DZIAŁA NA KAŻDEJ PODSTRONIE */}}
                     {{ $bio := "" }}
                     {{ if eq .Language.Lang "pl" }}
                         {{ $bio = .Site.Params.bio_pl }}
@@ -204,6 +203,7 @@
                 </div>
             </div>
         </div>
+
         <nav translate="no">
             <ul>
                 {{ range .Site.Menus.main }}
