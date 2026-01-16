@@ -27,3 +27,17 @@
   city: "Szczyrk"
   country: "Poland"
   online: true  # To aktywuje dopisek (on-line) / (held on-line)
+
+- event: "Nanophotonics in Toruń"
+  link: "https://nanophotonics.faj.org.pl/"
+  date: "2022-09-18"
+  end_date: "2022-09-21"
+  city: "Toruń"
+  country: "Poland"
+
+- event: "51st International School & Conference on the Physics of Semiconductors (Jaszowiec 2023)"
+  link: "https://www.jaszowiec.edu.pl/2023/"
+  date: "2023-06-17"
+  end_date: "2023-06-23"
+  city: "Szczyrk"
+  country: "Poland"
