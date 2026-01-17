@@ -80,8 +80,8 @@ title: "About Me"
       <a href="https://wppt.pwr.edu.pl" class="pub-link" target="_blank">Faculty of Fundamental Problems of Technology</a> <span class="no-wrap">| Wrocław University of Science and Technology</span>
     </div>
   </li>
-  <li>thesis title: <strong><em>Resonance fluorescence of systems with noise</em></strong></li>
-  <li>supervisor: <strong>Prof. Paweł Machnikowski</strong></li>
+  <li>thesis title: <strong><em>Resonance fluorescence of noisy systems</em></strong></li>
+  <li>supervisor: <strong>prof. Paweł Machnikowski</strong></li>
 </ul>
 
 <div class="flex-row">
@@ -95,7 +95,7 @@ title: "About Me"
     </div>
   </li>
   <li>thesis title: <strong><em>Charge noise influence on the resonance fluorescence spectrum from a&nbsp;quantum dot</em></strong></li>
-  <li>supervisor: <strong>Prof. Paweł Machnikowski</strong></li>
+  <li>supervisor: <strong>prof. Paweł Machnikowski</strong></li>
 </ul>
 
 <div class="flex-row">
@@ -105,7 +105,7 @@ title: "About Me"
   <li>major: electronics and telecommunications</li>
   <li>
     <div class="flex-row">
-      <a href="https://wefim.pwr.edu.pl" class="pub-link" target="_blank">Faculty of Electronics, Photonics and Microsystems</a> <span class="no-wrap">| Wrocław University of Science and Technology</span>
+      <a href="https://wefim.pwr.edu.pl" class="pub-link" target="_blank">Faculty of Microsystem Electronics and Photonics</a> <span class="no-wrap">| Wrocław University of Science and Technology</span>
     </div>
   </li>
   <li>thesis title: <strong><em>Determination of band diagrams of semiconductor heterostructures for photovoltaic applications</em></strong></li>
