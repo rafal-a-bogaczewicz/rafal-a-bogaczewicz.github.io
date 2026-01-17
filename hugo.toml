@@ -34,7 +34,7 @@ theme = []
         url = "/teaching/"
         weight = 4
       [[languages.pl.menu.main]]
-        name = "O mnie / CV"
+        name = "O mnie"
         url = "/about/"
         weight = 5
       [[languages.pl.menu.main]]
