@@ -108,7 +108,7 @@ title: "About Me"
       <a href="https://wefim.pwr.edu.pl/en/" class="pub-link" target="_blank">Faculty of Microsystem Electronics and Photonics</a> <span class="no-wrap">| Wrocław University of Science and Technology</span>
     </div>
   </li>
-  <li>thesis title: <strong><em>Determination of band diagrams of semiconductor heterostructures for photovoltaic applications</em></strong></li>
+  <li>thesis title: <strong><em>Determination of the band structure diagram of semiconductor heterostructures applied in photovoltaics</em></strong></li>
   <li>supervisor: <a href="https://www.popko.wppt.pwr.edu.pl" class="pub-link" target="_blank"><strong>prof. Ewa Płaczek-Popko</strong></a></li>
 </ul>
 
