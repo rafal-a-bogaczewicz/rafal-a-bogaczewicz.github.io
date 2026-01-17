@@ -65,7 +65,7 @@ title: "O mnie"
 <span class="cv-style-header">Umiejętności</span>
 
 **narzędzia i technologie:**
-*   język programowania: C++
+*   język programowania: C++ (+Armadillo)
 *   skład naukowy: LaTeX (Overleaf)
 
 **języki obce:**
