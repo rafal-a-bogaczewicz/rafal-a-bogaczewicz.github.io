@@ -3,6 +3,7 @@ title: ""
 ---
 
 <style>
+  /* Kontener główny - na desktopie rządek, na mobilkach kolumna-odwrócona */
   .intro-container {
     display: flex;
     flex-direction: row;
@@ -11,6 +12,7 @@ title: ""
     margin-bottom: 20px;
   }
 
+  /* Logotypy obok siebie */
   .uni-logos {
     display: flex;
     gap: 20px;
@@ -18,12 +20,14 @@ title: ""
     flex-shrink: 0;
   }
 
+  /* Tekst zajmuje dostępną przestrzeń */
   .intro-text {
     flex: 1;
   }
 
+  /* Wysokość zwiększona o 50% (z 55px na 82.5px) */
   .uni-logo-img {
-    height: 55px; 
+    height: 82.5px; 
     width: auto;
     transition: all 0.3s ease;
   }
@@ -86,7 +90,7 @@ title: ""
 
 **e-mail:** rafal.bogaczewicz<span>@</span>pwr.edu.pl
 
-<a href="https://orcid.org/0000-0001-7148-5250" class="pub-link" target="_blank">ORCID</a> | <a href="https://www.researchgate.net/profile/Rafal_Bogaczewicz" class="pub-link" target="_blank">ResearchGate</a> | <a href="https://pwr-wroc.academia.edu/Rafa%C5%82Bogaczewicz" class="pub-link" target="_blank">Academia.edu</a> | <a href="https://www.linkedin.com/in/rafa%C5%82-bogaczewicz-21a32a385/" class="pub-link" target="_blank">LinkedIn</a>
+<a href="https://orcid.org" class="pub-link" target="_blank">ORCID</a> | <a href="https://www.researchgate.net" class="pub-link" target="_blank">ResearchGate</a> | <a href="https://pwr-wroc.academia.edu" class="pub-link" target="_blank">Academia.edu</a> | <a href="https://www.linkedin.com" class="pub-link" target="_blank">LinkedIn</a>
 
 Instytut Fizyki Teoretycznej | Politechnika Wrocławska
 
