@@ -43,7 +43,7 @@ title: "O mnie"
 
   .skills-grid strong {
     display: inline-block;
-    margin-bottom: 8px; /* Zmień tę wartość, by wyregulować odstęp */
+    margin-bottom: 6px; /* Zmień tę wartość, by wyregulować odstęp */
   }
   
   @media (max-width: 600px) {
