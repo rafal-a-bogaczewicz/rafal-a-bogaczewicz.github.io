@@ -57,10 +57,10 @@ title: "O mnie"
 *   udział w projekcie Narodowego Centrum Nauki prowadzonym przez prof. Pawła Machnikowskiego
 
 **Alexander von Humboldt Research Group Linkage Grant** | 1 lipca 2023 – 31 grudnia 2025
-*   udział w międzynarodowym projekcie badawczym pt. ***Light-matter-sound interaction and quantum optomechanical control of nanosystems***
+*   udział w międzynarodowym projekcie badawczym pt. *Light-matter-sound interaction and quantum optomechanical control of nanosystems*
 
 **Grant NCN Beethoven** | 1 maja 2020 – 30 września 2021
-*   stypendysta w projekcie Narodowego Centrum Nauki pt. ***Spin Qubits in Artificial Molecules***
+*   stypendysta w projekcie Narodowego Centrum Nauki pt. *Spin Qubits in Artificial Molecules*
 
 <span class="cv-style-header">Umiejętności</span>
 
