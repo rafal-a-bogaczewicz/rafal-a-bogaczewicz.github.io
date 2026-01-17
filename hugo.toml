@@ -22,20 +22,20 @@ theme = []
         url = "/"
         weight = 1
       [[languages.pl.menu.main]]
+        name = "O mnie"
+        url = "/about/"
+        weight = 2
+      [[languages.pl.menu.main]]
         name = "Publikacje"
         url = "/publications/"
-        weight = 2
+        weight = 3
       [[languages.pl.menu.main]]
         name = "Konferencje"
         url = "/conferences/"
-        weight = 3
+        weight = 4
       [[languages.pl.menu.main]]
         name = "Dydaktyka"
         url = "/teaching/"
-        weight = 4
-      [[languages.pl.menu.main]]
-        name = "O mnie"
-        url = "/about/"
         weight = 5
       [[languages.pl.menu.main]]
         name = "Pasje"
@@ -52,20 +52,20 @@ theme = []
         url = "/"
         weight = 1
       [[languages.en.menu.main]]
+        name = "About Me"
+        url = "/about/"
+        weight = 2
+      [[languages.en.menu.main]]
         name = "Publications"
         url = "/publications/"
-        weight = 2
+        weight = 3
       [[languages.en.menu.main]]
         name = "Conferences"
         url = "/conferences/"
-        weight = 3
+        weight = 4
       [[languages.en.menu.main]]
         name = "Teaching"
         url = "/teaching/"
-        weight = 4
-      [[languages.en.menu.main]]
-        name = "About Me"
-        url = "/about/"
         weight = 5
       [[languages.en.menu.main]]
         name = "Passions"
