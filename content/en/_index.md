@@ -6,7 +6,7 @@ title: ""
   .intro-container {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 20px;
     align-items: flex-start;
     margin-bottom: 20px;
   }
@@ -23,7 +23,7 @@ title: ""
   }
 
   .uni-logo-img {
-    height: 55px; 
+    height: 70px; 
     width: auto;
     transition: all 0.3s ease;
   }
