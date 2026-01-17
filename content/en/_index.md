@@ -61,7 +61,7 @@ title: ""
 
 <div class="intro-container">
   <div class="uni-logos">
-    <a href="https://pwr.edu.pl" target="_blank">
+    <a href="https://pwr.edu.pl/en/" target="_blank">
         <img src="/images/logopwr.png" alt="WUST Logo" class="uni-logo-img logo-pwr">
     </a>
     <a href="https://www.kft.pwr.edu.pl" target="_blank">
