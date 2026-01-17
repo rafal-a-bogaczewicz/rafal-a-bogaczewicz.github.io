@@ -158,7 +158,7 @@ title: "O mnie"
 <div>
 <strong>narzędzia i technologie:</strong>
 <ul class="cv-list">
-  <li>język programowania: <span class="no-wrap">C++ (+Armadillo)</span></li>
+  <li>język programowania: <span class="no-wrap">C++ (+ biblioteka Armadillo)</span></li>
   <li>skład naukowy: <span class="no-wrap">LaTeX (Overleaf)</span></li>
 </ul>
 </div>
