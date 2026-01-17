@@ -132,10 +132,10 @@ title: "About Me"
 <span class="cv-style-header">Grants & Funding</span>
 
 <div class="flex-row">
-  <strong>NCN <em>Maestro</em> Grant</strong> <span class="no-wrap">| 1 November 2024 – present</span>
+  <strong>National Science Centre (Poland) <em>Maestro</em> Grant</strong> <span class="no-wrap">| 1 November 2024 – present</span>
 </div>
 <ul class="cv-list">
-  <li>scholarship recipient in the NCN project: <a href="https://projekty.ncn.gov.pl/en/index.php?projekt_id=596578" class="pub-link" target="_blank"><strong><em>Quantum acousto-optics of hybrid nanosystems</em></strong></a></li>
+  <li>scholarship recipient in the project: <a href="https://projekty.ncn.gov.pl/en/index.php?projekt_id=596578" class="pub-link" target="_blank"><strong><em>Quantum acousto-optics of hybrid nanosystems</em></strong></a></li>
 </ul>
 
 <div class="flex-row">
@@ -146,10 +146,10 @@ title: "About Me"
 </ul>
 
 <div class="flex-row">
-  <strong>NCN <em>Beethoven</em> Grant</strong> <span class="no-wrap">| 1 May 2020 – 30 September 2021</span>
+  <strong>National Science Centre (Poland) <em>Beethoven</em> Grant</strong> <span class="no-wrap">| 1 May 2020 – 30 September 2021</span>
 </div>
 <ul class="cv-list">
-  <li>scholarship recipient & researcher in the NCN project: <a href="https://projekty.ncn.gov.pl/en/index.php?projekt_id=357111" class="pub-link" target="_blank"><strong><em>Spins qubits in artificial molecules</em></strong></a></li>
+  <li>scholarship recipient & researcher in the project: <a href="https://projekty.ncn.gov.pl/en/index.php?projekt_id=357111" class="pub-link" target="_blank"><strong><em>Spins qubits in artificial molecules</em></strong></a></li>
 </ul>
 
 <span class="cv-style-header">Skills</span>
