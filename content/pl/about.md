@@ -139,10 +139,10 @@ title: "O mnie"
 </ul>
 
 <div class="flex-row">
-  <strong>Alexander von Humboldt Grant</strong> <span class="no-wrap">| 1 lipca 2023 – 31 grudnia 2025</span>
+  <strong>Alexander von Humboldt Research Group Linkage Grant</strong> <span class="no-wrap">| 1 lipca 2023 – 31 grudnia 2025</span>
 </div>
 <ul class="cv-list">
-  <li>wykonawca w projekcie pt. <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong><em>Light-matter-sound interaction and quantum optomechanical control</em></strong></a></li>
+  <li>wykonawca w projekcie pt. <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong><em>Light-matter-sound interaction and quantum optomechanical control of nanosystems</em></strong></a></li>
 </ul>
 
 <div class="flex-row">
