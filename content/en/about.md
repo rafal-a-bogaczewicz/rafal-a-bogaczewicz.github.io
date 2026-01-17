@@ -105,7 +105,7 @@ title: "About Me"
   <li>major: electronics and telecommunications</li>
   <li>
     <div class="flex-row">
-      <a href="https://wefim.pwr.edu.pl" class="pub-link" target="_blank">Faculty of Microsystem Electronics and Photonics</a> <span class="no-wrap">| Wrocław University of Science and Technology</span>
+      <a href="https://wefim.pwr.edu.pl/en/" class="pub-link" target="_blank">Faculty of Microsystem Electronics and Photonics</a> <span class="no-wrap">| Wrocław University of Science and Technology</span>
     </div>
   </li>
   <li>thesis title: <strong><em>Determination of band diagrams of semiconductor heterostructures for photovoltaic applications</em></strong></li>
