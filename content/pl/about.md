@@ -2,13 +2,26 @@
 title: "O mnie"
 ---
 
-## Wykształcenie
+<style>
+  .cv-style-header {
+    display: block;
+    border-bottom: 1px solid var(--gorska-zielen);
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+</style>
+
+<span class="cv-style-header">Wykształcenie</span>
 
 **Studia doktoranckie** | 1 października 2021 – obecnie
 *   dyscyplina naukowa: nauki fizyczne
 *   <a href="https://wppt.pwr.edu.pl" class="pub-link" target="_blank">Instytut Fizyki Teoretycznej</a> | Politechnika Wrocławska
 *   **7 stycznia 2026 r. — złożenie rozprawy doktorskiej** pt. „Rezonansowa fluorescencja emitera kwantowego w&nbsp;ciele stałym z&nbsp;fluktuacjami energii przejścia”
-*   promotor: **prof. dr. hab. inż. Paweł Machnikowski**
+*   promotor: **prof. dr. hab. inż. Pawel Machnikowski**
 
 **Studia magisterskie** | 26 lutego 2020 – 16 lipca 2021
 *   kierunek: inżynieria kwantowa
@@ -30,7 +43,7 @@ title: "O mnie"
 
 ---
 
-## Doświadczenie
+<span class="cv-style-header">Doświadczenie</span>
 
 **Centrum Fizyki Teoretycznej Polskiej Akademii Nauk** | 2 września 2019 – 27 września 2019
 *   staż naukowy (Warszawa)
@@ -41,7 +54,7 @@ title: "O mnie"
 
 ---
 
-## Granty
+<span class="cv-style-header">Granty</span>
 
 **Grant NCN MAESTRO** | 1 października 2021 – obecnie (do 31 marca 2026)
 *   udział w projekcie Narodowego Centrum Nauki prowadzonym przez prof. Pawła Machnikowskiego
@@ -54,7 +67,7 @@ title: "O mnie"
 
 ---
 
-## Umiejętności
+<span class="cv-style-header">Umiejętności</span>
 
 **narzędzia i technologie:**
 *   język programowania: C++
