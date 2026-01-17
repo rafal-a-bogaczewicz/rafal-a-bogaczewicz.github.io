@@ -60,7 +60,7 @@ title: "O mnie"
 *   wykonawca w projekcie pt. <a href="https://pm.kft.pwr.edu.pl/humboldt-linkage-grant/" class="pub-link" target="_blank">*Light-matter-sound interaction and quantum optomechanical control of nanosystems*</a>
 
 **Grant Narodowego Centrum Nauki *Beethoven*** | 1 maja 2020 – 30 września 2021
-*   wykonawca - stypendysta w projekcie Narodowego Centrum Nauki pt. <a href="https://projekty.ncn.gov.pl/index.php?projekt_id=357111" class="pub-link" target="_blank">*Kubity spinowe w sztucznych molekułach*</a>
+*   wykonawca - stypendysta w projekcie NCN pt. <a href="https://projekty.ncn.gov.pl/index.php?projekt_id=357111" class="pub-link" target="_blank">*Kubity spinowe w sztucznych molekułach*</a>
 
 <span class="cv-style-header">Umiejętności</span>
 
