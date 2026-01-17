@@ -142,7 +142,7 @@ title: "About Me"
   <strong>Alexander von Humboldt Research Group Linkage Grant</strong> <span class="no-wrap">| 1 July 2023 – 31 December 2025</span>
 </div>
 <ul class="cv-list">
-  <li>researcher in the project: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong><em>Light-matter-sound interaction and quantum optomechanical control of nanosystems</em></strong></a></li>
+  <li>researcher in the project: <a href="https://pm.kft.pwr.edu.pl/humboldt-linkage-grant/" class="pub-link" target="_blank"><strong><em>Light-matter-sound interaction and quantum optomechanical control of nanosystems</em></strong></a></li>
 </ul>
 
 <div class="flex-row">
