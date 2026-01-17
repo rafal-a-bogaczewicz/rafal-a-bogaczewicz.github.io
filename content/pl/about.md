@@ -14,7 +14,6 @@ title: "O mnie"
     letter-spacing: 0.5px;
   }
 
-  /* Klasa wymuszająca łamanie tylko na małych ekranach */
   .mobile-break {
     display: none;
   }
