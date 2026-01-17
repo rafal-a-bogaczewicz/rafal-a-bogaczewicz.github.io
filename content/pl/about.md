@@ -38,19 +38,19 @@ title: "O mnie"
 *   <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank">Instytut Fizyki Teoretycznej</a> | Politechnika Wrocławska
 *   7 stycznia 2026 r. — <a href="https://bip.pwr.edu.pl/strona-glowna/postepowania-o-nadanie-stopnia-doktora---publikowane-od-2023-r/rafal-bogaczewicz" class="pub-link" target="_blank">złożenie rozprawy doktorskiej</a> 
 *   tytuł pracy: ***Rezonansowa fluorescencja emitera kwantowego w&nbsp;ciele stałym z&nbsp;fluktuacjami energii przejścia***
-*   promotor: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank">**prof. dr. hab. inż. Paweł Machnikowski**</a>
+*   promotor: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank">**prof. dr hab. inż. Paweł Machnikowski**</a>
 
 **Studia magisterskie** | 26 lutego 2020 – 16 lipca 2021
 *   kierunek: inżynieria kwantowa
 *   <a href="https://wppt.pwr.edu.pl" class="pub-link" target="_blank">Wydział Podstawowych Problemów Techniki</a> | Politechnika Wrocławska
 *   tytuł pracy: ***Rezonansowa fluorescencja układów z&nbsp;szumem***
-*   promotor: **prof. dr. hab. inż. Paweł Machnikowski**
+*   promotor: **prof. dr hab. inż. Paweł Machnikowski**
 
 **Studia inżynierskie** | 1 października 2017 – 7 lutego 2020
 *   kierunek: inżynieria kwantowa
 *   <a href="https://wppt.pwr.edu.pl" class="pub-link" target="_blank">Wydział Podstawowych Problemów Techniki</a> | Politechnika Wrocławska
 *   tytuł pracy: ***Wpływ szumu ładunkowego na&nbsp;widmo rezonansowej fluorescencji z&nbsp;kropki kwantowej***
-*   promotor: **prof. dr. hab. inż. Paweł Machnikowski**
+*   promotor: **prof. dr hab. inż. Paweł Machnikowski**
 
 **Studia inżynierskie** | 1 października 2014 – 2 lutego 2018
 *   kierunek: elektronika i telekomunikacja
@@ -65,7 +65,7 @@ title: "O mnie"
 *   opiekun: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"> **dr hab. inż. Remigiusz Augusiak, prof. CFT PAN**</a>
 
 **Instytut Fizyki Teoretycznej PWr** | marzec 2019 - obecnie
-*   współpraca badawcza z&nbsp;**prof. Pawłem Machnikowskim** w&nbsp;zakresie optyki kwantowej ciała stałego
+*   współpraca badawcza z&nbsp;**prof. drem hab. inż. Pawłem Machnikowskim** w&nbsp;zakresie optyki kwantowej ciała stałego
 
 <span class="cv-style-header">Granty</span>
 
