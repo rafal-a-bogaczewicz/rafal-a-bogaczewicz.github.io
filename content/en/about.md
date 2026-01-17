@@ -56,59 +56,59 @@ title: "About me"
 <span class="cv-style-header">Education</span>
 
 <div class="flex-row">
-  <strong>PhD Candidate</strong> <span class="no-wrap">| 1 October 2021 – Present</span>
+  <strong>PhD Candidate</strong> <span class="no-wrap">| 1 October 2021 – present</span>
 </div>
 <ul class="cv-list">
-  <li>Discipline: Physical Sciences</li>
+  <li>discipline: physical sciences</li>
   <li>
     <div class="flex-row">
       <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank">Institute of Theoretical Physics</a> <span class="no-wrap">| Wrocław University of Science and Technology</span>
     </div>
   </li>
-  <li>7 January 2026 — <a href="https://bip.pwr.edu.pl" class="pub-link" target="_blank">Doctoral dissertation submitted</a></li>
-  <li>Thesis title: <strong><em>Resonance fluorescence of a&nbsp;solid-state quantum emitter with transition energy fluctuations</em></strong></li>
-  <li>Supervisor: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong>Prof. Paweł Machnikowski</strong></a></li>
+  <li>7 January 2026 — <a href="https://bip.pwr.edu.pl" class="pub-link" target="_blank">doctoral dissertation submitted</a></li>
+  <li>thesis title: <strong><em>Resonance fluorescence of a&nbsp;solid-state quantum emitter with fluctuating transition energy</em></strong></li>
+  <li>supervisor: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong>prof. Paweł Machnikowski</strong></a></li>
 </ul>
 
 <div class="flex-row">
   <strong>Master of Science (MSc)</strong> <span class="no-wrap">| 26 February 2020 – 16 July 2021</span>
 </div>
 <ul class="cv-list">
-  <li>Major: Quantum Engineering</li>
+  <li>major: quantum engineering</li>
   <li>
     <div class="flex-row">
       <a href="https://wppt.pwr.edu.pl" class="pub-link" target="_blank">Faculty of Fundamental Problems of Technology</a> <span class="no-wrap">| Wrocław University of Science and Technology</span>
     </div>
   </li>
-  <li>Thesis title: <strong><em>Resonance fluorescence of systems with noise</em></strong></li>
-  <li>Supervisor: <strong>Prof. Paweł Machnikowski</strong></li>
+  <li>thesis title: <strong><em>Resonance fluorescence of noisy systems</em></strong></li>
+  <li>supervisor: <strong>prof. Paweł Machnikowski</strong></li>
 </ul>
 
 <div class="flex-row">
   <strong>Bachelor of Science (BSc)</strong> <span class="no-wrap">| 1 October 2017 – 7 February 2020</span>
 </div>
 <ul class="cv-list">
-  <li>Major: Quantum Engineering</li>
+  <li>major: quantum engineering</li>
   <li>
     <div class="flex-row">
       <a href="https://wppt.pwr.edu.pl" class="pub-link" target="_blank">Faculty of Fundamental Problems of Technology</a> <span class="no-wrap">| Wrocław University of Science and Technology</span>
     </div>
   </li>
-  <li>Thesis title: <strong><em>Charge noise influence on the resonance fluorescence spectrum from a&nbsp;quantum dot</em></strong></li>
-  <li>Supervisor: <strong>Prof. Paweł Machnikowski</strong></li>
+  <li>thesis title: <strong><em>Charge noise influence on the resonance fluorescence spectrum from a&nbsp;quantum dot</em></strong></li>
+  <li>supervisor: <strong>prof. Paweł Machnikowski</strong></li>
 </ul>
 
 <div class="flex-row">
   <strong>Bachelor of Science (BSc)</strong> <span class="no-wrap">| 1 October 2014 – 2 February 2018</span>
 </div>
 <ul class="cv-list">
-  <li>Major: Electronics and Telecommunications</li>
+  <li>major: electronics and telecommunications</li>
   <li>
     <div class="flex-row">
       <a href="https://wefim.pwr.edu.pl" class="pub-link" target="_blank">Faculty of Electronics, Photonics and Microsystems</a> <span class="no-wrap">| Wrocław University of Science and Technology</span>
     </div>
   </li>
-  <li>Thesis title: <strong><em>Determination of band diagrams of semiconductor heterostructures for photovoltaic applications</em></strong></li>
+  <li>thesis title: <strong><em>Determination of the band structure diagram of semiconductor heterostructures applied in photovoltaics</em></strong></li>
   <li>Supervisor: <a href="https://www.popko.wppt.pwr.edu.pl" class="pub-link" target="_blank"><strong>Prof. Ewa Płaczek-Popko</strong></a></li>
 </ul>
 
