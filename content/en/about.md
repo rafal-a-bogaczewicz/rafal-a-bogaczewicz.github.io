@@ -119,7 +119,7 @@ title: "About Me"
 </div>
 <ul class="cv-list">
   <li>research internship — theoretical studies on quantum entanglement</li>
-  <li>mentor: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"><strong>. Remigiusz Augusiak</strong></a></li>
+  <li>mentor: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"><strong>prof. Remigiusz Augusiak</strong></a></li>
 </ul>
 
 <div class="flex-row">
