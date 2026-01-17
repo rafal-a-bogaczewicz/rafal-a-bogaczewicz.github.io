@@ -25,9 +25,9 @@ title: ""
     flex: 1;
   }
 
-  /* Wysokość zwiększona o 50% (z 55px na 82.5px) */
+  /* Wysokość */
   .uni-logo-img {
-    height: 82.5px; 
+    height: 75px; 
     width: auto;
     transition: all 0.3s ease;
   }
