@@ -14,8 +14,8 @@ Pracuję w&nbsp;grupie naukowej <a href="https://pm.kft.pwr.edu.pl" class="pub-l
 
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 35px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Kontakt i profile naukowe</span>
 
-**e-mail:** rafal.bogaczewicz@pwr.edu.pl
+**e-mail:** <span style="color: inherit; text-decoration: none; cursor: default;">rafal.bogaczewicz@pwr.edu.pl</span>
 
-<a href="https://orcid.org/0000-0001-7148-5250" class="pub-link" target="_blank">ORCID</a> | <a href="https://www.researchgate.net/profile/Rafal_Bogaczewicz" class="pub-link" target="_blank">ResearchGate</a> | <a href="https://pwr-wroc.academia.edu/Rafa%C5%82Bogaczewicz" class="pub-link" target="_blank">Academia.edu</a> | <a href="https://pl.linkedin.com/in/rafa%C5%82-bogaczewicz-21a32a385" class="pub-link" target="_blank">LinkedIn</a>
+<a href="https://orcid.org" class="pub-link" target="_blank">ORCID</a> | <a href="https://www.researchgate.net" class="pub-link" target="_blank">ResearchGate</a> | <a href="https://pwr-wroc.academia.edu" class="pub-link" target="_blank">Academia.edu</a> | <a href="https://pl.linkedin.com" class="pub-link" target="_blank">LinkedIn</a>
 
 Instytut Fizyki Teoretycznej | Politechnika Wrocławska
