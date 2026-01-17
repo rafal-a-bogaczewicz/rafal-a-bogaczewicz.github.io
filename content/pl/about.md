@@ -60,7 +60,7 @@ title: "O mnie"
 
 <span class="cv-style-header">Doświadczenie</span>
 
-**Centrum Fizyki Teoretycznej PAN (Warszawa)** | 2 września 2019 – 27 września 2019
+**Centrum Fizyki Teoretycznej Polskiej Akademii Nauk** | 2 września 2019 – 27 września 2019
 *   staż naukowy — teoretyczne badania nad splątaniem kwantowym 
 *   opiekun: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"> **dr hab. inż. Remigiusz Augusiak, prof. CFT PAN**</a>
 
