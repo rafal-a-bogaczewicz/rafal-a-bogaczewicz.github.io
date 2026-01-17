@@ -70,7 +70,7 @@ title: "O mnie"
 <span class="cv-style-header">Granty</span>
 
 **Grant Narodowego Centrum Nauki *Maestro*** | 1 listopada 2024 – obecnie (do 31 marca 2026)
-*   stypendysta w projekcie NCN pt. <a href="[https://projekty.ncn.gov.pl](https://projekty.ncn.gov.pl/index.php?projekt_id=596578)" class="pub-link" target="_blank">*Akustooptyka kwantowa nanoukładów hybrydowych*</a>
+*   stypendysta w projekcie NCN pt. <a href="https://projekty.ncn.gov.pl/index.php?projekt_id=596578" class="pub-link" target="_blank">*Akustooptyka kwantowa nanoukładów hybrydowych*</a>
 
 **Alexander von Humboldt Research Group Linkage Grant** | 1 lipca 2023 – 31 grudnia 2025
 *   wykonawca w projekcie pt. <a href="https://pm.kft.pwr.edu.plhumboldt-linkage-grant/" class="pub-link" target="_blank">*Light-matter-sound interaction and quantum optomechanical control of nanosystems*</a>
