@@ -115,11 +115,11 @@ title: "About Me"
 <span class="cv-style-header">Experience</span>
 
 <div class="flex-row">
-  <a href="https://www.cft.edu.pl" class="pub-link" target="_blank"><strong>Center for Theoretical Physics, Polish Academy of Sciences</strong></a> <span class="no-wrap">| 2 September 2019 – 27 September 2019</span>
+  <a href="https://www.cft.edu.pl/en/" class="pub-link" target="_blank"><strong>Center for Theoretical Physics, Polish Academy of Sciences</strong></a> <span class="no-wrap">| 2 September 2019 – 27 September 2019</span>
 </div>
 <ul class="cv-list">
   <li>research internship — theoretical studies on quantum entanglement</li>
-  <li>mentor: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"><strong>Prof. Remigiusz Augusiak</strong></a></li>
+  <li>mentor: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"><strong>prof. Remigiusz Augusiak</strong></a></li>
 </ul>
 
 <div class="flex-row">
