@@ -4,7 +4,7 @@ title: "Passions"
 
 <!-- Introduction -->
 <p style="text-align: left; font-size: 1.1em; margin-bottom: 40px; color: var(--text-color);">
-    <i>One passionate about discovery shall not live by quantum physics alone</i> — the interests below represent my other paths to exploring reality and marveling at its inherent beauty.
+    <i>One passionate about discovery</i> shall not live by quantum physics alone — the interests below represent my other paths to exploring reality and marveling at its inherent beauty.
 </p>
 
 <span class="cv-style-header">Traveling to Captivating Destinations</span>
