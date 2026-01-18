@@ -43,7 +43,7 @@
         </div>
         {{ end }}
 
-        {{/* SEKCJA KONFERENCJI */}}
+        {{/* SEKCJA KONFERENCJI - ZMIANA: id oparty na dacie dla bezpiecznego linkowania */}}
         {{ if eq .Type "conferences" }}
         <div class="conferences-list">
             {{ if .Site.Data.confs }}
@@ -51,7 +51,7 @@
                 {{ $confs := sort .Site.Data.confs "date" "desc" }}
                 {{ $count := len $confs }}
                 {{ range $index, $element := $confs }}
-                <div class="pub-item">
+                <div class="pub-item" id="conf-{{ $element.date }}">
                     <span class="pub-number" style="color: var(--gray-ref);">({{ sub $count $index }})</span>
                     <div class="pub-details">
                         <div class="authors">
@@ -103,7 +103,7 @@
         </div>
         {{ end }}
 
-        {{/* SEKCJA DYDAKTYKI - WYRÓWNANIE DO LEWEJ */}}
+        {{/* SEKCJA DYDAKTYKI */}}
         {{ if eq .Type "teaching" }}
         <div class="teaching-list">
             {{ if .Site.Data.teaching }}
@@ -116,7 +116,6 @@
                                 {{ if eq $.Language.Lang "pl" }}{{ $element.semester_pl }}{{ else }}{{ $element.semester_en }}{{ end }}
                             </b></span>
                         </div>
-                        {{/* ZMIANA: text-align: left zamiast justify */}}
                         <div class="title-line" style="text-align: left; opacity: 0.9; line-height: 1.6;">
                             {{ if eq $.Language.Lang "pl" }}{{ $element.desc_pl | safeHTML }}{{ else }}{{ $element.desc_en }}{{ end }}
                         </div>
