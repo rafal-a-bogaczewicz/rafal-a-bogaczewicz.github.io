@@ -97,8 +97,8 @@ slug: "passions"
   <div>
     <span class="cv-style-header" style="margin-top: 0;">Góry</span>
     <p>Beskidzkie szlaki i&nbsp;cisza szczytów to przestrzeń niezbędna do&nbsp;pracy intelektualnej i&nbsp;budowania charakteru.</p>
-    <img src="/images/gory.jpg" alt="Beskidy" class="img-responsive">
-    <p class="img-caption">Moment kontemplacji na&nbsp;szlaku.</p>
+    <img src="/images/koscielec_selfie.webp" alt="Rafał na Kościelcu" class="img-responsive">
+    <p class="img-caption">Podejście na Kościelec sprzed dekady. Dziś wybieram spokojniejsze szlaki, ale z&nbsp;odpowiednim towarzystwem chętnie wrócę na&nbsp;wyższe granie.</p>
   </div>
 </div>
 
