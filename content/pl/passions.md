@@ -91,7 +91,7 @@ slug: "passions"
   <div>
     <span class="cv-style-header" style="margin-top: 0;">Rower</span>
     <p>Długie trasy przez dolnośląskie niziny to trening samodyscypliny.</p>
-    <img src="/images/rower.jpg" alt="Wyprawa rowerowa - tabliczka Węgry" class="img-responsive">
+    <img src="/images/wegry.webp" alt="Wyprawa rowerowa - tabliczka Węgry" class="img-responsive">
     <p class="img-caption">Wyprawa rowerowa na Węgry (dolnośląskie).</p>
   </div>
   <div>
