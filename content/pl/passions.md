@@ -105,17 +105,17 @@ slug: "passions"
 <p>Odkrywanie złożoności podwodnego świata i&nbsp;zachwyt nad&nbsp;precyzją stworzenia.</p>
 
 <div style="margin-bottom: 25px;">
-    <img src="/images/brela_zachod.webp" alt="Skała w Breli o zachodzie słońca" class="img-responsive">
+    <img src="/images/skala.webp" alt="Skała w Breli o zachodzie słońca" class="img-responsive">
     <p class="img-caption">Skała w Breli (Chorwacja) o&nbsp;zachodzie słońca — punkt orientacyjny dalekich wypraw od&nbsp;brzegu.</p>
 </div>
 
 <div class="passions-grid">
     <div class="passion-item">
-        <img src="/images/lawica_skala.webp" alt="Ławica ryb przy skale" class="img-responsive">
+        <img src="/images/ryby.webp" alt="Ławica ryb przy skale" class="img-responsive">
         <p class="img-caption">Dynamika układów złożonych — ławica ryb przy pionowej ścianie skalnej i&nbsp;dnie.</p>
     </div>
     <div class="passion-item">
-        <img src="/images/rozgwiazda_reka.webp" alt="Czerwona rozgwiazda na dłoni" class="img-responsive">
+        <img src="/images/rozgwiazda.webp" alt="Czerwona rozgwiazda na dłoni" class="img-responsive">
         <p class="img-caption">Spotkanie z&nbsp;precyzją natury na&nbsp;kilku metrach głębokości.</p>
     </div>
 </div>
