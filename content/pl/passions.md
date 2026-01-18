@@ -5,17 +5,19 @@ slug: "passions"
 ---
 
 <style>
-  /* STYL SPÓJNY Z HOME, ABOUT I SYSTEMEM CYTATÓW */
-  .cv-style-header {
+  /* PRESTIŻOWY STYL ADAPTACYJNY */
+  .passions-header {
     display: block;
     border-bottom: 1px solid var(--gorska-zielen);
-    margin-top: 35px;
-    margin-bottom: 15px;
-    font-size: 1.1em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.15em;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--gorska-zielen);
+    letter-spacing: 1.5px; /* Zwiększony odstęp dla efektu premium */
+    
+    /* KLUCZ: W trybie jasnym czarny, w ciemnym biały */
+    color: var(--text-color); 
   }
 
   .passions-grid {
@@ -27,10 +29,10 @@ slug: "passions"
   
   .passions-grid-alt {
     display: grid;
-    gap: 30px;
+    gap: 35px;
     align-items: center;
-    margin-bottom: 40px;
-    margin-top: 20px;
+    margin-bottom: 45px;
+    margin-top: 25px;
   }
 
   .img-responsive {
@@ -39,28 +41,40 @@ slug: "passions"
     border-radius: 8px;
     border: 1px solid var(--gorska-zielen);
     display: block;
+    transition: transform 0.3s ease;
+  }
+
+  /* Subtelny efekt przy najechaniu - High Value Detail */
+  .img-responsive:hover {
+    transform: scale(1.02);
   }
 
   .img-caption {
     font-size: 0.85em;
     font-style: italic;
-    margin-top: 8px;
+    margin-top: 10px;
     color: var(--gray-quote);
     text-align: center;
   }
 
   @media (max-width: 600px) {
-    .passions-grid, .passions-grid-alt { grid-template-columns: 1fr !important; }
+    .passions-grid, .passions-grid-alt {
+      grid-template-columns: 1fr !important;
+    }
     .passions-grid-alt img { order: 2; }
     .passions-grid-alt div { order: 1; }
   }
 </style>
 
-<p style="text-align: center; font-size: 1.1em; margin-bottom: 40px; color: var(--text-color);">
-    Nie samą fizyką teoretyczną żyje <i>pasjonat odkrywania świata</i>, lecz ma też inne zainteresowania:
+<p style="text-align: center; font-size: 1.1em; margin-bottom: 20px; color: var(--text-color);">
+    Nie samą fizyką teoretyczną żyje <i>pasjonat odkrywania świata</i>. 
 </p>
 
-<span class="cv-style-header">Podróże i zwiedzanie ciekawych miejsc</span>
+<p style="text-align: center; font-size: 1.05em; margin-bottom: 40px; color: var(--gray-quote); font-style: italic;">
+    Poniższe pasje mają wspólny mianownik — to inne drogi poznawania rzeczywistości, zachwytu nad jej złożonością i pięknem.
+</p>
+
+<span class="passions-header">Podróże i zwiedzanie ciekawych miejsc</span>
 
 <div class="values-header" style="margin-top: 10px; margin-bottom: 25px;">
     <div class="quote-text">Kto podróżował, pełen jest zaradności, a kto ma wielkie doświadczenie, mądrze przemawiać będzie.</div>
@@ -81,7 +95,7 @@ slug: "passions"
     </div>
 </div>
 
-<span class="cv-style-header">Rower i góry</span>
+<span class="passions-header">Rower i góry</span>
 <p>Trening charakteru, samodyscypliny i pokory wobec sił natury. Cisza szczytów to przestrzeń niezbędna do pracy intelektualnej.</p>
 
 <div class="passions-grid-alt" style="grid-template-columns: 1fr 1.2fr;">
@@ -92,7 +106,7 @@ slug: "passions"
     <img src="/images/gory.jpg" alt="Góry" class="img-responsive">
 </div>
 
-<span class="cv-style-header">Pływanie i snorkeling</span>
+<span class="passions-header">Pływanie i snorkeling</span>
 <p>Odkrywanie złożoności podwodnego świata i zachwyt nad precyzją stworzenia.</p>
 
 <div class="passions-grid-alt" style="grid-template-columns: 1.2fr 1fr;">
@@ -103,7 +117,7 @@ slug: "passions"
     </div>
 </div>
 
-<span class="cv-style-header">Oczarowanie tajemnicą</span>
+<span class="passions-header">Oczarowanie tajemnicą</span>
 
 <p>Mam też inne pasje, ale...</p>
 
