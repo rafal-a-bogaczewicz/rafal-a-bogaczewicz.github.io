@@ -97,8 +97,8 @@ slug: "passions"
   <div>
     <span class="cv-style-header" style="margin-top: 0;">Góry</span>
     <p>Tatrzańskie szlaki i&nbsp;wysokie partie gór to przestrzeń do porządkowania myśli i&nbsp;budowania charakteru.</p>
-    <img src="/images/koscielec_selfie.webp" alt="Rafał na Kościelcu" class="img-responsive">
-    <p class="img-caption">Podejście na Kościelec sprzed dekady. Dziś wybieram spokojniejsze szlaki, ale z&nbsp;odpowiednim towarzystwem chętnie wrócę na&nbsp;wyższe granie.</p>
+    <img src="/images/koscielec.webp" alt="Rafał na Kościelcu" class="img-responsive">
+    <p class="img-caption">Podejście na Kościelec z czasów studenckich.</p>
   </div>
 </div>
 
