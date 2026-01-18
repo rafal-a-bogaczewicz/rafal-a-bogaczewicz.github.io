@@ -1,11 +1,10 @@
 ---
 title: "Pasje"
-date: 2026-01-18
 slug: "passions"
 ---
 
 <style>
-  /* STYL SPÓJNY Z HOME ORAZ ABOUT */
+  /* STYL SPÓJNY Z HOME ORAZ ABOUT - KLUCZOWA ZMIANA KOLORU TEKSTU */
   .cv-style-header {
     display: block;
     border-bottom: 1px solid var(--gorska-zielen);
@@ -15,7 +14,7 @@ slug: "passions"
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--gorska-zielen);
+    color: var(--text-color); /* TUTAJ JEST ZMIANA: kolor tekstu adaptuje się do trybu Dark/Light */
   }
 
   /* Układ siatki dla zdjęć */
@@ -68,7 +67,7 @@ slug: "passions"
     Poniższe zainteresowania to inne ścieżki zgłębiania rzeczywistości i&nbsp;zachwytu nad&nbsp;jej pięknem.
 </p>
 
-<span class="cv-style-header">Podróże i zwiedzanie ciekawych miejsc</span>
+<span class="cv-style-header">Podróże do ciekawych miejsc</span>
 
 <div class="values-header" style="margin-top: 10px; margin-bottom: 25px;">
     <div class="quote-text">Kto podróżował, pełen jest zaradności, a kto ma wielkie doświadczenie, mądrze przemawiać będzie.</div>
