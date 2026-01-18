@@ -34,6 +34,15 @@ slug: "passions"
     margin-top: 20px;
   }
 
+  /* Układ trzech zdjęć obok siebie dla sekcji Pływanie */
+  .triple-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
   .img-responsive {
     width: 100%;
     height: auto;
@@ -52,7 +61,7 @@ slug: "passions"
 
   /* Responsywność dla urządzeń mobilnych */
   @media (max-width: 800px) {
-    .passions-grid, .passion-split-grid {
+    .passions-grid, .passion-split-grid, .triple-grid {
       grid-template-columns: 1fr !important;
       gap: 30px;
     }
@@ -76,7 +85,7 @@ slug: "passions"
         <img src="/images/sansebastian.webp" alt="San Sebastián o zmierzchu" class="img-responsive">
         <p class="img-caption">
             Zwiedzanie San Sebastián po 
-            <a href="/conferences/#conf-2024-07-22" class="pub-link">konferencji</a>.
+            <a href="https://nanoqi-2024.dipc.org/" class="pub-link" target="_blank" rel="noopener">konferencji</a>.
         </p>
     </div>
     <div class="passion-item">
@@ -104,26 +113,25 @@ slug: "passions"
 <span class="cv-style-header">Pływanie</span>
 <p>Odkrywanie złożoności podwodnego świata i&nbsp;zachwyt nad&nbsp;precyzją stworzenia.</p>
 
-<div style="margin-bottom: 25px;">
-    <img src="/images/skala.webp" alt="Skała w Breli o zachodzie słońca" class="img-responsive">
-    <p class="img-caption">Skała w Breli (Chorwacja) o&nbsp;zachodzie słońca — punkt orientacyjny dalekich wypraw od&nbsp;brzegu.</p>
-</div>
-
-<div class="passions-grid">
+<div class="triple-grid">
     <div class="passion-item">
-        <img src="/images/ryby.webp" alt="Ławica ryb przy skale" class="img-responsive">
-        <p class="img-caption">Dynamika układów złożonych — ławica ryb przy pionowej ścianie skalnej i&nbsp;dnie.</p>
+        <img src="/images/skala.webp" alt="Skała w Breli" class="img-responsive">
+        <p class="img-caption">Skała w Breli (Chorwacja) — punkt orientacyjny do&nbsp;wypraw podwodnych.</p>
     </div>
     <div class="passion-item">
-        <img src="/images/rozgwiazda.webp" alt="Czerwona rozgwiazda na dłoni" class="img-responsive">
-        <p class="img-caption">Spotkanie z&nbsp;precyzją natury na&nbsp;kilku metrach głębokości.</p>
+        <img src="/images/ryby.webp" alt="Ławica ryb" class="img-responsive">
+        <p class="img-caption">Ławica ryb <i>Chromis chromis</i> jako przykład układu złożonego.</p>
+    </div>
+    <div class="passion-item">
+        <img src="/images/rozgwiazda.webp" alt="Rozgwiazda na dłoni" class="img-responsive">
+        <p class="img-caption">Spotkanie z&nbsp;rozgwiazdą <i>Echinaster sepositus</i>.</p>
     </div>
 </div>
 
-<span class="cv-style-header">Oczarowanie tajemnicą</span>
-<p>Mam też inne pasje, ale...</p>
+<!-- Pozioma kreska oddzielająca -->
+<hr style="border: 0; border-top: 1px solid var(--gorska-zielen); margin: 60px 0 30px 0; opacity: 0.5;">
 
-<div class="values-header" style="margin-top: 30px; margin-bottom: 50px;">
+<div class="values-header" style="margin-bottom: 60px;">
     <div class="quote-text">Najpiękniejszą rzeczą, jakiej możemy doświadczyć, jest oczarowanie tajemnicą.</div>
     <div class="quote-ref">— <b>Albert Einstein</b></div>
 </div>
