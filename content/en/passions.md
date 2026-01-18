@@ -1,6 +1,10 @@
+---
+title: "Passions"
+---
+
 <!-- Introduction -->
 <p style="text-align: left; font-size: 1.1em; margin-bottom: 40px; color: var(--text-color);">
-    A <i>passion for exploring the world</i> goes far beyond quantum physics — the interests below represent my other paths to understanding reality and marveling at its inherent beauty.
+    <i>One passionate about discovery shall not live by quantum physics alone</i> — the interests below represent my other paths to exploring reality and marveling at its inherent beauty.
 </p>
 
 <span class="cv-style-header">Traveling to Captivating Destinations</span>
@@ -18,7 +22,7 @@
         </p>
     </div>
     <div class="passion-item">
-        <img src="/images/lot.webp" alt="Aerial view of the Bay of Biscay" class="img-responsive">
+        <img src="/images/lot.webp" alt="View of the Bay of Biscay" class="img-responsive">
         <p class="img-caption">A breathtaking view of the Bay of Biscay on the flight home.</p>
     </div>
 </div>
@@ -29,23 +33,23 @@
     <span class="cv-style-header" style="margin-top: 0;">Cycling</span>
     <p>Long-distance rides through the lowlands of Lower Silesia serve as my ultimate training in self-discipline.</p>
     <img src="/images/wegry.webp" alt="Cycling trip - Hungary sign" class="img-responsive">
-    <p class="img-caption">A cycling expedition to "Węgry" (a village in Lower Silesia, Poland).</p>
+    <p class="img-caption">A cycling expedition to "Węgry" (Lower Silesia, Poland).</p>
   </div>
   <div>
     <span class="cv-style-header" style="margin-top: 0;">Mountains</span>
-    <p>The Tatra trails and high-altitude peaks provide the perfect space to organize my thoughts and build character.</p>
-    <img src="/images/koscielec.webp" alt="Rafał on Kościelec" class="img-responsive">
+    <p>The Tatra trails and high peaks provide the perfect space to organize my thoughts and build character.</p>
+    <img src="/images/koscielec.webp" alt="Rafał on Kościeliec" class="img-responsive">
     <p class="img-caption">The view from Kościelec towards Kozi Wierch. A throwback to my university days.</p>
   </div>
 </div>
 
-<span class="cv-style-header">Swimming & Free-diving</span>
+<span class="cv-style-header">Swimming & Underwater Exploration</span>
 <p>Discovering the complexity of the underwater world and admiring the precision of creation.</p>
 
 <div class="triple-grid">
     <div class="passion-item">
-        <img src="/images/skala.webp" alt="The Rock in Brela" class="img-responsive">
-        <p class="img-caption">The Brela Stone (Croatia) — a landmark for my underwater excursions.</p>
+        <img src="/images/skala.webp" alt="Rock in Brela" class="img-responsive">
+        <p class="img-caption">The Brela Stone (Croatia) — a landmark for underwater excursions.</p>
     </div>
     <div class="passion-item">
         <img src="/images/ryby.webp" alt="School of fish" class="img-responsive">
