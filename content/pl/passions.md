@@ -136,6 +136,10 @@ slug: "passions"
 <!-- Pozioma kreska oddzielająca -->
 <hr style="border: 0; border-top: 1px solid var(--gorska-zielen); margin: 60px 0 30px 0; opacity: 0.5;">
 
+<p style="text-align: left; font-size: 1.1em; margin-bottom: 20px; color: var(--text-color);">
+    Mam jeszcze wiele innych pasji, ale...
+</p>
+
 <div class="values-header" style="margin-bottom: 60px;">
     <div class="quote-text">Najpiękniejszą rzeczą, jakiej możemy doświadczyć, jest oczarowanie tajemnicą.</div>
     <div class="quote-ref">— <b>Albert Einstein</b></div>
