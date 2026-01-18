@@ -17,7 +17,7 @@ slug: "passions"
     color: var(--text-color);
   }
 
-  /* Układ siatki dla sekcji Podróże */
+  /* Układ siatki dla sekcji Podróże oraz Pływanie */
   .passions-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -101,14 +101,22 @@ slug: "passions"
   </div>
 </div>
 
-<span class="cv-style-header">Pływanie i snorkeling</span>
+<span class="cv-style-header">Pływanie</span>
 <p>Odkrywanie złożoności podwodnego świata i&nbsp;zachwyt nad&nbsp;precyzją stworzenia.</p>
 
-<div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; align-items: center; margin-bottom: 40px; margin-top: 20px;">
-    <img src="/images/rafa.jpg" alt="Rafa koralowa" class="img-responsive">
-    <div>
-        <h4 style="color: var(--gorska-zielen); margin-top: 0;">Uważność i detal</h4>
-        <p>Eksploracja podwodnego świata uczy dostrzegania systemów, które na&nbsp;pierwszy rzut oka pozostają ukryte.</p>
+<div style="margin-bottom: 25px;">
+    <img src="/images/brela_zachod.webp" alt="Skała w Breli o zachodzie słońca" class="img-responsive">
+    <p class="img-caption">Skała w Breli (Chorwacja) o&nbsp;zachodzie słońca — punkt orientacyjny dalekich wypraw od&nbsp;brzegu.</p>
+</div>
+
+<div class="passions-grid">
+    <div class="passion-item">
+        <img src="/images/lawica_skala.webp" alt="Ławica ryb przy skale" class="img-responsive">
+        <p class="img-caption">Dynamika układów złożonych — ławica ryb przy pionowej ścianie skalnej.</p>
+    </div>
+    <div class="passion-item">
+        <img src="/images/rozgwiazda_reka.webp" alt="Czerwona rozgwiazda na dłoni" class="img-responsive">
+        <p class="img-caption">Spotkanie z&nbsp;precyzją natury na&nbsp;kilku metrach głębokości.</p>
     </div>
 </div>
 
