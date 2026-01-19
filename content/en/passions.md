@@ -47,8 +47,8 @@
         </p>
     </div>
     <div class="passion-item">
-        <img src="/images/lot.webp" alt="View of the Bay of Biscay from the air" class="img-responsive">
-        <p class="img-caption">View of&nbsp;the Bay of&nbsp;Biscay on&nbsp;the way back.</p>
+        <img src="/images/lot.webp" alt="French skies and a moment for reflection on the way home." class="img-responsive">
+        <p class="img-caption">View of&nbsp;the french skies on&nbsp;the way home.</p>
     </div>
 </div>
 
