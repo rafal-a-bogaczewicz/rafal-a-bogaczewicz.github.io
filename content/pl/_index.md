@@ -20,6 +20,11 @@ title: ""
     flex-shrink: 0;
   }
 
+  .no-wrap {
+    white-space: nowrap;
+    display: inline-block;
+  }
+  
   /* Tekst zajmuje dostępną przestrzeń */
   .intro-text {
     flex: 1;
