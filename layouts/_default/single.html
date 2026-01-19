@@ -103,29 +103,6 @@
         </div>
         {{ end }}
 
-        {{/* SEKCJA DYDAKTYKI */}}
-        {{ if eq .Type "teaching" }}
-        <div class="teaching-list">
-            {{ if .Site.Data.teaching }}
-                {{ $items := sort .Site.Data.teaching "date" "desc" }}
-                {{ range $index, $element := $items }}
-                <div class="pub-item" style="display: block; margin-bottom: 30px;">
-                    <div class="pub-details">
-                        <div class="authors" style="margin-bottom: 5px;">
-                            <span class="pub-title" style="font-size: 1.1em;"><b>
-                                {{ if eq $.Language.Lang "pl" }}{{ $element.semester_pl }}{{ else }}{{ $element.semester_en }}{{ end }}
-                            </b></span>
-                        </div>
-                        <div class="title-line" style="text-align: left; opacity: 0.9; line-height: 1.6;">
-                            {{ if eq $.Language.Lang "pl" }}{{ $element.desc_pl | safeHTML }}{{ else }}{{ $element.desc_en }}{{ end }}
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-            {{ end }}
-        </div>
-        {{ end }}
-
         <div class="markdown-body">
             {{ .Content | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}
         </div>
