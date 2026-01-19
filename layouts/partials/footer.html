@@ -5,45 +5,49 @@
     </footer>
 
     <script>
-        // --- MOTYW (DOMYŚLNIE JASNY) ---
+        // --- MOTYW (WYMUSZONY JASNY JAKO DOMYŚLNY) ---
         const themeToggle = document.getElementById("theme-toggle");
         
-        // Sprawdzamy localStorage. Jeśli brak wpisu, ustawiamy 'light' (wymuszony tryb jasny)
-        const currentTheme = localStorage.getItem("theme") || "light";
+        // Pobieramy zapisany motyw. Jeśli go nie ma (null), ustawiamy na sztywno "light"
+        let currentTheme = localStorage.getItem("theme");
 
-        if (currentTheme === "dark") { 
-            document.documentElement.setAttribute("data-theme", "dark"); 
-            themeToggle.checked = true; 
-        } else {
-            // Wymuszamy atrybut light, aby CSS wiedział jak renderować zmienne
-            document.documentElement.setAttribute("data-theme", "light");
-            themeToggle.checked = false;
+        if (!currentTheme) {
+            currentTheme = "light";
         }
 
-        themeToggle.addEventListener("change", () => {
-            const newMode = themeToggle.checked ? "dark" : "light";
-            document.documentElement.setAttribute("data-theme", newMode);
-            localStorage.setItem("theme", newMode);
-        });
+        // Aplikujemy motyw do dokumentu
+        if (currentTheme === "dark") { 
+            document.documentElement.setAttribute("data-theme", "dark"); 
+            if (themeToggle) themeToggle.checked = true; 
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+            if (themeToggle) themeToggle.checked = false;
+        }
+
+        // Obsługa zmiany motywu przez użytkownika
+        if (themeToggle) {
+            themeToggle.addEventListener("change", () => {
+                const newMode = themeToggle.checked ? "dark" : "light";
+                document.documentElement.setAttribute("data-theme", newMode);
+                localStorage.setItem("theme", newMode);
+            });
+        }
 
         // --- JĘZYK ---
         const langToggle = document.getElementById("lang-toggle");
-        
-        // Mapa tłumaczeń aktualnej strony
         const translations = {
             {{ range .AllTranslations }}"{{ .Language.Lang }}": "{{ .Permalink }}",{{ end }}
             "{{ .Language.Lang }}": "{{ .Permalink }}"
         };
 
-        langToggle.addEventListener("change", () => {
-            const isChecked = langToggle.checked; // true = PL, false = EN
-            const targetLang = isChecked ? "pl" : "en";
-            
-            // Jeśli istnieje tłumaczenie dla tej konkretnej podstrony, idź do niego.
-            // W przeciwnym razie wróć do strony głównej danego języka.
-            const targetURL = translations[targetLang] || (targetLang === "pl" ? "/" : "/en/");
-            window.location.href = targetURL;
-        });
+        if (langToggle) {
+            langToggle.addEventListener("change", () => {
+                const isChecked = langToggle.checked; // true = PL, false = EN
+                const targetLang = isChecked ? "pl" : "en";
+                const targetURL = translations[targetLang] || (targetLang === "pl" ? "/" : "/en/");
+                window.location.href = targetURL;
+            });
+        }
     </script>
 </body>
 </html>
