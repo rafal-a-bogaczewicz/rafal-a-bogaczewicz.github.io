@@ -7,7 +7,6 @@ theme = []
 
 [params]
   gorska_zielen = "#4a674f"
-  # Przywrócone biogramy - teraz .Site.Params znów je poprawnie wyświetli
   bio_pl = "Pasjonat odkrywania świata\u00A0— zarówno naukowo, jak i\u00A0podczas wypraw."
   bio_en = "Passionate about discovery\u00A0— both in\u00A0research and during exploration."
 
@@ -16,64 +15,74 @@ theme = []
     languageName = 'PL'
     contentDir = 'content/pl'
     weight = 1
-    # SEO Description PL
     description = "Rafał A. Bogaczewicz — fizyk teoretyk i pasjonat odkrywania świata. Doktorant w Instytucie Fizyki Teoretycznej PWr, badający optykę kwantową ciała stałego."
     [languages.pl.menu]
       [[languages.pl.menu.main]]
+        identifier = "home"
         name = "Start"
         url = "/"
         weight = 1
       [[languages.pl.menu.main]]
+        identifier = "about"
         name = "O mnie"
-        url = "/about/"
+        url = "about"
         weight = 2
       [[languages.pl.menu.main]]
+        identifier = "publications"
         name = "Publikacje"
-        url = "/publications/"
+        url = "publications"
         weight = 3
       [[languages.pl.menu.main]]
+        identifier = "conferences"
         name = "Konferencje"
-        url = "/conferences/"
+        url = "conferences"
         weight = 4
       [[languages.pl.menu.main]]
+        identifier = "teaching"
         name = "Dydaktyka"
-        url = "/teaching/"
+        url = "teaching"
         weight = 5
       [[languages.pl.menu.main]]
+        identifier = "passions"
         name = "Pasje"
-        url = "/passions/"
+        url = "passions"
         weight = 6
 
   [languages.en]
     languageName = 'EN'
     contentDir = 'content/en'
     weight = 2
-    # SEO Description EN
     description = "Rafał A. Bogaczewicz — theoretical physicist and passionate about discovery. PhD student at the Institute of Theoretical Physics (WUST), researching solid-state quantum optics."
     [languages.en.menu]
       [[languages.en.menu.main]]
+        identifier = "home"
         name = "Home"
         url = "/"
         weight = 1
       [[languages.en.menu.main]]
+        identifier = "about"
         name = "About Me"
-        url = "/about/"
+        url = "about"
         weight = 2
       [[languages.en.menu.main]]
+        identifier = "publications"
         name = "Publications"
-        url = "/publications/"
+        url = "publications"
         weight = 3
       [[languages.en.menu.main]]
+        identifier = "conferences"
         name = "Conferences"
-        url = "/conferences/"
+        url = "conferences"
         weight = 4
       [[languages.en.menu.main]]
+        identifier = "teaching"
         name = "Teaching"
-        url = "/teaching/"
+        url = "teaching"
         weight = 5
       [[languages.en.menu.main]]
+        identifier = "passions"
         name = "Passions"
-        url = "/passions/"
+        url = "passions"
         weight = 6
 
 [markup]
