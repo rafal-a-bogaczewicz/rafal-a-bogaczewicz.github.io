@@ -274,11 +274,11 @@
             <ul>
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
-                    {{/* 1. Sprawdzamy czy to fizycznie ta strona */}}
+                    {{/* Sprawdzamy czy link jest aktualną stroną */}}
                     {{ $isCurrent := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
                     {{ if and (eq .URL "/") (eq $currentPage.RelPermalink "/") }}{{ $isCurrent = true }}{{ end }}
 
-                    {{/* 2. Sprawdzamy czy to przycisk Home/Start */}}
+                    {{/* Sprawdzamy czy to przycisk Start/Home */}}
                     {{ $isHomeButton := eq .URL "/" }}
 
                     <li>
