@@ -18,6 +18,11 @@ title: ""
     flex-shrink: 0;
   }
 
+  .no-wrap {
+    white-space: nowrap;
+    display: inline-block;
+  }
+
   .intro-text {
     flex: 1;
   }
