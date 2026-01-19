@@ -91,11 +91,11 @@
     </div>
     <div class="passion-item">
         <img src="/images/ryby.webp" alt="Ławica ryb" class="img-responsive">
-        <p class="img-caption">Ławica ryb <span class="roman">Chromis chromis</span> jako przykład układu złożonego.</p>
+        <p class="img-caption">Ławica ryb <span class="roman"><i>Chromis chromis</i></span> jako przykład układu złożonego.</p>
     </div>
     <div class="passion-item">
         <img src="/images/rozgwiazda.webp" alt="Rozgwiazda na dłoni" class="img-responsive">
-        <p class="img-caption">Spotkanie z&nbsp;rozgwiazdą <span class="roman">Echinaster sepositus</span>.</p>
+        <p class="img-caption">Spotkanie z&nbsp;rozgwiazdą <span class="roman"><i>Echinaster sepositus</i></span>.</p>
     </div>
 </div>
 
