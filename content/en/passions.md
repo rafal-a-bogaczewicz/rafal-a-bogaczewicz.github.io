@@ -90,7 +90,7 @@
     </div>
     <div class="passion-item">
         <img src="/images/ryby.webp" alt="School of fish" class="img-responsive">
-        <p class="img-caption">A school of&nbsp;<i>Chromis chromis</i> as&nbsp;an example of&nbsp;a complex system.</p>
+        <p class="img-caption">Statics of&nbsp;the rock formation and dynamics of&nbsp;the <i>Chromis chromis</i> school.</p>
     </div>
     <div class="passion-item">
         <img src="/images/rozgwiazda.webp" alt="Starfish on a hand" class="img-responsive">
