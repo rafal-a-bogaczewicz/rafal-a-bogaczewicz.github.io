@@ -48,7 +48,7 @@
     </div>
     <div class="passion-item">
         <img src="/images/lot.webp" alt="French skies and a moment for reflection on the way home." class="img-responsive">
-        <p class="img-caption">View of&nbsp;the french skies on&nbsp;the way home.</p>
+        <p class="img-caption">View of&nbsp;the French skies on&nbsp;the way home.</p>
     </div>
 </div>
 
