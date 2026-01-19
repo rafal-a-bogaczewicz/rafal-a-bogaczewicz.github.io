@@ -272,16 +272,22 @@
             <ul>
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
-                    {{/* Sprawdzamy czy link jest aktualną stroną */}}
-                    {{ $isCurrent := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
-                    {{ if and (eq .URL "/") (eq $currentPage.RelPermalink "/") }}{{ $isCurrent = true }}{{ end }}
-
-                    {{/* Sprawdzamy czy to przycisk Start/Home */}}
-                    {{ $isHomeButton := eq .URL "/" }}
+                    {{/* 1. Sprawdzamy, czy ten konkretny element menu to link do strony głównej */}}
+                    {{ $isHomeURL := eq .URL "/" }}
+                    
+                    {{/* 2. Logika aktywności (podkreślenia):
+                       - Jeśli to link Home: musi być na stronie głównej (IsHome).
+                       - Jeśli to inny link: Hugo sprawdza, czy strona pasuje do menu. */}}
+                    {{ $isActive := false }}
+                    {{ if $isHomeURL }}
+                        {{ if $currentPage.IsHome }}{{ $isActive = true }}{{ end }}
+                    {{ else }}
+                        {{ $isActive = $currentPage.IsMenuCurrent "main" . }}
+                    {{ end }}
 
                     <li>
                         <a href="{{ .URL | relLangURL }}" 
-                           class="{{ if $isCurrent }}active-link{{ end }} {{ if $isHomeButton }}home-button{{ end }}">
+                           class="{{ if $isActive }}active-link{{ end }} {{ if $isHomeURL }}home-button{{ end }}">
                             {{ .Name }}
                         </a>
                     </li>
