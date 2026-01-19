@@ -8,6 +8,8 @@
     <meta name="google" content="notranslate">
     <meta name="googlebot" content="notranslate">
     <meta name="robots" content="notranslate">
+    <!-- SEO Description -->
+    <meta name="description" content="{{ .Language.Params.description }}">
 
     {{ range .AllTranslations }}
     <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
@@ -15,6 +17,7 @@
     
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 
+    <!-- Link kanoniczny dla Google -->
     <link rel="canonical" href="{{ .Permalink }}">
     
     <script>
@@ -145,20 +148,18 @@
 
         .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; line-height: 1.6; }
         .pub-number { 
-            color: var(--gray-ref); /* Użycie barwy referencji (ciemniejszy/wyraźniejszy szary) */
+            color: var(--gray-ref); 
             min-width: 45px; 
             font-weight: bold; 
             flex-shrink: 0; 
             margin-right: 5px; 
         }
         
-        /* ZMIANA 1: Brak wytłuszczenia, linia w kolorze tekstu */
         .my-name { 
             border-bottom: 1px solid var(--text-color); 
             font-weight: normal; 
         }
         
-        /* ZMIANA 4, 6, 7: Brak wytłuszczenia w linku publikacji */
         .pub-link { 
             color: var(--gorska-zielen); 
             text-decoration: none; 
@@ -170,10 +171,11 @@
             opacity: 0.8;
         }
         .authors { margin-bottom: 4px; color: var(--text-color); }
-        /* ZMIANA 3: Tytuł bez wytłuszczenia */
         .pub-title { font-weight: normal; }
         
-        .control-group { display: flex; align-items: center; gap: 6px; }
+        .control-group { display: flex; align-items: center; gap: 8px; }
+        .lang-label { font-size: 14px; font-weight: bold; color: var(--gorska-zielen); }
+
         .switch { position: relative; display: inline-block; width: 36px; height: 18px; }
         .switch input { opacity: 0; width: 0; height: 0; }
         .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--slider-bg); transition: .3s; border-radius: 20px; }
@@ -183,7 +185,7 @@
         .icon { font-size: 1.2rem; }
 
         @media (max-width: 850px) {
-            .controls-top { justify-content: flex-start; }
+            .controls-top { justify-content: flex-end; }
         }
 
         @media (max-width: 600px) {
@@ -206,12 +208,12 @@
     <header>
         <div class="controls-top">
             <div class="control-group">
-                <span class="icon">🇺🇸</span>
+                <span class="lang-label">EN</span>
                 <label class="switch">
                     <input type="checkbox" id="lang-toggle" {{ if eq .Language.Lang "pl" }}checked{{ end }}>
                     <span class="slider"></span>
                 </label>
-                <span class="icon">🇵🇱</span>
+                <span class="lang-label">PL</span>
             </div>
             <div class="control-group">
                 <span class="icon">☀️</span>
