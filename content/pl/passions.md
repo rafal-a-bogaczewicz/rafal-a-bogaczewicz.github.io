@@ -1,11 +1,11 @@
 <!-- Wprowadzenie -->
-<p style="text-align: left; font-size: 1.1em; margin-bottom: 25px; color: var(--text-color);">
+<p style="text-align: left; font-size: 1.1em; margin-bottom: 20px; color: var(--text-color);">
     Nie samą fizyką kwantową żyje <i>pasjonat odkrywania świata</i> — poniższe zainteresowania to inne ścieżki zgłębiania rzeczywistości i&nbsp;zachwytu nad&nbsp;jej pięknem.
 </p>
 
-<span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 10px; margin-bottom: 12px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Podróże do ciekawych miejsc</span>
+<span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 10px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Podróże do ciekawych miejsc</span>
 
-<div class="values-header" style="margin-top: 5px; margin-bottom: 20px;">
+<div class="values-header" style="margin-top: 5px; margin-bottom: 15px;">
     <div class="quote-text">Kto podróżował, pełen jest zaradności, a&nbsp;kto ma wielkie doświadczenie, mądrze przemawiać będzie.</div>
     <div class="quote-ref">— <b>Syr 34, 9</b></div>
 </div>
@@ -15,7 +15,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 15px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .img-responsive {
@@ -30,11 +30,12 @@
         font-size: 0.9em;
         margin-top: 6px;
         opacity: 0.8;
+        line-height: 1.4;
     }
 
     @media (max-width: 600px) {
         .travel-grid { grid-template-columns: 1fr; }
-        .passion-split-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+        .passion-split-grid { grid-template-columns: 1fr !important; gap: 15px !important; }
     }
 </style>
 
@@ -51,24 +52,25 @@
     </div>
 </div>
 
-<!-- Sekcja dwukolumnowa: ROWER | GÓRY - maksymalne zagęszczenie -->
+<!-- Sekcja dwukolumnowa: ROWER | GÓRY - podciągnięta pionowo -->
 <div class="passion-split-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 0;">
   <div>
-    <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 10px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Rower</span>
-    <p style="margin-bottom: 10px;">Długie trasy przez dolnośląskie niziny to trening samodyscypliny.</p>
+    <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 8px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Rower</span>
+    <p style="margin-bottom: 8px;">Długie trasy przez dolnośląskie niziny to trening samodyscypliny.</p>
     <img src="/images/wegry.webp" alt="Wyprawa rowerowa - tabliczka Węgry" class="img-responsive">
     <p class="img-caption">Wyprawa rowerowa na&nbsp;Węgry (dolnośląskie).</p>
   </div>
   <div>
-    <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 10px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Góry</span>
-    <p style="margin-bottom: 10px;">Tatrzańskie szlaki i&nbsp;wysokie partie gór to przestrzeń do&nbsp;porządkowania myśli i&nbsp;budowania charakteru.</p>
+    <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 8px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Góry</span>
+    <p style="margin-bottom: 8px;">Tatrzańskie szlaki i&nbsp;wysokie partie gór to przestrzeń do&nbsp;porządkowania myśli i&nbsp;budowania charakteru.</p>
     <img src="/images/koscielec.webp" alt="Rafał na Kościelcu" class="img-responsive">
     <p class="img-caption">Widok z&nbsp;Kościelca na&nbsp;Kozi Wierch. Zdjęcie z&nbsp;czasów studenckich.</p>
   </div>
 </div>
 
-<span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 15px; margin-bottom: 10px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Pływanie</span>
-<p style="margin-bottom: 15px;">Odkrywanie złożoności podwodnego świata i&nbsp;zachwyt nad&nbsp;precyzją stworzenia.</p>
+<!-- Sekcja Pływanie - podciągnięta (margin-top: 10px) -->
+<span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 10px; margin-bottom: 8px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Pływanie</span>
+<p style="margin-bottom: 10px;">Odkrywanie złożoności podwodnego świata i&nbsp;zachwyt nad&nbsp;precyzją stworzenia.</p>
 
 <style>
     .triple-grid {
@@ -96,14 +98,14 @@
     </div>
 </div>
 
-<!-- Maksymalnie podciągnięta kreska i sekcja końcowa -->
-<hr style="border: 0; border-top: 1px solid var(--gorska-zielen); margin: 25px 0 20px 0; opacity: 0.5;">
+<!-- Kreska i cytat Einsteina - podciągnięte -->
+<hr style="border: 0; border-top: 1px solid var(--gorska-zielen); margin: 25px 0 15px 0; opacity: 0.5;">
 
-<p style="text-align: left; font-size: 1.1em; margin-bottom: 15px; color: var(--text-color);">
+<p style="text-align: left; font-size: 1.1em; margin-bottom: 10px; color: var(--text-color);">
     Mam jeszcze wiele innych pasji, ale...
 </p>
 
-<div class="values-header" style="margin-bottom: 40px;">
+<div class="values-header" style="margin-bottom: 30px;">
     <div class="quote-text">Najpiękniejszą rzeczą, jakiej możemy doświadczyć, jest oczarowanie tajemnicą.</div>
     <div class="quote-ref">— <b>Albert Einstein</b></div>
 </div>
