@@ -76,7 +76,7 @@ title: ""
   <div class="intro-text">
     Cześć! Jestem fizykiem teoretykiem, doktorantem w&nbsp;<a href="https://www.kft.pwr.edu.pl" class="pub-link" target="_blank">Instytucie Fizyki Teoretycznej PWr</a>.
     <br><br>
-    Pracuję w&nbsp;grupie naukowej <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank">prof.&nbsp;Pawła Machnikowskiego</a>.
+    Pracuję w&nbsp;grupie naukowej <span class="no-wrap"><a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank">prof.&nbsp;Pawła Machnikowskiego</a></span>.
   </div>
 </div>
 
