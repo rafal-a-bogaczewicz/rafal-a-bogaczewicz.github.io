@@ -6,7 +6,7 @@
   country_pl: "Polska"
   country_en: "Poland"
   
-- event: "6th International Workshop on the Optical Properties of Nanostructures (OPON 2020)"
+- event: "6th International Workshop on the Optical Properties of Nanostructures (OPON&nbsp;2020)"
   link: "http://opon.fuw.edu.pl/"
   date: "2020-02-12"
   end_date: "2020-02-14"
@@ -14,7 +14,7 @@
   country_pl: "Polska"
   country_en: "Poland"
   
-- event: "15th International Conference on Nonlinear Optics and Excitation Kinetics in Semiconductors (NOEKS 15)"
+- event: "15th International Conference on Nonlinear Optics and Excitation Kinetics in&nbsp;Semiconductors (NOEKS 15)"
   link: "https://www.uni-muenster.de/NOEKS15/"
   date: "2020-09-13"
   end_date: "2020-09-17"
@@ -56,7 +56,7 @@
   country_pl: "Niemcy"
   country_en: "Germany"
   
-- event: "7th International Workshop on the Optical Properties of Nanostructures (OPON 2024)"
+- event: "7th International Workshop on the Optical Properties of Nanostructures (OPON&nbsp;2024)"
   link: "https://opon2024.pwr.edu.pl/"
   date: "2024-02-14"
   end_date: "2024-02-16"
@@ -72,7 +72,7 @@
   country_pl: "Hiszpania"
   country_en: "Spain"
   
-- event: "8th International Workshop on the Optical Properties of Nanostructures (OPON 2025)"
+- event: "8th International Workshop on the Optical Properties of Nanostructures (OPON&nbsp;2025)"
   link: "https://www.uni-muenster.de/Physik.FT/opon2025/"
   date: "2025-02-12"
   end_date: "2025-02-14"
@@ -96,7 +96,7 @@
   country_pl: "Polska"
   country_en: "Poland"
 
-- event: "17th International Conference on Nonlinear Optics and Excitation Kinetics in Semiconductors (NOEKS 17)"
+- event: "17th International Conference on Nonlinear Optics and Excitation Kinetics in&nbsp;Semiconductors (NOEKS 17)"
   link: "https://www.uni-marburg.de/en/fb13/semiconductor-photonics/prfolder/copy_of_news/noeks-17"
   date: "2025-09-08"
   end_date: "2025-09-12"
