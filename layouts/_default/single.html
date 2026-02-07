@@ -43,7 +43,7 @@
         </div>
         {{ end }}
 
-        {{/* SEKCJA KONFERENCJI */}}
+{{/* SEKCJA KONFERENCJI */}}
         {{ if eq .Type "conferences" }}
         <div class="conferences-list">
             {{ if .Site.Data.confs }}
@@ -52,7 +52,9 @@
                 {{ $count := len $confs }}
                 {{ range $index, $element := $confs }}
                 <div class="pub-item" id="conf-{{ $element.date }}">
-                    <span class="pub-number" style="color: var(--gray-ref);">({{ sub $count $index }})</span>
+                    <span
+
+ class="pub-number" style="color: var(--gray-ref);">({{ sub $count $index }})</span>
                     <div class="pub-details">
                         <div class="authors">
                             {{ if $element.title }}
@@ -86,8 +88,16 @@
                                 {{ dateFormat "2" $element.date }} {{ $month_display }} {{ dateFormat "2006" $element.date }}
                             {{- end -}},
 
-                            {{- if $element.city -}}
-                                &nbsp;{{ $element.city }} ({{ if eq $.Language.Lang "pl" }}{{ $element.country_pl }}{{ else }}{{ $element.country_en }}{{ end }})
+                            {{- /* NOWA LOGIKA MIASTA */ -}}
+                            {{- $city := "" -}}
+                            {{- if eq $.Language.Lang "pl" -}}
+                                {{- $city = $element.city_pl | default $element.city -}}
+                            {{- else -}}
+                                {{- $city = $element.city_en | default $element.city -}}
+                            {{- end -}}
+
+                            {{- if $city -}}
+                                &nbsp;{{ $city }} ({{ if eq $.Language.Lang "pl" }}{{ $element.country_pl }}{{ else }}{{ $element.country_en }}{{ end }})
                             {{- end -}}
 
                             {{- if $element.online -}}
@@ -102,7 +112,7 @@
             {{ end }}
         </div>
         {{ end }}
-
+        
         <div class="markdown-body">
             {{ .Content | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}
         </div>
