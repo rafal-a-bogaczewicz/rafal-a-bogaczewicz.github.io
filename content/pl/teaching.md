@@ -23,6 +23,7 @@ W&nbsp;bieżącym semestrze prowadzę ćwiczenia do&nbsp;następujących kursów
 
 *   **Fizyka 1A**
 *   **Wstęp do&nbsp;Optyki Kwantowej**
+  
   **Konsultacje**
 
 Szczegółowe informacje, harmonogramy oraz wszystkie materiały do&nbsp;kursów (listy zadań) będą publikowane sukcesywnie w&nbsp;formie plików PDF lub ogłoszeń poniżej.
