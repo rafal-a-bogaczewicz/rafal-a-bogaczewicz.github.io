@@ -12,7 +12,7 @@ In the current semester, I am conducting tutorials for the following courses:
 *   **Physics 1A**
 *   **Introduction to Quantum Optics**
 
-Detailed information, schedules, and all course materials (problem sets) are available on the [**Polish version of this page**]({{< ref "teaching.md" >}}).
+Detailed information, schedules, and all course materials (problem sets) are available on the [Polish version of this page]({{< ref "teaching.md" >}}).
 
 <!-- 
 ARCHIVE: Winter semester 2025/2026
