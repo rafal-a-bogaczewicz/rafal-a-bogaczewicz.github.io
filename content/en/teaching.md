@@ -9,10 +9,12 @@ quote_ref: "St. John Paul II"
     /* Ta reguła zadziała tylko na linki wewnątrz tej konkretnej podstrony */
     .markdown-body a {
         color: var(--gorska-zielen) !important;
-        text-decoration: underline;
+        text-decoration: none !important; /* Usuwa podkreślenie */
+        font-weight: bold; /* Opcjonalnie: pogrubienie, żeby link był widoczny bez podkreślenia */
     }
     .markdown-body a:hover {
         opacity: 0.8;
+        text-decoration: none !important; /* Upewnia się, że po najechaniu też go nie ma */
     }
 </style>
 
