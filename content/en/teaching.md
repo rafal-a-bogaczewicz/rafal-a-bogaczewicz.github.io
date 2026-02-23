@@ -6,15 +6,14 @@ quote_ref: "St. John Paul II"
 ---
 
 <style>
-    /* Ta reguła zadziała tylko na linki wewnątrz tej konkretnej podstrony */
     .markdown-body a {
         color: var(--gorska-zielen) !important;
-        text-decoration: none !important; /* Usuwa podkreślenie */
-        font-weight: bold; /* Opcjonalnie: pogrubienie, żeby link był widoczny bez podkreślenia */
+        text-decoration: none !important; /* Brak podkreślenia na starcie */
+        font-weight: normal !important;   /* Brak pogrubienia */
     }
     .markdown-body a:hover {
+        text-decoration: underline !important; /* Podkreślenie tylko przy najechaniu */
         opacity: 0.8;
-        text-decoration: none !important; /* Upewnia się, że po najechaniu też go nie ma */
     }
 </style>
 
