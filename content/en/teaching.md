@@ -25,7 +25,7 @@ In the current semester, I am conducting recitations for the following courses:
 *   **Physics 1A**
 *   **Introduction to Quantum Optics**
 
-Detailed course materials are available on the [Polish version of this page]({{< ref "teaching.md" >}}).
+Detailed informations and materials are available on the [Polish version of this page]({{< ref "teaching.md" >}}).
 
 <!-- 
 ARCHIVE: Winter semester 2025/2026
