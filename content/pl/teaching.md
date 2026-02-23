@@ -19,7 +19,13 @@ quote_ref: "św. Jan Paweł II"
 
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 10px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Semestr letni 2025/2026</span>
 
-Przerwa dydaktyczna w&nbsp;związku z&nbsp;intensywną realizacją projektów naukowych i&nbsp;pracą badawczą.
+W&nbsp;bieżącym semestrze prowadzę ćwiczenia do&nbsp;następujących kursów:
+
+*   **Fizyka 1A**
+*   **Wstęp do&nbsp;Optyki Kwantowej**
+*   **Konsultacje**
+
+Szczegółowe informacje, harmonogramy oraz wszystkie materiały do&nbsp;kursów (listy zadań) będą publikowane sukcesywnie w&nbsp;formie plików PDF lub ogłoszeń poniżej.
 
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 35px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Doświadczenie</span>
 
