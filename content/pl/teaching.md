@@ -24,6 +24,7 @@ quote_ref: "św. Jan Paweł II"
 *   **Fizyka 1A** (WEFiM)
     - <a href="/pdf/Fizyka_1A_zasady_zaliczenia.pdf" target="_blank">Zasady zaliczenia</a>
     - <a href="/pdf/Lista_1_kinematyka.pdf" target="_blank">Lista 1 - kinematyka</a>
+    
 *   **Wstęp do&nbsp;Optyki Kwantowej** (WPPT)
   
   **Konsultacje**
