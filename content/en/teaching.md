@@ -12,7 +12,7 @@ Conducted recitations:
 *   **Physics 1A**
 *   **Introduction to Quantum Optics**
 
-Detailed information and all course materials (problem sets) are be available on the Polish version of this page.
+Detailed information and all course materials (problem sets) are available on the Polish version of this page.
 
 <!-- 
 ARCHIVE: Winter semester 2025/2026
