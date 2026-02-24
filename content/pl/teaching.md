@@ -21,9 +21,10 @@ quote_ref: "św. Jan Paweł II"
 
 **Prowadzone ćwiczenia**
 
-*   **Fizyka 1A**
+*   **Fizyka 1A** (WEFiM)
     - <a href="/pdf/Fizyka_1A_zasady_zaliczenia.pdf" target="_blank">Zasady zaliczenia</a>
-*   **Wstęp do&nbsp;Optyki Kwantowej**
+    - <a href="/pdf/Lista 1 - kineamtyka.pdf" target="_blank">Lista 1 - kinematyka</a>
+*   **Wstęp do&nbsp;Optyki Kwantowej** (WPPT)
   
   **Konsultacje**
 
