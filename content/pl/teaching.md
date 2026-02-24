@@ -22,7 +22,7 @@ quote_ref: "św. Jan Paweł II"
 **Prowadzone ćwiczenia**
 
 *   **Fizyka 1A**
-    <a href="/pdf/Fizyka_1A_zasady_zaliczenia.pdf" target="_blank">Zasady zaliczenia</a>
+    - <a href="/pdf/Fizyka_1A_zasady_zaliczenia.pdf" target="_blank">Zasady zaliczenia</a>
 *   **Wstęp do&nbsp;Optyki Kwantowej**
   
   **Konsultacje**
