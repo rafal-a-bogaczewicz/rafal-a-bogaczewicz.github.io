@@ -30,17 +30,17 @@ quote_ref: "św. Jan Paweł II"
 *   **Podstawy fizyki klasycznej** (Wydział&nbsp;Matematyki)
     <span class="lit-header">Literatura:</span>
     <div style="margin-top: -16px;"> <!-- Zmniejszone z 2px, żeby książki zostały w tym samym miejscu -->
-        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; L. D. Landau, J. M. Lifszyc, <i style="font-style: italic;">Mechanika</i>, PWN&nbsp;(2020)</span>
+        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; L.&nbsp;D.&nbsp;Landau,&nbsp;J.&nbsp;M.&nbsp;Lifszyc, <i style="font-style: italic;">Mechanika</i>, PWN&nbsp;(2020)</span>
         <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; S. Banach, <i style="font-style: italic;">Mechanika</i>, PWN&nbsp;(1956)</span>
-        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; K. Jezierski, B. Kołodka, K. Sierański<i style="font-style: italic;">Fizyka.&nbsp;Zadania&nbsp;z&nbsp;rozwiązaniami,&nbsp;cz.&nbsp;I</i>, Oficyna&nbsp;Wydawnicza&nbsp;Scripta&nbsp;(1999)</span>
-        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; K. Jezierski, B. Kołodka, K. Sierański<i style="font-style: italic;">Fizyka.&nbsp;Zadania&nbsp;z&nbsp;rozwiązaniami,&nbsp;cz.&nbsp;II</i>, Oficyna&nbsp;Wydawnicza&nbsp;Scripta&nbsp;(2000)</span>
+        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; K.&nbsp;Jezierski, B.&nbsp;Kołodka, K.&nbsp;Sierański<i style="font-style: italic;">Fizyka.&nbsp;Zadania&nbsp;z&nbsp;rozwiązaniami,&nbsp;cz.&nbsp;I</i>, Oficyna&nbsp;Wydawnicza&nbsp;Scripta&nbsp;(1999)</span>
+        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; K.&nbsp;Jezierski, B.&nbsp;Kołodka, K.&nbsp;Sierański<i style="font-style: italic;">Fizyka.&nbsp;Zadania&nbsp;z&nbsp;rozwiązaniami,&nbsp;cz.&nbsp;II</i>, Oficyna&nbsp;Wydawnicza&nbsp;Scripta&nbsp;(2000)</span>
     </div>
     
 *   **Wstęp do&nbsp;optyki kwantowej** (Wydział&nbsp;Podstawowych Problemów Techniki)
     <span class="lit-header">Literatura:</span>
     <div style="margin-top: -16px;"> <!-- Analogiczna zmiana tutaj -->
-        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; J. W. Orland, H. Negele, <i style="font-style: italic;">Quantum&nbsp;Many-Particle&nbsp;Systems</i>, CRC&nbsp;Press&nbsp;(2018)</span>
-        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; F. Schwabl, <i style="font-style: italic;">Advanced&nbsp;Quantum&nbsp;Mechanics</i>, Springer&nbsp;(2008)</span>
+        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; J.&nbsp;&nbsp;Orland, H.&nbsp;Negele, <i style="font-style: italic;">Quantum&nbsp;Many&nbsp;-&nbsp;Particle&nbsp;Systems</i>, CRC&nbsp;Press&nbsp;(2018)</span>
+        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; F.&nbsp;Schwabl, <i style="font-style: italic;">Advanced&nbsp;Quantum&nbsp;Mechanics</i>, Springer&nbsp;(2008)</span>
     </div>
   
   **Konsultacje**
