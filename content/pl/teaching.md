@@ -28,7 +28,7 @@ quote_ref: "św. Jan Paweł II"
   **Konsultacje**
 
 *   Budynek A1, pokój 503
-*   Dokładne godziny jescze zostaną ustalone
+*   Dokładne godziny jeszcze zostaną ustalone
 
 Szczegółowe informacje, harmonogramy oraz wszystkie materiały do&nbsp;kursów (listy zadań) będą publikowane sukcesywnie w&nbsp;formie plików PDF lub ogłoszeń poniżej.
 
