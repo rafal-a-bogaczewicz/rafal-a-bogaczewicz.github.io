@@ -20,7 +20,7 @@ quote_ref: "św. Jan Paweł II"
         list-style-type: circle;
         display: list-item;
         margin-left: 40px;
-        margin-top: -5px;   /* Zwiększone z -12px, żeby odsunąć od nazwy przedmiotu */
+        margin-top: 0px;   /* Zwiększone z -12px, żeby odsunąć od nazwy przedmiotu */
         margin-bottom: 2px; /* Dodatkowy odstęp dolny */
     }
 </style>
