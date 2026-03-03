@@ -40,7 +40,7 @@ quote_ref: "św. Jan Paweł II"
 
 *   **Wstęp do&nbsp;optyki kwantowej** (Wydział&nbsp;Podstawowych Problemów Techniki)
     <span class="lit-header">
-        <a href="/pdf/OK_literatura.pdf" target="_blank">Literatura</a>
+        <a href="/pdf/WdOK_literatura.pdf" target="_blank">Literatura</a>
     </span>
   
   **Konsultacje**
