@@ -26,7 +26,7 @@ quote_ref: "św. Jan Paweł II"
 *   **Wstęp do&nbsp;optyki kwantowej** (Wydział Podstawowych Problemów Techniki)
     <div style="margin-top: -15px;">
         Literatura:<br>
-        <span style="padding-left: 15px; display: block;">F. Schwabl, *Advanced Quantum Mechanics*, Springer (2008)</span>
+        <span style="padding-left: 15px; display: block;">F. Schwabl, <i style="font-style: italic;">Advanced Quantum Mechanics</i>, Springer (2008)</span>
     </div>
 
   
