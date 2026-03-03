@@ -24,6 +24,9 @@ quote_ref: "św. Jan Paweł II"
 *   **Podstawy fizyki klasycznej** (Wydział Matematyki)
     
 *   **Wstęp do&nbsp;optyki kwantowej** (Wydział Podstawowych Problemów Techniki)
+  * Literatura:
+      F. Schwabl, Advanced Quantum Mechanics, Springer (2008)
+
   
   **Konsultacje**
 
