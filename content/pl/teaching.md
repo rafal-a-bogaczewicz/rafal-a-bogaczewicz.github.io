@@ -15,6 +15,13 @@ quote_ref: "św. Jan Paweł II"
         text-decoration: underline !important;
         opacity: 0.8;
     }
+    /* Styl dla pustego punktora literatury */
+    .lit-header {
+        list-style-type: circle;
+        display: list-item;
+        margin-left: 40px;
+        margin-top: -12px;
+    }
 </style>
 
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 10px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Semestr letni 2025/2026</span>
@@ -22,17 +29,17 @@ quote_ref: "św. Jan Paweł II"
 **Prowadzone ćwiczenia**
 
 *   **Podstawy fizyki klasycznej** (Wydział&nbsp;Matematyki)
-    <div style="margin-top: -15px;">
-        Literatura:<br>
-        <span style="padding-left: 20px; display: block;">L. D. Landau, J. M. Lifszyc, <i style="font-style: italic;">Mechanika</i>, PWN&nbsp;(2020)</span>
-        <span style="padding-left: 20px; display: block;">S. Banach, <i style="font-style: italic;">Mechanika</i>, PWN&nbsp;(1956)</span>
+    <span class="lit-header">Literatura:</span>
+    <div style="margin-top: 2px;">
+        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; L. D. Landau, J. M. Lifszyc, <i style="font-style: italic;">Mechanika</i>, PWN&nbsp;(2020)</span>
+        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; S. Banach, <i style="font-style: italic;">Mechanika</i>, PWN&nbsp;(1956)</span>
     </div>
     
 *   **Wstęp do&nbsp;optyki kwantowej** (Wydział&nbsp;Podstawowych Problemów Techniki)
-    <div style="margin-top: -15px;">
-        Literatura:<br>
-        <span style="padding-left: 20px; display: block;">J. W. Orland, H. Negele, <i style="font-style: italic;">Quantum&nbsp;Many&nbsp;-&nbsp;Particle&nbsp;Systems</i>, CRC&nbsp;Press&nbsp;(2018)</span>
-        <span style="padding-left: 20px; display: block;">F. Schwabl, <i style="font-style: italic;">Advanced&nbsp;Quantum&nbsp;Mechanics</i>, Springer&nbsp;(2008)</span>
+    <span class="lit-header">Literatura:</span>
+    <div style="margin-top: 2px;">
+        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; J. W. Orland, H. Negele, <i style="font-style: italic;">Quantum&nbsp;Many-Particle&nbsp;Systems</i>, CRC&nbsp;Press&nbsp;(2018)</span>
+        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; F. Schwabl, <i style="font-style: italic;">Advanced&nbsp;Quantum&nbsp;Mechanics</i>, Springer&nbsp;(2008)</span>
     </div>
 
   
