@@ -19,7 +19,7 @@ quote_ref: "św. Jan Paweł II"
     .lit-header {
         list-style-type: circle;
         display: list-item;
-        margin-left: 40px;
+        margin-left: 25px;
         margin-top: 6px;   /* Zwiększone z -12px, żeby odsunąć od nazwy przedmiotu */
         margin-bottom: 0px; /* Dodatkowy odstęp dolny */
     }
@@ -35,6 +35,7 @@ quote_ref: "św. Jan Paweł II"
         <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; K.&nbsp;Jezierski, B.&nbsp;Kołodka, K.&nbsp;Sierański, <i style="font-style: italic;">Fizyka.&nbsp;Zadania&nbsp;z&nbsp;rozwiązaniami,&nbsp;cz.&nbsp;I</i>, Oficyna&nbsp;Wydawnicza&nbsp;Scripta&nbsp;(1999)</span>
         <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; K.&nbsp;Jezierski, B.&nbsp;Kołodka, K.&nbsp;Sierański, <i style="font-style: italic;">Fizyka.&nbsp;Zadania&nbsp;z&nbsp;rozwiązaniami,&nbsp;cz.&nbsp;II</i>, Oficyna&nbsp;Wydawnicza&nbsp;Scripta&nbsp;(2000)</span>
         <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; S.&nbsp;F.&nbsp;Farlow, <i style="font-style: italic;">Partial&nbsp;Differential&nbsp;Equations&nbsp;for&nbsp;Physicists&nbsp;and&nbsp;Engineers</i>, Wiley&nbsp(1984)</span>
+        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; C.&nbsp;Kittel, W.&nbsp;D.&nbsp;Knight, M.&nbsp;A.&nbsp;Ruderman, <i style="font-style: italic;">Mechanika</i>, PWN&nbsp(1975)</span>
     </div>
     
 *   **Wstęp do&nbsp;optyki kwantowej** (Wydział&nbsp;Podstawowych Problemów Techniki)
