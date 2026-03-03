@@ -40,15 +40,8 @@ quote_ref: "św. Jan Paweł II"
 
 *   **Wstęp do&nbsp;optyki kwantowej** (Wydział&nbsp;Podstawowych Problemów Techniki)
     <span class="lit-header">
-        Literatura <a href="/pdf/literatura-optyka.pdf" target="_blank" style="font-size: 0.8em; margin-left: 10px; font-weight: normal;">[Pobierz zestawienie PDF]</a>
+        <a href="/pdf/OK_literatura.pdf" target="_blank" style="font-size: 0.8em; margin-left: 10px; font-weight: normal;">Literatura</a>
     </span>
-    
-*   **Wstęp do&nbsp;optyki kwantowej** (Wydział&nbsp;Podstawowych Problemów Techniki)
-    <span class="lit-header">Literatura:</span>
-    <div style="margin-top: -16px;"> <!-- Analogiczna zmiana tutaj -->
-        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; J.&nbsp;&nbsp;Orland, H.&nbsp;Negele, <i style="font-style: italic;">Quantum&nbsp;Many&nbsp;-&nbsp;Particle&nbsp;Systems</i>, CRC&nbsp;Press&nbsp;(2018)</span>
-        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; F.&nbsp;Schwabl, <i style="font-style: italic;">Advanced&nbsp;Quantum&nbsp;Mechanics</i>, Springer&nbsp;(2008)</span>
-    </div>
   
   **Konsultacje**
 
