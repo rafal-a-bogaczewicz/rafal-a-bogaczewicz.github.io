@@ -8,11 +8,11 @@ quote_ref: "św. Jan Paweł II"
 <style>
     .markdown-body a {
         color: var(--gorska-zielen) !important;
-        text-decoration: none !important; /* Brak podkreślenia na starcie */
-        font-weight: normal !important;   /* Brak pogrubienia */
+        text-decoration: none !important;
+        font-weight: normal !important;
     }
     .markdown-body a:hover {
-        text-decoration: underline !important; /* Podkreślenie tylko przy najechaniu */
+        text-decoration: underline !important;
         opacity: 0.8;
     }
 </style>
@@ -24,7 +24,7 @@ quote_ref: "św. Jan Paweł II"
 *   **Podstawy fizyki klasycznej** (Wydział Matematyki)
     
 *   **Wstęp do&nbsp;optyki kwantowej** (Wydział Podstawowych Problemów Techniki)
-    <div style="margin-top:-5px;">
+    <div style="margin-top: -15px;">
         Literatura:<br>
         <span style="padding-left: 15px; display: block;">F. Schwabl, Advanced Quantum Mechanics, Springer (2008)</span>
     </div>
