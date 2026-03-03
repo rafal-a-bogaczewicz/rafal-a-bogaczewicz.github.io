@@ -32,8 +32,8 @@ quote_ref: "św. Jan Paweł II"
     <div style="margin-top: -16px;"> <!-- Zmniejszone z 2px, żeby książki zostały w tym samym miejscu -->
         <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; L.&nbsp;D.&nbsp;Landau,&nbsp;J.&nbsp;M.&nbsp;Lifszyc, <i style="font-style: italic;">Mechanika</i>, PWN&nbsp;(2020)</span>
         <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; S. Banach, <i style="font-style: italic;">Mechanika</i>, PWN&nbsp;(1956)</span>
-        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; K.&nbsp;Jezierski, B.&nbsp;Kołodka, K.&nbsp;Sierański<i style="font-style: italic;">Fizyka.&nbsp;Zadania&nbsp;z&nbsp;rozwiązaniami,&nbsp;cz.&nbsp;I</i>, Oficyna&nbsp;Wydawnicza&nbsp;Scripta&nbsp;(1999)</span>
-        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; K.&nbsp;Jezierski, B.&nbsp;Kołodka, K.&nbsp;Sierański<i style="font-style: italic;">Fizyka.&nbsp;Zadania&nbsp;z&nbsp;rozwiązaniami,&nbsp;cz.&nbsp;II</i>, Oficyna&nbsp;Wydawnicza&nbsp;Scripta&nbsp;(2000)</span>
+        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; K.&nbsp;Jezierski, B.&nbsp;Kołodka, K.&nbsp;Sierański, <i style="font-style: italic;">Fizyka.&nbsp;Zadania&nbsp;z&nbsp;rozwiązaniami,&nbsp;cz.&nbsp;I</i>, Oficyna&nbsp;Wydawnicza&nbsp;Scripta&nbsp;(1999)</span>
+        <span style="padding-left: 45px; display: block; text-indent: -12px;">&ndash; K.&nbsp;Jezierski, B.&nbsp;Kołodka, K.&nbsp;Sierański, <i style="font-style: italic;">Fizyka.&nbsp;Zadania&nbsp;z&nbsp;rozwiązaniami,&nbsp;cz.&nbsp;II</i>, Oficyna&nbsp;Wydawnicza&nbsp;Scripta&nbsp;(2000)</span>
     </div>
     
 *   **Wstęp do&nbsp;optyki kwantowej** (Wydział&nbsp;Podstawowych Problemów Techniki)
