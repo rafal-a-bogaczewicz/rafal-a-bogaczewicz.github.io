@@ -23,7 +23,7 @@ quote_ref: "św. Jan Paweł II"
 
 *   **Podstawy fizyki klasycznej** (Wydział Matematyki)
     
-*   **Wstęp do&nbsp;Optyki Kwantowej** (Wydział Podstawowych Problemów Techniki)
+*   **Wstęp do&nbsp;optyki kwantowej** (Wydział Podstawowych Problemów Techniki)
   
   **Konsultacje**
 
