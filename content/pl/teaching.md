@@ -22,6 +22,11 @@ quote_ref: "św. Jan Paweł II"
 **Prowadzone ćwiczenia**
 
 *   **Podstawy fizyki klasycznej** (Wydział&nbsp;Matematyki)
+    <div style="margin-top: -15px;">
+        Literatura:<br>
+        <span style="padding-left: 20px; display: block;">L. D. Landau, J. M. Lifszyc, <i style="font-style: italic;">Mechanika</i>, PWN&nbsp;(2020)</span>
+        <span style="padding-left: 20px; display: block;">S. Banach, <i style="font-style: italic;">Mechanika</i>, PWN&nbsp;(1956)</span>
+    </div>
     
 *   **Wstęp do&nbsp;optyki kwantowej** (Wydział&nbsp;Podstawowych Problemów Techniki)
     <div style="margin-top: -15px;">
