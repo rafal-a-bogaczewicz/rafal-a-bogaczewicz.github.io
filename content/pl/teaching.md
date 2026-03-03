@@ -47,9 +47,9 @@ quote_ref: "św. Jan Paweł II"
   
   **Konsultacje**
 
-*   **Miejsce**: budynek A1, pokój 503
-*   **Czas**: zostanie podany wkrótce
-*   Warunkiem koniecznym konsultacji jest umówienie się e-mailowo na spotkanie (przynajmniej z dobowym wyprzedzeniem)
+*   **Miejsce**: budynek A1, pokój 503.
+*   **Czas**: zostanie podany wkrótce.
+*   Warunkiem koniecznym konsultacji jest umówienie się e-mailowo na spotkanie (przynajmniej z dobowym wyprzedzeniem).
 *   Jeśli komuś nie pasuje podany termin konsultacji, proszę o kontakt e-mailowy w celu umówienia innego terminu (albo spotkania zdalnego).
 
 Szczegółowe informacje, harmonogramy oraz wszystkie materiały do&nbsp;kursów (listy zadań) będą publikowane sukcesywnie w&nbsp;formie plików PDF lub ogłoszeń poniżej.
