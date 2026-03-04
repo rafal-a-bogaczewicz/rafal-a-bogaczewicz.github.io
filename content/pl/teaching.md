@@ -16,28 +16,30 @@ quote_ref: "św. Jan Paweł II"
         opacity: 0.8;
     }
     /* Styl dla pustego punktora literatury */
-    .lit-header {
+    .lit-header-list {
         list-style-type: circle;
-        display: list-item;
-        margin-left: 25px;
-        margin-top: 6px;   /* Zwiększone z -12px, żeby odsunąć od nazwy przedmiotu */
-        margin-bottom: 0px; /* Dodatkowy odstęp dolny */
+        margin-left: 20px;
+        margin-top: 5px;
+        padding-left: 0;
+    }
+    .lit-header-list li {
+        margin-bottom: 3px; /* mały odstęp między literaturą a zasadami */
     }
 </style>
 
 **Prowadzone ćwiczenia**
 
 *   **Podstawy fizyki klasycznej** (Wydział&nbsp;Matematyki)
-    <span class="lit-header">
-        <a href="/pdf/PFK_literatura.pdf" target="_blank">Literatura</a><br>
-        <a href="/pdf/PFK_zasady_zaliczenia.pdf" target="_blank">Zasady zaliczenia</a>
-    </span>
-
+    <ul class="lit-header-list">
+        <li><a href="/pdf/PFK_literatura.pdf" target="_blank">Literatura</a></li>
+        <li><a href="/pdf/PFK_zasady_zaliczenia.pdf" target="_blank">Zasady zaliczenia</a></li>
+    </ul>
+    
 *   **Wstęp do&nbsp;optyki kwantowej** (Wydział&nbsp;Podstawowych Problemów Techniki)
-    <span class="lit-header">
-        <a href="/pdf/WdOK_literatura.pdf" target="_blank">Literatura</a>
-    </span>
-  
+    <ul class="lit-header-list">
+        <li><a href="/pdf/WdOK_literatura.pdf" target="_blank">Literatura</a></li>
+    </ul>
+
   **Konsultacje**
 
 *   **Miejsce**:&nbsp;budynek&nbsp;A1,&nbsp;pokój&nbsp;503.
