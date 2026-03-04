@@ -33,12 +33,14 @@ quote_ref: "św. Jan Paweł II"
     <ul class="lit-header-list">
         <li><a href="/pdf/PFK_literatura.pdf" target="_blank">Literatura</a></li>
         <li><a href="/pdf/PFK_zasady_zaliczenia.pdf" target="_blank">Zasady zaliczenia</a></li>
+        <li>Listy zadań są dostępne na <a href="https://eportal.pwr.edu.pl/" target="_blank">e-Portalu PWr</a></li>
     </ul>
     
 *   **Wstęp do&nbsp;optyki kwantowej** (Wydział&nbsp;Podstawowych Problemów Techniki)
     <ul class="lit-header-list">
         <li><a href="/pdf/WdOK_literatura.pdf" target="_blank">Literatura</a></li>
         <li><a href="/pdf/OK_zasady_zaliczenia.pdf" target="_blank">Zasady zaliczenia</a></li>
+        <li>Listy zadań są dostępne na <a href="https://eportal.pwr.edu.pl/" target="_blank">e-Portalu PWr</a></li>
     </ul>
 
   **Konsultacje**
