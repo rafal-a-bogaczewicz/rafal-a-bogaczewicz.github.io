@@ -30,6 +30,7 @@ quote_ref: "św. Jan Paweł II"
 *   **Podstawy fizyki klasycznej** (Wydział&nbsp;Matematyki)
     <span class="lit-header">
         <a href="/pdf/PFK_literatura.pdf" target="_blank">Literatura</a>
+        <a href="/pdf/PFK_zasady_zaliczenia.pdf" target="_blank">Zasady zaliczenia</a>
     </span>
 
 *   **Wstęp do&nbsp;optyki kwantowej** (Wydział&nbsp;Podstawowych Problemów Techniki)
