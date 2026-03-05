@@ -34,13 +34,12 @@ quote_ref: "św. Jan Paweł II"
         <li><a href="/pdf/PFK_literatura.pdf" target="_blank">Literatura</a></li>
         <li><a href="/pdf/PFK_zasady_zaliczenia.pdf" target="_blank">Zasady zaliczenia</a></li>
         <li>Listy zadań są dostępne na <a href="https://eportal.pwr.edu.pl/" target="_blank">e-Portalu PWr</a></li>
-        <li>
-        <strong>Kluczowe terminy:</strong>
-        <ul style="list-style-type: none; padding-top: 5px;">
-            <li>• <strong>Etap I:</strong> 16 kwietnia 2026</li>    
-            <li>• <strong>Etap II:</strong> 18 czerwca 2026</li>    
-            <li>• <em>Termin uzupełniający:</em> 25 czerwca 2026</li>    
-        </ul>
+        <li>Kluczowe terminy:
+            <ul style="list-style-type: none; padding-top: 5px;">
+                <li>kolokwium I: 16 kwietnia 2026</li>    
+                <li>kolokwium II: 18 czerwca 2026</li>    
+                <li>poprawa: 25 czerwca 2026</li>    
+            </ul>
         </li>
     </ul>
     
@@ -49,8 +48,16 @@ quote_ref: "św. Jan Paweł II"
         <li><a href="/pdf/WdOK_literatura.pdf" target="_blank">Literatura</a></li>
         <li><a href="/pdf/WdOK_zasady_zaliczenia.pdf" target="_blank">Zasady zaliczenia</a></li>
         <li>Listy zadań są dostępne na <a href="https://eportal.pwr.edu.pl/" target="_blank">e-Portalu PWr</a></li>
-        <li>Notatki z zajęć</li>
-            <li><a href="/pdf/Notatki_WdOK_05_03_2026.pdf" target="_blank">5 marca 2026</a></li>
+        <li>Notatki z zajęć:
+            <ul style="list-style-type: none; padding-top: 5px;">
+                <li><a href="/pdf/Notatki_WdOK_05_03_2026.pdf" target="_blank">5 marca 2026</a></li>
+        </li>
+        <li>Kluczowe terminy:
+            <ul style="list-style-type: none; padding-top: 5px;">
+                <li>kolokwium : 18 czerwca 2026</li>    
+                <li>poprawa: 25 czerwca 2026</li>    
+            </ul>
+        </li>
     </ul>
 
   **Konsultacje**
