@@ -34,13 +34,19 @@ quote_ref: "św. Jan Paweł II"
         <li><a href="/pdf/PFK_literatura.pdf" target="_blank">Literatura</a></li>
         <li><a href="/pdf/PFK_zasady_zaliczenia.pdf" target="_blank">Zasady zaliczenia</a></li>
         <li>Listy zadań są dostępne na <a href="https://eportal.pwr.edu.pl/" target="_blank">e-Portalu PWr</a></li>
+        <li>Ważne terminy:</li>
+            <li>Kolokwium I : 16 kwietnia 2026</li>    
+            <li>Kolokwium II : 18 czerwca 2026</li>    
+            <li>Kolokwium poprawkowe : 25 czerwca 2026</li>    
     </ul>
     
 *   **Wstęp do&nbsp;optyki kwantowej** (Wydział&nbsp;Podstawowych Problemów Techniki)
     <ul class="lit-header-list">
         <li><a href="/pdf/WdOK_literatura.pdf" target="_blank">Literatura</a></li>
-        <li><a href="/pdf/OK_zasady_zaliczenia.pdf" target="_blank">Zasady zaliczenia</a></li>
+        <li><a href="/pdf/WdOK_zasady_zaliczenia.pdf" target="_blank">Zasady zaliczenia</a></li>
         <li>Listy zadań są dostępne na <a href="https://eportal.pwr.edu.pl/" target="_blank">e-Portalu PWr</a></li>
+        <li>Notatki z zajęć</li>
+            <li><a href="/pdf/Notatki_WdOK_05_03_2026.pdf" target="_blank">5 marca 2026</a></li>
     </ul>
 
   **Konsultacje**
