@@ -51,6 +51,7 @@ quote_ref: "św. Jan Paweł II"
         <li>Notatki z zajęć:
             <ul style="list-style-type: none; padding-top: 5px;">
                 <li><a href="/pdf/Notatki_WdOK_05_03_2026.pdf" target="_blank">5 marca 2026</a></li>
+            </ul>
         </li>
         <li>Kluczowe terminy:
             <ul style="list-style-type: none; padding-top: 5px;">
