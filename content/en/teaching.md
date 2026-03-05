@@ -9,7 +9,7 @@ quote_ref: "St. John Paul II"
 
 Conducted recitations:
 
-*   **Physics 1A**
+*   **Basic Classical Physics**
 *   **Introduction to Quantum Optics**
 
 Detailed information and all course materials (problem sets) are available on the Polish version of this page.
