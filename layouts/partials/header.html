@@ -164,10 +164,26 @@
         .values-header { border-left: 3px solid var(--gorska-zielen); padding-left: 20px; margin: 20px 0 40px 15px; }
         .quote-text { font-style: italic; color: var(--gray-quote); margin-bottom: 8px; line-height: 1.5; font-size: 1.05em; }
         .quote-ref { color: var(--gray-ref); font-weight: bold; font-size: 0.95em; }
-        .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; line-height: 1.6; }
+        .pub-item { 
+            display: flex; 
+            align-items: flex-start; /* Zmieniono z baseline na flex-start */
+            margin-bottom: 25px; 
+            font-size: 0.95em; 
+            line-height: 1.6;
+            word-break: normal; 
+            overflow-wrap: anywhere; 
+        }
         .pub-number { color: var(--gray-ref); min-width: 45px; font-weight: bold; flex-shrink: 0; margin-right: 5px; }
         .my-name { border-bottom: 1px solid var(--text-color); font-weight: normal; }
-        .pub-link { color: var(--gorska-zielen); text-decoration: none; transition: opacity 0.2s; }
+        .pub-link { 
+            color: var(--gorska-zielen); 
+            text-decoration: none; 
+            transition: opacity 0.2s;
+            /* DODAJ TE 2 LINIE PONIŻEJ: */
+            display: inline;
+            word-break: keep-all; 
+            overflow-wrap: break-word;
+        }
         .pub-link:hover { text-decoration: underline; opacity: 0.8; }
         .authors { margin-bottom: 4px; color: var(--text-color); }
         .control-group { display: flex; align-items: center; gap: 8px; }
