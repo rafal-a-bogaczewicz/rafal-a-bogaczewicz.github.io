@@ -34,6 +34,11 @@ quote_ref: "św. Jan Paweł II"
         <li><a href="/pdf/PFK_literatura.pdf" target="_blank">Literatura</a></li>
         <li><a href="/pdf/PFK_zasady_zaliczenia.pdf" target="_blank">Zasady zaliczenia</a></li>
         <li>Listy zadań są dostępne na <a href="https://eportal.pwr.edu.pl/" target="_blank">e-Portalu PWr</a></li>
+        <li>Notatki z zajęć:
+            <ul style="list-style-type: none; padding-top: 5px;">
+                <li><a href="/pdf/Notatki_PFK_12_03_2026.pdf" target="_blank">12 marca 2026</a></li>
+            </ul>
+        </li>
         <li>Kluczowe terminy:
             <ul style="list-style-type: none; padding-top: 5px;">
                 <li>kolokwium I: 16 kwietnia 2026</li>    
