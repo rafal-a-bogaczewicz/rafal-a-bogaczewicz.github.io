@@ -37,6 +37,7 @@ quote_ref: "św. Jan Paweł II"
         <li>Notatki z zajęć:
             <ul style="list-style-type: none; padding-top: 5px;">
                 <li><a href="/pdf/Notatki_PFK_12_03_2026.pdf" target="_blank">12 marca 2026</a></li>
+                <li><a href="/pdf/Współrzędne_krzywoliniowe.pdf" target="_blank">Współrzędne krzywoliniowe</a></li>
             </ul>
         </li>
         <li>Kluczowe terminy:
