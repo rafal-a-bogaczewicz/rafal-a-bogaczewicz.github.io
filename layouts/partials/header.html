@@ -173,12 +173,18 @@
         }
         .pub-number { color: var(--gray-ref); min-width: 45px; font-weight: bold; flex-shrink: 0; margin-right: 5px; }
         .my-name { border-bottom: 1px solid var(--text-color); font-weight: normal; }
-        .pub-link { 
+        .pub-link, .markdown-body a { 
             display: inline-block !important; 
-            white-space: nowrap !important; /* Całkowity zakaz łamania wewnątrz linku */        
-            color: var(--gorska-zielen) !important;
+            white-space: nowrap !important; 
+            color: var(--gorska-zielen) !important; /* Zawsze Twoja zieleń */
+            text-decoration: none !important;      /* Brak podkreślenia na start */
+            transition: opacity 0.2s;
         }
-        .pub-link:hover { text-decoration: underline; opacity: 0.8; }
+        .pub-link:hover, .markdown-body a:hover { 
+            text-decoration: underline !important; /* Podkreślenie przy najechaniu */
+            opacity: 0.6; /* Lekkie przygaśnięcie zieleni (możesz zmienić na 0.7 lub 0.8) */
+            color: var(--gorska-zielen) !important; /* Wymuszenie zachowania zieleni */
+        }
         .authors { margin-bottom: 4px; color: var(--text-color); }
         .control-group { display: flex; align-items: center; gap: 8px; }
         .lang-label { font-size: 14px; font-weight: bold; color: var(--gorska-zielen); }
