@@ -60,6 +60,7 @@ quote_ref: "św. Jan Paweł II"
                 <li><a href="/pdf/Notatki_WdOK_05_03_2026.pdf" target="_blank">5 marca 2026</a></li>
                 <li><a href="/pdf/Notatki_WdOK_12_03_2026.pdf" target="_blank">12 marca 2026</a></li>
                 <li><a href="/pdf/Notatki_WdOK_19_03_2026.pdf" target="_blank">19 marca 2026</a></li>
+                <li><a href="/pdf/Notatki_WdOK_09_04_2026.pdf" target="_blank">9 kwietnia 2026</a></li>
             </ul>
         </li>
         <li>Kluczowe terminy:
