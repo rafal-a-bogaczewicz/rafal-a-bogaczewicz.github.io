@@ -43,7 +43,12 @@ quote_ref: "św. Jan Paweł II"
         </li>
         <li>Kluczowe terminy:
             <ul style="list-style-type: none; padding-top: 5px;">
-                <li>kolokwium I: 16 kwietnia 2026 (rozwiązania zadań i wyniki znajdują się na ePortalu)</li>
+                <li>
+                   kolokwium I: 16 kwietnia 2026<br>
+                   <span style="margin-left: 85px; font-size: 0.9em; color: #555;">
+                      Rozwiązania zadań i wyniki znajdują się na ePortalu.
+                   </span>
+                </li>
                 <li>kolokwium II: 18 czerwca 2026</li>    
                 <li>poprawa: 25 czerwca 2026</li>    
             </ul>
