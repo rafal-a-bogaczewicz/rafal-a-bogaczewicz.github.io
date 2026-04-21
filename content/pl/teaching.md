@@ -45,7 +45,7 @@ quote_ref: "św. Jan Paweł II"
             <ul style="list-style-type: none; padding-top: 5px;">
                 <li>
                    kolokwium I: 16 kwietnia 2026<br>
-                   <span style="margin-left: 85px; font-size: 0.9em; color: #555;">
+                   <span style="margin-left: 120px; font-size: 1.0em; color: #555;">
                       Rozwiązania zadań i wyniki znajdują się na ePortalu.
                    </span>
                 </li>
