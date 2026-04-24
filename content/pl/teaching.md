@@ -86,8 +86,6 @@ quote_ref: "św. Jan Paweł II"
 *   O&nbsp;zamiarze&nbsp;przyjścia&nbsp;na&nbsp;konsultacje proszę&nbsp;poinformować&nbsp;drogą&nbsp;e-mailową przynajmniej&nbsp;z&nbsp;dobowym&nbsp;wyprzedzeniem.
 *   Jeśli&nbsp;komuś&nbsp;nie&nbsp;pasuje&nbsp;podany&nbsp;termin konsultacji, proszę&nbsp;o&nbsp;kontakt&nbsp;e-mailowy w&nbsp;celu&nbsp;umówienia&nbsp;innego&nbsp;terminu (albo&nbsp;spotkania&nbsp;zdalnego).
 
-Szczegółowe informacje, harmonogramy oraz wszystkie materiały do&nbsp;kursów (listy zadań) będą publikowane sukcesywnie w&nbsp;formie plików PDF lub ogłoszeń poniżej.
-
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 35px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Doświadczenie</span>
 
 W&nbsp;poprzednich semestrach na&nbsp;PWr prowadziłem ćwiczenia z:
