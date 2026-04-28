@@ -132,7 +132,7 @@ title: "About Me"
 <span class="cv-style-header">Grants & Funding</span>
 
 <div class="flex-row">
-  <strong>National Science Centre (Poland) <em>Maestro</em> Grant</strong> <span class="no-wrap">| 1 November 2024 – present</span>
+  <strong>National Science Centre (Poland) <em>Maestro</em> Grant</strong> <span class="no-wrap">| 1 November 2024 – 31 March 2026</span>
 </div>
 <ul class="cv-list">
   <li>scholarship recipient in the project: <a href="https://projekty.ncn.gov.pl/en/index.php?projekt_id=596578" class="pub-link" target="_blank"><strong><em>Quantum acousto-optics of hybrid nanosystems</em></strong></a></li>
