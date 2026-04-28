@@ -132,7 +132,7 @@ title: "O mnie"
 <span class="cv-style-header">Granty</span>
 
 <div class="flex-row">
-  <strong>Grant NCN <em>Maestro</em></strong> <span class="no-wrap">| 1 listopada 2024 – obecnie</span>
+  <strong>Grant NCN <em>Maestro</em></strong> <span class="no-wrap">| 1 listopada 2024 – 31 marca 2026</span>
 </div>
 <ul class="cv-list">
   <li>stypendysta w projekcie pt. <a href="https://projekty.ncn.gov.pl/index.php?projekt_id=596578" class="pub-link" target="_blank"><strong><em>Akustooptyka kwantowa nanoukładów hybrydowych</em></strong></a></li>
