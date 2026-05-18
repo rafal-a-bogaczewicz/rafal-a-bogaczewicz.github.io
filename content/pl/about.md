@@ -56,7 +56,7 @@ title: "O mnie"
 <span class="cv-style-header">Wykształcenie</span>
 
 <div class="flex-row">
-  <strong>Studia doktoranckie</strong> <span class="no-wrap">| 1 października 2021 – 18 maja 2026</span>
+  <strong>Doktor nauk fizycznych</strong> <span class="no-wrap">| 1 października 2021 – 18 maja 2026</span>
 </div>
 <ul class="cv-list">
   <li>dyscyplina: nauki fizyczne</li>
