@@ -71,6 +71,7 @@ quote_ref: "św. Jan Paweł II"
                 <li><a href="/pdf/Notatki_WdOK_09_04_2026.pdf" target="_blank">9 kwietnia 2026</a></li>
                 <li><a href="/pdf/Notatki_WdOK_07_05_2026.pdf" target="_blank">7 maja 2026</a></li>
                 <li><a href="/pdf/Notatki_WdOK_19_05_2026.pdf" target="_blank">19 maja 2026</a></li>
+                <li><a href="/pdf/Notatki_WdOK_28_05_2026.pdf" target="_blank">28 maja 2026</a></li>
             </ul>
         </li>
         <li>Kluczowe terminy:
