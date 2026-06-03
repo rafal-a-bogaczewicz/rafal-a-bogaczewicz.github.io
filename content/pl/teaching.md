@@ -39,6 +39,7 @@ quote_ref: "św. Jan Paweł II"
                 <li><a href="/pdf/Współrzędne_krzywoliniowe.pdf" target="_blank">Współrzędne krzywoliniowe</a></li>
                 <li><a href="/pdf/Notatki_PFK_12_03_2026.pdf" target="_blank">12 marca 2026</a></li>
                 <li><a href="/pdf/Notatki_PFK_26_03_2026.pdf" target="_blank">26 marca 2026</a></li>
+                <li><a href="/pdf/Notatki_PFK_02_06_2026.pdf" target="_blank">2 czerwca 2026</a></li>
             </ul>
         </li>
         <li>Kluczowe terminy:
