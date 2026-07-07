@@ -127,3 +127,12 @@
   city_en: "St Andrews"
   country_pl: "Wielka Brytania"
   country_en: "Great Britain"
+
+- event: "Summer School Physics of Quantum Chips 2026"
+  link: "https://klar.ug.edu.pl/pqchips-2026/"
+  date: "2026-07-01"
+  end_date: "2026-07-08"
+  city_pl: "Gdańsk"
+  city_en: "Gdansk"
+  country_pl: "Polska"
+  country_en: "Poland" 
