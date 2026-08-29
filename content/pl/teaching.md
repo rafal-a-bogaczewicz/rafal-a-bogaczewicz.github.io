@@ -31,7 +31,7 @@ quote_ref: "św. Jan Paweł II"
 
 **Przerwa dydaktyczna** w&nbsp;związku z&nbsp;intensywną realizacją projektów badawczych i&nbsp;pracą naukową. 
 
-Konsultacje akademickie oraz spotkania naukowe odbywają się po wcześniejszym ustaleniu terminu drogą wiadomości e-mail.
+Konsultacje akademickie oraz spotkania naukowe odbywają się po wcześniejszym ustaleniu drogą mailową.
 
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 35px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Doświadczenie</span>
 
