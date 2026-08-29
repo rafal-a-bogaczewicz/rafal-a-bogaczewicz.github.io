@@ -39,4 +39,5 @@ W&nbsp;poprzednich semestrach na&nbsp;PWr prowadziłem ćwiczenia z:
 
 *   fizyki ogólnej (kursy podstawowe),
 *   analizy matematycznej,
-*   podstaw optyki kwantowej.
+*   podstaw optyki kwantowej,
+*   mechaniki klasycznej.
