@@ -1,6 +1,6 @@
 <!-- Introduction -->
 <p style="text-align: left; font-size: 1.1em; margin-bottom: 20px; color: var(--text-color);">
-    Discovering the world is not just about physics — the following interests listed are other paths of exploring reality and marveling at its beauty.
+    Discovering the world is not just about physics — the following interests are other paths of exploring reality and marveling at its beauty.
 </p>
 
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 10px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Traveling to Interesting Places</span>
