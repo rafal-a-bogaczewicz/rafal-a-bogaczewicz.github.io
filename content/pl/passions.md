@@ -1,6 +1,6 @@
 <!-- Wprowadzenie -->
 <p style="text-align: left; font-size: 1.1em; margin-bottom: 20px; color: var(--text-color);">
-    Nie samą fizyką kwantową żyje <i>pasjonat odkrywania świata</i> — poniższe zainteresowania to inne ścieżki zgłębiania rzeczywistości i&nbsp;zachwytu nad&nbsp;jej pięknem.
+    Fizyka to nie jedyny sposób na <i>odkrywanie świata</i> — poniższe zainteresowania to inne ścieżki zgłębiania rzeczywistości i&nbsp;zachwytu nad&nbsp;jej pięknem.
 </p>
 
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 10px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Podróże do ciekawych miejsc</span>
