@@ -5,19 +5,11 @@ quote: "You must demand of yourselves even if others do not demand of you."
 quote_ref: "St. John Paul II"
 ---
 
-<span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 10px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Summer semester 2025/2026</span>
+<span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 10px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Winter semester 2026/2027</span>
 
-Conducted recitations:
+**Teaching break** due to intensive implementation of research projects and scientific work. 
 
-*   **Basic Classical Physics**
-*   **Introduction to Quantum Optics**
-
-Detailed information and all course materials (problem sets) are available on the Polish version of this page.
-
-<!-- 
-ARCHIVE: Winter semester 2025/2026
-Teaching break due to intensive implementation of research projects and scientific work.
--->
+Academic consultations and research meetings are available upon prior e-mail appointment.
 
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 35px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Experience</span>
 
