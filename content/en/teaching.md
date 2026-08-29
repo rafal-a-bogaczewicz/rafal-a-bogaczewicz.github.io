@@ -26,3 +26,4 @@ In&nbsp;previous semesters at&nbsp;WUST, I&nbsp;have taught tutorials in:
 *   general physics (basic courses),
 *   mathematical analysis,
 *   fundamentals of&nbsp;quantum optics.
+*   classical mechanics
