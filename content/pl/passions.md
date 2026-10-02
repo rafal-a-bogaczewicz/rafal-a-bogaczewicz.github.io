@@ -89,8 +89,8 @@
         <p class="img-caption">Skała w&nbsp;Breli (Chorwacja) — punkt orientacyjny do&nbsp;wypraw podwodnych.</p>
     </div>
     <div class="passion-item">
-        <img src="/images/ryby.webp" alt="Ławica ryb" class="img-responsive">
-        <p class="img-caption">Statyka skały i&nbsp;dynamika ławicy ryb <i>Chromis chromis</i>.</p>
+        <img src="/images/ryby.jpg" alt="Ławica ryb" class="img-responsive">
+        <p class="img-caption">Ławica ryb <i>Chromis chromis</i>.</p>
     </div>
     <div class="passion-item">
         <img src="/images/rozgwiazda.webp" alt="Rozgwiazda na dłoni" class="img-responsive">
