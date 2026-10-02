@@ -115,18 +115,18 @@ title: "About Me"
 <span class="cv-style-header">Experience</span>
 
 <div class="flex-row">
+  <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank"><strong>Institute of Theoretical Physics (WUST)</strong></a> <span class="no-wrap">| 1 March 2019 – 30 September 2026</span>
+</div>
+<ul class="cv-list">
+  <li>research collaboration with <strong>Prof. Paweł Machnikowski</strong> in the field of solid-state quantum optics</li>
+</ul>
+
+<div class="flex-row">
   <a href="https://www.cft.edu.pl/en/" class="pub-link" target="_blank"><strong>Center for Theoretical Physics, Polish Academy of Sciences</strong></a> <span class="no-wrap">| 2 September 2019 – 27 September 2019</span>
 </div>
 <ul class="cv-list">
   <li>research internship — theoretical studies on quantum entanglement</li>
   <li>mentor: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"><strong>Prof. Remigiusz Augusiak</strong></a></li>
-</ul>
-
-<div class="flex-row">
-  <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank"><strong>Institute of Theoretical Physics (WUST)</strong></a> <span class="no-wrap">| March 2019 – present</span>
-</div>
-<ul class="cv-list">
-  <li>research collaboration with <strong>Prof. Paweł Machnikowski</strong> in the field of solid-state quantum optics</li>
 </ul>
 
 <span class="cv-style-header">Grants & Funding</span>
