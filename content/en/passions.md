@@ -89,7 +89,7 @@
         <p class="img-caption">The Rock in&nbsp;Brela (Croatia) — a&nbsp;landmark for&nbsp;underwater excursions.</p>
     </div>
     <div class="passion-item">
-        <img src="/images/ryby.webp" alt="School of fish" class="img-responsive">
+        <img src="/images/ryby.jpg" alt="School of fish" class="img-responsive">
         <p class="img-caption">School of <i>Chromis chromis</i> fish.</p>
     </div>
     <div class="passion-item">
