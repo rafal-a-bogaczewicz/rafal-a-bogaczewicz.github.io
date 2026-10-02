@@ -115,18 +115,18 @@ title: "O mnie"
 <span class="cv-style-header">Doświadczenie</span>
 
 <div class="flex-row">
+  <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank"><strong>Instytut Fizyki Teoretycznej PWr</strong></a> <span class="no-wrap">| 1 marca 2019 – 30 września 2026</span>
+</div>
+<ul class="cv-list">
+  <li>współpraca badawcza z <strong>prof. dr. hab. inż. Pawłem Machnikowskim</strong> w&nbsp;dziedzinie optyki kwantowej ciała stałego</li>
+</ul>
+
+<div class="flex-row">
   <a href="https://www.cft.edu.pl" class="pub-link" target="_blank"><strong>Centrum Fizyki Teoretycznej PAN</strong></a> <span class="no-wrap">| 2 września 2019 – 27 września 2019</span>
 </div>
 <ul class="cv-list">
   <li>staż naukowy — teoretyczne badania nad splątaniem kwantowym</li>
   <li>opiekun: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"><strong>dr hab. inż. Remigiusz Augusiak, prof. CFT PAN</strong></a></li>
-</ul>
-
-<div class="flex-row">
-  <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank"><strong>Instytut Fizyki Teoretycznej PWr</strong></a> <span class="no-wrap">| marzec 2019 – obecnie</span>
-</div>
-<ul class="cv-list">
-  <li>współpraca badawcza z <strong>prof. dr. hab. inż. Pawłem Machnikowskim</strong> w&nbsp;dziedzinie optyki kwantowej ciała stałego</li>
 </ul>
 
 <span class="cv-style-header">Granty</span>
