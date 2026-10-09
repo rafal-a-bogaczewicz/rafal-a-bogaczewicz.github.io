@@ -135,7 +135,7 @@ title: "O mnie"
   <strong>NCN <em>Sonata Bis 13</em></strong> <span class="no-wrap">| 15 października 2026 – 14 grudnia 2028</span>
 </div>
 <ul class="cv-list">
-  <li>postdok w projekcie pt. <a href="https://projekty.ncn.gov.pl/index.php?projekt_id=596578" class="pub-link" target="_blank"><strong><em>Architektury Fotoniczne Inspirowane Materiałami 2D</em></strong></a></li>
+  <li>postdok w projekcie pt. <a href="https://projekty.ncn.gov.pl/index.php?projekt_id=598887" class="pub-link" target="_blank"><strong><em>Architektury Fotoniczne Inspirowane Materiałami 2D</em></strong></a></li>
 </ul>
 
 <div class="flex-row">
