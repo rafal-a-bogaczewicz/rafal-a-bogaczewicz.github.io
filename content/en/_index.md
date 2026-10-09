@@ -92,6 +92,8 @@ title: ""
 
 <a href="https://scholar.google.com/citations?hl=pl&user=PLex6OUAAAAJ" class="pub-link" target="_blank">GoogleScholar</a> | <a href="https://orcid.org/0000-0001-7148-5250" class="pub-link" target="_blank">ORCID</a> | <a href="https://www.researchgate.net/profile/Rafal_Bogaczewicz" class="pub-link" target="_blank">ResearchGate</a> | <a href="https://pwr-wroc.academia.edu/Rafa%C5%82Bogaczewicz" class="pub-link" target="_blank">Academia.edu</a> | <a href="https://www.linkedin.com/in/rafa%C5%82-bogaczewicz-21a32a385/" class="pub-link" target="_blank">LinkedIn</a>
 
-Institute of Theoretical Physics | Wrocław University of Science and Technology
+<div class="flex-row">
+  <span class="no-wrap"> Department&nbsp;of&nbsp;Quantum&nbsp;Physics | Institute&nbsp;of&nbsp;Physics | Nicolaus&nbsp;Copernicus&nbsp;University&nbsp;in&nbsp;Toruń
+ </span>
 
-Wybrzeże Wyspiańskiego 27, 50-370 Wrocław, Poland
+Grudziądzka 5, 87-100 Toruń, Poland
