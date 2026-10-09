@@ -132,7 +132,7 @@ title: "O mnie"
 <span class="cv-style-header">Granty</span>
 
 <div class="flex-row">
-  <strong>Grant NCN <em>Maestro</em></strong> <span class="no-wrap">| 1 listopada 2024 – 31 marca 2026</span>
+  <strong>NCN <em>Maestro</em></strong> <span class="no-wrap">| 1 listopada 2024 – 31 marca 2026</span>
 </div>
 <ul class="cv-list">
   <li>stypendysta w projekcie pt. <a href="https://projekty.ncn.gov.pl/index.php?projekt_id=596578" class="pub-link" target="_blank"><strong><em>Akustooptyka kwantowa nanoukładów hybrydowych</em></strong></a></li>
@@ -146,7 +146,7 @@ title: "O mnie"
 </ul>
 
 <div class="flex-row">
-  <strong>Grant NCN <em>Beethoven</em></strong> <span class="no-wrap">| 1 maja 2020 – 30 września 2021</span>
+  <strong>NCN <em>Beethoven</em></strong> <span class="no-wrap">| 1 maja 2020 – 30 września 2021</span>
 </div>
 <ul class="cv-list">
   <li>stypendysta - wykonawca w projekcie pt. <a href="https://projekty.ncn.gov.pl/index.php?projekt_id=357111" class="pub-link" target="_blank"><strong><em>Kubity spinowe w sztucznych molekułach</em></strong></a></li>
