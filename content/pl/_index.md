@@ -39,12 +39,13 @@ title: ""
   }
 
   /* TRYB CIEMNY */
-  /* Odwracamy kolory (białe tło znika i staje się czarne/przezroczyste, a ciemne elementy logo stają się jasne) */
+  /* Odwracamy jasność tła, ale obracamy barwy o 180 stopni, 
+     dzięki czemu niebieski pierścień i żółte słońce odzyskują swoje naturalne kolory! */
   [data-theme="dark"] .logo-umk {
-    filter: invert(1) hue-rotate(180deg) brightness(1.2);
-    mix-blend-mode: screen; /* Zapewnia idealne wtapianie w ciemne tło strony */
+    filter: invert(1) hue-rotate(180deg) brightness(1.4) contrast(1.2);
+    mix-blend-mode: screen; /* Idealnie wtapia czarne teraz tło obrazka w ciemny szablon strony */
   }
-
+  
   @media (max-width: 800px) {
     .intro-container {
       flex-direction: column;
