@@ -34,18 +34,15 @@ title: ""
     height: 58px; 
     width: auto;
     transition: all 0.3s ease;
-  }
-
-  /* LOGO UMK: Wygładzający cień dla lepszej widoczności na skrajnych tłach */
-  .logo-umk {
-    filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.2));
+    /* TRYB JASNY: Usuwa białe/kwadratowe tło wokół kształtu logo, jeśli grafika nie jest idealnym PNG */
+    mix-blend-mode: multiply; 
   }
 
   /* TRYB CIEMNY */
-  /* Jeśli logo UMK w wersji bazowej słabo kontrastuje z ciemnym tłem, 
-     delikatnie podbijamy jego jasność */
+  /* Odwracamy kolory (białe tło znika i staje się czarne/przezroczyste, a ciemne elementy logo stają się jasne) */
   [data-theme="dark"] .logo-umk {
-    filter: drop-shadow(0px 0px 2px rgba(255,255,255,0.3)) brightness(1.1);
+    filter: invert(1) hue-rotate(180deg) brightness(1.2);
+    mix-blend-mode: screen; /* Zapewnia idealne wtapianie w ciemne tło strony */
   }
 
   @media (max-width: 800px) {
