@@ -2,20 +2,23 @@
 title: ""
 ---
 
+
+
+
+
 <style>
-  /* Kontener główny - na desktopie rządek, na mobilkach kolumna-odwrócona */
+  /* Kontener główny - na desktopie rządek, na mobilkach kolumna */
   .intro-container {
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    gap: 16px; /* Zwiększony odstęp między pojedynczym logo a tekstem dla lepszego balansu */
     align-items: flex-start;
     margin-bottom: 20px;
   }
 
-  /* Logotypy obok siebie */
-  .uni-logos {
+  /* Kontener na pojedyncze logo */
+  .uni-logo-wrapper {
     display: flex;
-    gap: 8px;
     align-items: center;
     flex-shrink: 0;
   }
@@ -30,27 +33,23 @@ title: ""
     flex: 1;
   }
 
-  /* Wysokość */
+  /* Wysokość logotypu */
   .uni-logo-img {
     height: 58px; 
     width: auto;
     transition: all 0.3s ease;
   }
 
-  /* LOGO IFT: Dodajemy poświatę (cień), żeby białe elementy były widoczne na jasnym tle */
-  .logo-ift {
-    filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.5));
+  /* LOGO UMK: Wygładzający cień dla lepszej widoczności na skrajnych tłach */
+  .logo-umk {
+    filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.2));
   }
 
   /* TRYB CIEMNY */
-  /* Logo PWR zostaje bez zmian (oryginalne barwy) */
-  [data-theme="dark"] .logo-pwr {
-    filter: none;
-  }
-
-  /* Logo IFT w trybie ciemnym - podbijamy jasność, by kropka i "I" były czytelne, ale nie odwracamy kolorów */
-  [data-theme="dark"] .logo-ift {
-    filter: drop-shadow(0px 0px 2px rgba(255,255,255,0.3)) brightness(1.2);
+  /* Jeśli logo UMK w wersji bazowej słabo kontrastuje z ciemnym tłem, 
+     delikatnie podbijamy jego jasność */
+  [data-theme="dark"] .logo-umk {
+    filter: drop-shadow(0px 0px 2px rgba(255,255,255,0.3)) brightness(1.1);
   }
 
   @media (max-width: 800px) {
@@ -59,8 +58,8 @@ title: ""
       align-items: center;
       text-align: center;
     }
-    .uni-logos {
-      margin-bottom: 10px;
+    .uni-logo-wrapper {
+      margin-bottom: 12px;
     }
     .intro-text {
         text-align: left;
@@ -69,16 +68,13 @@ title: ""
 </style>
 
 <div class="intro-container">
-  <div class="uni-logos">
-    <a href="https://pwr.edu.pl" target="_blank">
-        <img src="/images/logopwr.png" alt="Logo PWr" class="uni-logo-img logo-pwr">
-    </a>
-    <a href="https://www.kft.pwr.edu.pl" target="_blank">
-        <img src="/images/logoift.png" alt="Logo IFT" class="uni-logo-img logo-ift">
+  <div class="uni-logo-wrapper">
+    <a href="https://umk.pl" target="_blank">
+        <img src="/images/logoUMK.png" alt="Logo UMK" class="uni-logo-img logo-umk">
     </a>
   </div>
 
-  <div class="intro-text">
+<div class="intro-text">
     Fizyk teoretyk na&nbsp;<a href="https://pwr.edu.pl" class="pub-link" target="_blank">Politechnice Wrocławskiej</a>.<br>
     W zespole <a href="https://www.pm.kft.pwr.edu.pl" class="pub-link" target="_blank">prof.&nbsp;Pawła Machnikowskiego</a> badam rezonansową&nbsp;fluorescencję emiterów&nbsp;kwantowych.
   </div>
