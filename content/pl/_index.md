@@ -2,10 +2,6 @@
 title: ""
 ---
 
-
-
-
-
 <style>
   /* Kontener główny - na desktopie rządek, na mobilkach kolumna */
   .intro-container {
@@ -75,8 +71,8 @@ title: ""
   </div>
 
 <div class="intro-text">
-    Fizyk teoretyk na&nbsp;<a href="https://pwr.edu.pl" class="pub-link" target="_blank">Politechnice Wrocławskiej</a>.<br>
-    W zespole <a href="https://www.pm.kft.pwr.edu.pl" class="pub-link" target="_blank">prof.&nbsp;Pawła Machnikowskiego</a> badam rezonansową&nbsp;fluorescencję emiterów&nbsp;kwantowych.
+    Fizyk teoretyk na&nbsp;<a href="https://www.umk.pl/" class="pub-link" target="_blank">Uniwersytecie Mikołaja Kopernika w Toruniu</a>.<br>
+    W zespole <a href="https://fizyka.umk.pl/~karolina/index.html" class="pub-link" target="_blank">dr&nbsp;hab.&nbsp;Karoliny Słowik</a> badam optyczne&nbsp;właściwości&nbsp;nanostruktur&nbsp;2D.
   </div>
 </div>
 
