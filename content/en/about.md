@@ -132,6 +132,13 @@ title: "About Me"
 <span class="cv-style-header">Grants & Funding</span>
 
 <div class="flex-row">
+  <strong>National Science Centre (Poland) <em>Sonata Bis 13</em> Grant</strong> <span class="no-wrap">| 15 October 2026 – 14 December 2028</span>
+</div>
+<ul class="cv-list">
+  <li>postdoc in the project: <a href="https://projekty.ncn.gov.pl/en/index.php?projekt_id=598887" class="pub-link" target="_blank"><strong><em>MAPS: 2D-MAterial-inspired Photonic architectureS</em></strong></a></li>
+</ul>
+
+<div class="flex-row">
   <strong>National Science Centre (Poland) <em>Maestro</em> Grant</strong> <span class="no-wrap">| 1 November 2024 – 31 March 2026</span>
 </div>
 <ul class="cv-list">
