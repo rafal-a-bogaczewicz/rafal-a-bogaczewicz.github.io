@@ -31,7 +31,7 @@ title: ""
 
   /* Wysokość logotypu */
   .uni-logo-img {
-    height: 58px; 
+    height: 70px; 
     width: auto;
     transition: all 0.3s ease;
   }
