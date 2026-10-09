@@ -7,7 +7,7 @@ title: ""
   .intro-container {
     display: flex;
     flex-direction: row;
-    gap: 16px; /* Zwiększony odstęp między pojedynczym logo a tekstem dla lepszego balansu */
+    gap: 16px; 
     align-items: flex-start;
     margin-bottom: 20px;
   }
@@ -34,18 +34,26 @@ title: ""
     height: 58px; 
     width: auto;
     transition: all 0.3s ease;
-    /* TRYB JASNY: Usuwa białe/kwadratowe tło wokół kształtu logo, jeśli grafika nie jest idealnym PNG */
-    mix-blend-mode: multiply; 
   }
 
-  /* TRYB CIEMNY */
-  /* Odwracamy jasność tła, ale obracamy barwy o 180 stopni, 
-     dzięki czemu niebieski pierścień i żółte słońce odzyskują swoje naturalne kolory! */
-  [data-theme="dark"] .logo-umk {
-    filter: invert(1) hue-rotate(180deg) brightness(1.4) contrast(1.2);
-    mix-blend-mode: screen; /* Idealnie wtapia czarne teraz tło obrazka w ciemny szablon strony */
+  /* KONTROLA WIDOCZNOŚCI LOGO */
+  /* Domyślnie (tryb jasny): Pokazuj normalne logo, ukryj wersję dark */
+  .logo-umk-dark {
+    display: none !important;
   }
-  
+  .logo-umk-light {
+    display: block !important;
+    mix-blend-mode: multiply; /* Usuwa ewentualne białe tło z niedoskonałego pliku */
+  }
+
+  /* TRYB CIEMNY: Ukryj jasne logo, pokaż natywne ciemne logo */
+  [data-theme="dark"] .logo-umk-light {
+    display: none !important;
+  }
+  [data-theme="dark"] .logo-umk-dark {
+    display: block !important;
+  }
+
   @media (max-width: 800px) {
     .intro-container {
       flex-direction: column;
@@ -64,10 +72,13 @@ title: ""
 <div class="intro-container">
   <div class="uni-logo-wrapper">
     <a href="https://umk.pl" target="_blank">
-        <img src="/images/logoUMK.png" alt="Logo UMK" class="uni-logo-img logo-umk">
+        <!-- Obie wersje logotypu osadzone jednocześnie, sterowane klasami CSS -->
+        <img src="/images/logoUMK.png" alt="Logo UMK" class="uni-logo-img logo-umk-light">
+        <img src="/images/logoUMK-dark.png" alt="Logo UMK" class="uni-logo-img logo-umk-dark">
     </a>
   </div>
-
+  
+    
 <div class="intro-text">
     Fizyk teoretyk na&nbsp;<a href="https://www.umk.pl/" class="pub-link" target="_blank">Uniwersytecie Mikołaja Kopernika w Toruniu</a>.<br>
     W zespole <a href="https://fizyka.umk.pl/~karolina/index.html" class="pub-link" target="_blank">dr&nbsp;hab.&nbsp;Karoliny Słowik</a> badam optyczne&nbsp;właściwości&nbsp;nanostruktur&nbsp;2D.
