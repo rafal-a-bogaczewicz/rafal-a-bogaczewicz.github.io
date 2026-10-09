@@ -81,7 +81,7 @@ title: ""
     
 <div class="intro-text">
     Fizyk teoretyk na&nbsp;<a href="https://www.umk.pl/" class="pub-link" target="_blank">Uniwersytecie Mikołaja Kopernika w Toruniu</a>.<br>
-    W zespole <a href="https://fizyka.umk.pl/~karolina/index.html" class="pub-link" target="_blank">dr&nbsp;hab.&nbsp;Karoliny Słowik</a> badam optyczne&nbsp;właściwości&nbsp;nanostruktur&nbsp;2D.
+    Jako postdok w zespole naukowym <a href="https://fizyka.umk.pl/~karolina/index.html" class="pub-link" target="_blank">dr&nbsp;hab.&nbsp;Karoliny Słowik</a> badam optyczne&nbsp;właściwości&nbsp;nanostruktur&nbsp;2D.
   </div>
 </div>
 
