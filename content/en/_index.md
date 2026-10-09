@@ -3,17 +3,18 @@ title: ""
 ---
 
 <style>
+  /* Kontener główny - na desktopie rządek, na mobilkach kolumna */
   .intro-container {
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    gap: 16px; 
     align-items: flex-start;
     margin-bottom: 20px;
   }
 
-  .uni-logos {
+  /* Kontener na pojedyncze logo */
+  .uni-logo-wrapper {
     display: flex;
-    gap: 8px;
     align-items: center;
     flex-shrink: 0;
   }
@@ -22,31 +23,35 @@ title: ""
     white-space: nowrap;
     display: inline-block;
   }
-
+  
+  /* Tekst zajmuje dostępną przestrzeń */
   .intro-text {
     flex: 1;
   }
 
+  /* Wysokość logotypu */
   .uni-logo-img {
     height: 58px; 
     width: auto;
     transition: all 0.3s ease;
   }
 
-  /* LOGO IFT: Shadow added to make white elements visible on light background */
-  .logo-ift {
-    filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.5));
+  /* KONTROLA WIDOCZNOŚCI LOGO */
+  /* Domyślnie (tryb jasny): Pokazuj normalne logo, ukryj wersję dark */
+  .logo-umk-dark {
+    display: none !important;
+  }
+  .logo-umk-light {
+    display: block !important;
+    mix-blend-mode: multiply; /* Usuwa ewentualne białe tło z niedoskonałego pliku */
   }
 
-  /* DARK MODE */
-  /* PWr logo remains unchanged (original colors) */
-  [data-theme="dark"] .logo-pwr {
-    filter: none;
+  /* TRYB CIEMNY: Ukryj jasne logo, pokaż natywne ciemne logo */
+  [data-theme="dark"] .logo-umk-light {
+    display: none !important;
   }
-
-  /* IFT logo in dark mode - increased brightness for readability of 'I' and dot */
-  [data-theme="dark"] .logo-ift {
-    filter: drop-shadow(0px 0px 2px rgba(255,255,255,0.3)) brightness(1.2);
+  [data-theme="dark"] .logo-umk-dark {
+    display: block !important;
   }
 
   @media (max-width: 800px) {
@@ -55,8 +60,8 @@ title: ""
       align-items: center;
       text-align: center;
     }
-    .uni-logos {
-      margin-bottom: 10px;
+    .uni-logo-wrapper {
+      margin-bottom: 12px;
     }
     .intro-text {
         text-align: left;
@@ -65,19 +70,18 @@ title: ""
 </style>
 
 <div class="intro-container">
-  <div class="uni-logos">
-    <a href="https://pwr.edu.pl/en/" target="_blank">
-        <img src="/images/logopwr.png" alt="WUST Logo" class="uni-logo-img logo-pwr">
-    </a>
-    <a href="https://www.kft.pwr.edu.pl" target="_blank">
-        <img src="/images/logoift.png" alt="IFT Logo" class="uni-logo-img logo-ift">
+  <div class="uni-logo-wrapper">
+    <a href="https://umk.pl" target="_blank">
+        <!-- Obie wersje logotypu osadzone jednocześnie, sterowane klasami CSS -->
+        <img src="/images/logoUMK.png" alt="Logo UMK" class="uni-logo-img logo-umk-light">
+        <img src="/images/logoUMK-dark.png" alt="Logo UMK" class="uni-logo-img logo-umk-dark">
     </a>
   </div>
 
   <div class="intro-text">
-    Theoretical physicist at <a href="https://pwr.edu.pl/en/" class="pub-link" target="_blank">Wrocław University of Science and Technology</a>.<br>
-    Within <a href="https://www.pm.kft.pwr.edu.pl" class="pub-link" target="_blank">Prof.&nbsp;Paweł Machnikowski's</a> group, I&nbsp;research resonance&nbsp;fluorescence from&nbsp;quantum&nbsp;emitters.
-  </div>
+    Theoretical physicist at <a href="https://www.umk.pl/en/" class="pub-link" target="_blank">Nicolaus Copernicus University in Toruń</a>.<br>
+    As a postdoctoral researcher in the scientific group of <a href="https://fizyka.umk.pl/~karolina/index.html" class="pub-link" target="_blank">Assoc.&nbsp;Prof.&nbsp;Karolina Słowik</a>, I study the optical properties of 2D nanomaterials.
+   </div>
 </div>
 
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 35px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Scientific interests</span>
