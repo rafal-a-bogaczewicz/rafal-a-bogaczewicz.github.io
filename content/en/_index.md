@@ -80,7 +80,7 @@ title: ""
 
   <div class="intro-text">
     Theoretical physicist at <a href="https://www.umk.pl/en/" class="pub-link" target="_blank">Nicolaus Copernicus University in Toruń</a>.<br>
-    As a postdoctoral researcher in the scientific group of <a href="https://fizyka.umk.pl/~karolina/index.html" class="pub-link" target="_blank">Assoc.&nbsp;Prof.&nbsp;Karolina Słowik</a>, I study the optical properties of 2D nanomaterials.
+    As a postdoc in the scientific group of <a href="https://fizyka.umk.pl/~karolina/index.html" class="pub-link" target="_blank">Assoc.&nbsp;Prof.&nbsp;Karolina Słowik</a>, I study the optical properties of 2D nanomaterials.
    </div>
 </div>
 
