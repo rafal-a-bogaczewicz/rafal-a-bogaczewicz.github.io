@@ -96,6 +96,6 @@ title: ""
 
 <a href="https://scholar.google.com/citations?hl=pl&user=PLex6OUAAAAJ" class="pub-link" target="_blank">GoogleScholar</a> | <a href="https://orcid.org/0000-0001-7148-5250" class="pub-link" target="_blank">ORCID</a> | <a href="https://www.researchgate.net/profile/Rafal_Bogaczewicz" class="pub-link" target="_blank">ResearchGate</a> | <a href="https://pwr-wroc.academia.edu/Rafa%C5%82Bogaczewicz" class="pub-link" target="_blank">Academia.edu</a> | <a href="https://www.linkedin.com/in/rafa%C5%82-bogaczewicz-21a32a385/" class="pub-link" target="_blank">LinkedIn</a>
 
-Katedra Mechaniki Kwantowej | Instytut Fizyki | Uniwersytet Mikołaja Kopernika w Toruniu
+Katedra&nbsp;Mechaniki&nbsp;Kwantowej | Instytut&nbsp;Fizyki | Uniwersytet&nbsp;Mikołaja&nbsp;Kopernika&nbsp;w&nbsp;Toruniu
 
 Grudziądzka 5, 87-100 Toruń
