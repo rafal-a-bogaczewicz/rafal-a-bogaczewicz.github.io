@@ -115,6 +115,13 @@ title: "About Me"
 <span class="cv-style-header">Experience</span>
 
 <div class="flex-row">
+  <a href="https://www.ifiz.umk.pl/en/" class="pub-link" target="_blank"><strong>Institute of Physics NCU in Toruń</strong></a> <span class="no-wrap">| 15 October 2026 – present</span>
+</div>
+<ul class="cv-list">
+  <li>research collaboration with <a href="https://fizyka.umk.pl/~karolina/contact.html" class="pub-link" target="_blank"><strong>Prof. Karolina Słowik</strong></a> in the field of quantum optics of the 2D materials</li>
+</ul>
+
+<div class="flex-row">
   <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank"><strong>Institute of Theoretical Physics (WUST)</strong></a> <span class="no-wrap">| 1 March 2019 – 30 September 2026</span>
 </div>
 <ul class="cv-list">
