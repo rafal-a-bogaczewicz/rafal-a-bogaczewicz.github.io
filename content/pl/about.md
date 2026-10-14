@@ -118,7 +118,7 @@ title: "O mnie"
   <a href="https://www.ifiz.umk.pl/" class="pub-link" target="_blank"><strong>Instytut Fizyki UMK w Toruniu</strong></a> <span class="no-wrap">| 15 października 2026 – obecnie</span>
 </div>
 <ul class="cv-list">
-  <li>współpraca badawcza z <a href="https://fizyka.umk.pl/~karolina/contact.html" class="pub-link" target="_blank"><strong>dr hab. Karoliną Słowik</strong>, prof. UMK w Toruniu</a> w&nbsp;dziedzinie optyki kwantowej materiałów 2D</li>
+  <li>współpraca badawcza z <a href="https://fizyka.umk.pl/~karolina/contact.html" class="pub-link" target="_blank"><strong>dr hab. Karoliną Słowik, prof. UMK w Toruniu</strong></a> w&nbsp;dziedzinie optyki kwantowej materiałów 2D</li>
 </ul>
 
 <div class="flex-row">
